@@ -139,7 +139,7 @@ export async function transformPageData(pageData: PageData) {
         headers: getPropsHeader(lang),
         data: resolvePropsData,
         transform: (propName: string, propValue: any) => {
-          if (!propValue) return '/'
+          if (!propValue) return ''
           if (propName === 'type') {
             for (const key in resolveImportDataMap) {
               if (propValue.includes(key)) {

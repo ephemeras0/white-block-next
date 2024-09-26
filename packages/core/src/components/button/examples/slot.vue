@@ -20,8 +20,6 @@
 </template>
 
 <script setup lang="tsx">
-// @ts-ignore
 const SearchIconNode = <i class="i-tdesign:search" />
-// @ts-ignore
 const EditIconNode = <i class="i-tdesign:edit" />
 </script>

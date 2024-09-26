@@ -1,58 +1,60 @@
 import type { SizeEnum } from './types'
 
-export type SizeProps = {
+/* ----------------------------------- element ----------------------------------- */
+export type Size = {
   /*
    * Size of the element.
    * 'xs' | 'sm' | 'md' | 'lg' | 'xl'
    */
   size?: SizeEnum | number
 }
-export const SizeDefaultProps = {
+export const SizeDefault = {
   size: 'md'
-} as SizeProps
+} as Size
 
-export type LoadingProps = {
+/* ----------------------------------- state ----------------------------------- */
+export type Loading = {
   /*
    * Loading or not.
    */
   loading?: boolean
 }
-export const LoadingDefaultProps = {
+export const LoadingDefault = {
   loading: false
-} as LoadingProps
+} as Loading
 
-export type DisabledProps = {
+export type Disabled = {
   /*
    * Disable or not.
    */
   disabled?: boolean
 }
-export const DisabledDefaultProps = {
+export const DisabledDefault = {
   disabled: false
-} as DisabledProps
+} as Disabled
 
-export type ReadonlyProps = {
+export type Readonly = {
   /*
    * Readonly or not.
    */
   readonly?: boolean
 }
-export const ReadonlyDefaultProps = {
+export const ReadonlyDefault = {
   readonly: false
-} as ReadonlyProps
+} as Readonly
 
-export type ClearableProps = {
+export type Clearable = {
   /*
    * Show button to clear ${COMPONENT_NAME} value or not.
    */
   clearable?: boolean
 }
-export const ClearableDefaultProps = {
+export const ClearableDefault = {
   clearable: false
-} as ClearableProps
+} as Clearable
 
 /* ----------------------------------- value ----------------------------------- */
-export type ValueProps<T = any> = {
+export type Value<T = any> = {
   /*
    * Value of ${COMPONENT_NAME}. Supported `v-model` and `v-model:value`.
    */

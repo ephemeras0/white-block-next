@@ -10,6 +10,5 @@
 </template>
 
 <script setup lang="tsx">
-// @ts-ignore
 const ContentNode = <div>vnode</div>
 </script>

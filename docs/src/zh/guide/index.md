@@ -3,7 +3,7 @@ title: White Block
 description: 更符合直觉的设计，更轻松地开发。
 ---
 
-## Installation
+## 安装
 
 ::: code-group
 ```sh [pnpm]
@@ -23,7 +23,7 @@ $ bun add white-block
 ```
 :::
 
-## 
+## 使用
 
 White Block 提供了三种方式使用组件，具体使用方式如下：
 ### 基础使用

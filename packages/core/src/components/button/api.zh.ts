@@ -22,7 +22,7 @@ export type Slots = {
 
 export type Emits = {
   /*
-   * 点击时触发, 参数为 `MouseEvent` 对象。
+   * 点击事件处理函数。
    */
   click: [e: MouseEvent]
 }

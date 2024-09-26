@@ -20,21 +20,36 @@ export function getCommonAPI(lang: string) {
   const exportData = resolver.getExports()
 
   const SizePropsData = getPropsConfig(
-    exportData.SizeProps,
-    exportData.SizeDefaultProps ?? {}
+    exportData.Size,
+    exportData.SizeDefault ?? {}
+  )
+  const LoadingPropsData = getPropsConfig(
+    exportData.Loading,
+    exportData.LoadingDefault ?? {}
   )
   const DisabledPropsData = getPropsConfig(
-    exportData.DisabledProps,
-    exportData.DisabledDefaultProps ?? {}
+    exportData.Disabled,
+    exportData.DisabledDefault ?? {}
   )
-  const ValuePropsData = getPropsConfig(exportData.ValueProps, {})
+  const ReadonlyPropsData = getPropsConfig(
+    exportData.Readonly,
+    exportData.ReadonlyDefault ?? {}
+  )
+  const ClearablePropsData = getPropsConfig(
+    exportData.Clearable,
+    exportData.ClearableDefault ?? {}
+  )
+  const ValuePropsData = getPropsConfig(exportData.Value, {})
   const ValueEmitsData = getEmitsConfig(exportData.ValueEmits)
 
   return {
     exportData,
     importData,
     SizePropsData,
+    LoadingPropsData,
     DisabledPropsData,
+    ReadonlyPropsData,
+    ClearablePropsData,
     ValuePropsData,
     ValueEmitsData
   }

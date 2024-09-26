@@ -3,7 +3,7 @@ component: button
 category: form
 
 title: Button
-description: 用于触发操作的元素。
+description: 用于触发一个操作。
 decoration: /assets/img/components/button.png
 ---
 

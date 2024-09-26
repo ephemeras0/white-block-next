@@ -1,10 +1,10 @@
 import {
-  DisabledDefaultProps,
-  DisabledProps,
-  LoadingDefaultProps,
-  LoadingProps,
-  SizeDefaultProps,
-  SizeProps
+  Disabled,
+  DisabledDefault,
+  Loading,
+  LoadingDefault,
+  Size,
+  SizeDefault
 } from '../api'
 import XDefaultProps, {
   Emits as XEmits,
@@ -14,11 +14,11 @@ import XDefaultProps, {
 
 export type Slots = XSlot
 export type Emits = XEmits
-export type Props = XProps & SizeProps & LoadingProps & DisabledProps
+export type Props = XProps & Size & Loading & Disabled
 
 export const DefaultProps = {
-  ...SizeDefaultProps,
-  ...LoadingDefaultProps,
-  ...DisabledDefaultProps,
+  ...SizeDefault,
+  ...LoadingDefault,
+  ...DisabledDefault,
   ...XDefaultProps
 }

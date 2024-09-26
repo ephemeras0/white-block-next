@@ -22,7 +22,7 @@ export function getPropsHeader(lang = 'en'): any {
     {
       label: LOCALE_PROPS_TITLE_MAP.default[lang],
       value: 'default',
-      align: 'center',
+      // align: 'center',
       transform: (val: any) => {
         if (['', undefined, null].includes(val)) {
           return ''
