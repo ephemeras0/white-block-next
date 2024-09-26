@@ -3,7 +3,7 @@ import { createTable, TableDataItem, TableHeaderItem } from '../src'
 
 describe('# Table', () => {
   it('## Props', () => {
-    const options: TableHeaderItem[] = [
+    const headers: TableHeaderItem[] = [
       { label: '名称', value: 'name' },
       { label: '类型', value: 'type' },
       { label: 'TS类型', value: 'ts' },
@@ -39,7 +39,7 @@ describe('# Table', () => {
         default: 'medium'
       }
     ]
-    const tableOptions: any = { options, data }
+    const tableOptions = { headers, data }
     expect(createTable(tableOptions))
       .toBe(`| 名称 | 类型 | TS类型 | 默认值 | 说明 | 必传 |
 | :-------- | :-------- | :-------- | :-------- | :-------- | :--------: |
@@ -47,7 +47,7 @@ describe('# Table', () => {
 | size | String | ButtonSize | medium | 组件尺寸 | N |`)
   })
   it('## Emits', () => {
-    const options: TableHeaderItem[] = [
+    const headers: TableHeaderItem[] = [
       { label: '名称', value: 'name' },
       {
         label: '参数',
@@ -74,7 +74,7 @@ describe('# Table', () => {
         params: { e: 'MouseEvent', payload: 'Data' }
       }
     ]
-    const tableOptions: any = { options, data }
+    const tableOptions = { headers, data }
     expect(createTable(tableOptions)).toBe(`| 名称 | 参数 | 描述 |
 | :-------- | :-------- | :-------- |
 | click | \`(e: MouseEvent, payload: Data)\` | 点击时触发 |`)

@@ -2,13 +2,13 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
-    deps: {
-      inline: ['@babel/types']
+    server: {
+      deps: {
+        inline: ['@babel/types']
+      }
     },
     coverage: {
-      provider: 'v8' // or 'v8'
-      // reporter: 'lcov'
-    },
-    include: ['test/api.test.ts']
+      provider: 'v8'
+    }
   }
 })
