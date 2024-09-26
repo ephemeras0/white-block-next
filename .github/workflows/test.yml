@@ -27,9 +27,7 @@ jobs:
         run: pnpm install
 
       - name: Build coverage reports
-        run: |
-          pnpm --filter=@white-block/types test:coverage
-          pnpm --filter=white-block test:coverage
+        run: pnpm test:coverage
 
       # Push packages reports
       - name: Upload coverage reports to Codecov

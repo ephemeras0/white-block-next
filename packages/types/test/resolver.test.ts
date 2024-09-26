@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { ModuleResolver } from '../src'
 
-describe.only('# ModuleResolver', () => {
-  describe.only('## Export', () => {
+describe('# ModuleResolver', () => {
+  describe('## Export', () => {
     describe('### Type Alias', () => {
       const cases = [
         {
@@ -132,7 +132,7 @@ describe.only('# ModuleResolver', () => {
         })
       })
     })
-    describe.only('### Value Named', () => {
+    describe('### Value Named', () => {
       it('### base', () => {
         const code = `export const test = {
           a: 1,
