@@ -1,0 +1,167 @@
+:root {
+  /* ------------------------------------------- size ------------------------------------------- */
+  --wb-size-1: calc(1 / 16 * 1rem);
+  --wb-size-2: calc(2 / 16 * 1rem);
+  --wb-size-3: calc(3 / 16 * 1rem);
+  --wb-size-4: calc(4 / 16 * 1rem);
+  --wb-size-5: calc(5 / 16 * 1rem);
+  --wb-size-6: calc(6 / 16 * 1rem);
+  --wb-size-8: calc(8 / 16 * 1rem);
+  --wb-size-10: calc(10 / 16 * 1rem);
+  --wb-size-12: calc(12 / 16 * 1rem);
+  --wb-size-14: calc(14 / 16 * 1rem);
+  --wb-size-16: calc(16 / 16 * 1rem);
+  --wb-size-18: calc(18 / 16 * 1rem);
+  --wb-size-20: calc(20 / 16 * 1rem);
+  --wb-size-24: calc(24 / 16 * 1rem);
+  --wb-size-32: calc(32 / 16 * 1rem);
+  --wb-size-36: calc(36 / 16 * 1rem);
+  --wb-size-40: calc(40 / 16 * 1rem);
+  --wb-size-48: calc(48 / 16 * 1rem);
+  --wb-size-56: calc(56 / 16 * 1rem);
+  --wb-size-64: calc(64 / 16 * 1rem);
+  --wb-size-80: calc(80 / 16 * 1rem);
+  --wb-size-96: calc(96 / 16 * 1rem);
+  --wb-size-128: calc(128 / 16 * 1rem);
+  --wb-size-160: calc(160 / 16 * 1rem);
+  --wb-size-192: calc(192 / 16 * 1rem);
+  --wb-size-224: calc(224 / 16 * 1rem);
+  --wb-size-256: calc(256 / 16 * 1rem);
+  --wb-size-512: calc(512 / 16 * 1rem);
+
+  --wb-comp-height-xs: var(--wb-size-18);
+  --wb-comp-height-sm: var(--wb-size-24);
+  --wb-comp-height-md: var(--wb-size-32);
+  --wb-comp-height-lg: var(--wb-size-40);
+  --wb-comp-height-xl: var(--wb-size-48);
+
+  --wb-comp-padding-xs: var(--wb-size-6);
+  --wb-comp-padding-sm: var(--wb-size-8);
+  --wb-comp-padding-md: var(--wb-size-10);
+  --wb-comp-padding-lg: var(--wb-size-12);
+  --wb-comp-padding-xl: var(--wb-size-14);
+
+  --wb-comp-font-size-xs: var(--wb-size-10);
+  --wb-comp-font-size-sm: var(--wb-size-12);
+  --wb-comp-font-size-md: var(--wb-size-14);
+  --wb-comp-font-size-lg: var(--wb-size-16);
+  --wb-comp-font-size-xl: var(--wb-size-18);
+
+  --wb-comp-radius-xs: var(--wb-size-2);
+  --wb-comp-radius-sm: var(--wb-size-3);
+  --wb-comp-radius-md: var(--wb-size-4);
+  --wb-comp-radius-lg: var(--wb-size-5);
+  --wb-comp-radius-xl: var(--wb-size-6);
+
+  --wb-comp-content-gap-xs: var(--wb-size-2);
+  --wb-comp-content-gap-sm: var(--wb-size-3);
+  --wb-comp-content-gap-md: var(--wb-size-4);
+  --wb-comp-content-gap-lg: var(--wb-size-5);
+  --wb-comp-content-gap-xl: var(--wb-size-6);
+
+  /* ------------------------------------------- color ------------------------------------------- */
+  /* Slate */
+  --wb-vc-gray-50: 248 250 252;
+  --wb-vc-gray-100: 241 245 249;
+  --wb-vc-gray-200: 226 232 240;
+  --wb-vc-gray-300: 203 213 225;
+  --wb-vc-gray-400: 148 163 184;
+  --wb-vc-gray-500: 100 116 139;
+  --wb-vc-gray-600: 71 85 105;
+  --wb-vc-gray-700: 51 65 85;
+  --wb-vc-gray-800: 30 41 59;
+  --wb-vc-gray-900: 15 23 42;
+  --wb-vc-gray-950: 2 6 23;
+
+  /* Neutral */
+  --wb-vc-gray-50: 250 250 250;
+  --wb-vc-gray-100: 245 245 245;
+  --wb-vc-gray-200: 229 229 229;
+  --wb-vc-gray-300: 212 212 212;
+  --wb-vc-gray-400: 163 163 163;
+  --wb-vc-gray-500: 115 115 115;
+  --wb-vc-gray-600: 82 82 82;
+  --wb-vc-gray-700: 64 64 64;
+  --wb-vc-gray-800: 38 38 38;
+  --wb-vc-gray-900: 23 23 23;
+  --wb-vc-gray-950: 10 10 10;
+
+  --wb-color-white: rgb(var(--wb-vc-white));
+  --wb-color-black: rgb(var(--wb-vc-black));
+  --wb-color-primary: rgb(var(--wb-vc-primary));
+  --wb-color-soft: rgb(var(--wb-vc-soft));
+  --wb-color-success: rgb(var(--wb-vc-success));
+  --wb-color-warning: rgb(var(--wb-vc-warning));
+  --wb-color-danger: rgb(var(--wb-vc-danger));
+  --wb-color-background: rgb(var(--wb-vc-background));
+  --wb-color-foreground: rgb(var(--wb-vc-foreground));
+  --wb-color-container: rgb(var(--wb-vc-container));
+  --wb-color-layer: rgb(var(--wb-vc-layer));
+  --wb-color-panel: rgb(var(--wb-vc-layer));
+  --wb-color-scrollbar: rgb(var(--wb-vc-scrollbar));
+
+  --wb-vc-white: 255 255 255;
+  --wb-vc-black: 0 0 0;
+  --wb-vc-primary: 0 193 106;
+  --wb-vc-soft: var(--wb-vc-gray-300);
+  --wb-vc-success: 19 219 101;
+  --wb-vc-warning: 255 165 0;
+  --wb-vc-danger: 237 72 84;
+  --wb-vc-background: var(--wb-vc-white);
+  --wb-vc-foreground: var(--wb-vc-gray-700);
+  --wb-vc-container: var(--wb-vc-gray-200);
+  --wb-vc-layer: var(--wb-vc-gray-300);
+  --wb-vc-panel: var(--wb-vc-gray-400);
+  --wb-vc-scrollbar: var(--wb-vc-gray-200);
+
+  --wb-color-text-main: var(--wb-color-text-1);
+  --wb-color-text-default: var(--wb-color-text-2);
+  --wb-color-text-disabled: var(--wb-color-text-3);
+  --wb-color-text-secondly: var(--wb-color-text-4);
+  --wb-color-text-placeholder: var(--wb-color-text-4);
+
+  --wb-color-text-1: rgb(var(--wb-vc-gray-900));
+  --wb-color-text-2: rgb(var(--wb-vc-gray-800));
+  --wb-color-text-3: rgb(var(--wb-vc-gray-700));
+  --wb-color-text-4: rgb(var(--wb-vc-gray-600));
+  --wb-color-text-5: rgb(var(--wb-vc-gray-500));
+
+  --wb-color-border-container: rgb(var(--wb-vc-gray-500));
+  --wb-color-border-emphasize: rgb(var(--wb-vc-gray-400));
+  --wb-color-border-base: rgb(var(--wb-vc-gray-300));
+  --wb-color-border-soft: rgb(var(--wb-vc-gray-200));
+  --wb-color-border-dinky: rgb(var(--wb-vc-gray-100));
+
+  /* ------------------------------------------- other ------------------------------------------- */
+  --wb-transition-ease: all 0.2s cubic-bezier(0.38, 0, 0.24, 1);
+  --wb-transition-linear: all 0.2s linear;
+}
+
+.dark:root {
+  /* ------------------------------------------- color ------------------------------------------- */
+  --wb-vc-white: 255 255 255;
+  --wb-vc-black: 0 0 0;
+  --wb-vc-primary: 0 193 106;
+  --wb-vc-soft: var(--wb-vc-gray-800);
+  --wb-vc-success: 19 219 101;
+  --wb-vc-warning: 255 165 0;
+  --wb-vc-danger: 237 72 84;
+  --wb-vc-foreground: var(--wb-vc-gray-200);
+  --wb-vc-background: var(--wb-vc-gray-900);
+  --wb-vc-container: var(--wb-vc-gray-800);
+  --wb-vc-layer: var(--wb-vc-gray-700);
+  --wb-vc-panel: var(--wb-vc-gray-600);
+  --wb-vc-scrollbar: var(--wb-vc-gray-700);
+
+  --wb-color-text-1: rgb(var(--wb-vc-gray-100));
+  --wb-color-text-2: rgb(var(--wb-vc-gray-200));
+  --wb-color-text-3: rgb(var(--wb-vc-gray-300) / 75%);
+  --wb-color-text-4: rgb(var(--wb-vc-gray-400));
+  --wb-color-text-5: rgb(var(--wb-vc-gray-400) / 75%);
+
+  --wb-color-border-container: rgb(var(--wb-vc-gray-800));
+  --wb-color-border-emphasize: rgb(var(--wb-vc-gray-600) / 75%);
+  --wb-color-border-base: rgb(var(--wb-vc-gray-700));
+  --wb-color-border-soft: rgb(var(--wb-vc-gray-800));
+  --wb-color-border-dinky: rgb(var(--wb-vc-gray-800) / 50%);
+}

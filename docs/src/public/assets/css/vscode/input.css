@@ -1,0 +1,17 @@
+.dark:root {
+  --vscode-input-foreground: rgb(204 204 204);
+  --vscode-input-background: rgb(49 49 49);
+  --vscode-input-border: rgb(60 60 60);
+  --vscode-inputOption-activeBorder: rgb(0 120 212);
+
+  .wb-input {
+    --wb-input-gap: 0;
+  }
+  .wb-input:focus-within {
+    outline-width: 1px;
+  }
+  .wb-input--base {
+    --wb-input-background: var(--vscode-input-background);
+    --wb-input-border: var(--vscode-input-border);
+  }
+}

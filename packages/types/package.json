@@ -1,0 +1,40 @@
+{
+  "name": "@white-block/types",
+  "version": "0.0.3",
+  "description": "A tool to resolve Props & Emits type for Vue3",
+  "keywords": [
+    "ephemeras",
+    "white-block",
+    "type",
+    "props",
+    "emits"
+  ],
+  "author": {
+    "name": "ephemeras",
+    "email": "ephemeras@qq.com"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "scripts": {
+    "dev": "tsup --watch src",
+    "build": "tsup",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.22.7"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.22.10"
+  }
+}

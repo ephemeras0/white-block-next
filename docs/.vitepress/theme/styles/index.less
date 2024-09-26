@@ -1,0 +1,141 @@
+@import url(./variables.less);
+@import url(./font.less);
+@import url(./vitepress.less);
+
+html,
+body,
+#app {
+  height: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+/* ----------------------------------- scrollable ----------------------------------- */
+.scrollable-main {
+  &::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+  &::-webkit-scrollbar-corner {
+    width: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--wb-color-scrollbar);
+    background-clip: content-box;
+    border: 4px solid transparent;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+@media (max-width: 641px) {
+  .scrollable-main {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.scrollable {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-corner {
+    width: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--wb-color-scrollbar);
+    background-clip: content-box;
+    border: 4px solid transparent;
+    border-radius: 6px;
+  }
+}
+@media (max-width: 641px) {
+  .scrollable {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+// /* ----------------------------------- animates ----------------------------------- */
+// .animate-up {
+//   animation: translateUp 1s;
+// }
+// .animate-down {
+//   animation: translateDown 1s;
+// }
+// .animate-left {
+//   animation: translateLeft 1s;
+// }
+// .animate-right {
+//   animation: translateRight 1s;
+// }
+// @keyframes translateDown {
+//   0% {
+//     opacity: 0;
+//     transform: translate3D(0, -100px, 0);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0, 0, 0);
+//   }
+// }
+// @keyframes translateUp {
+//   0% {
+//     opacity: 0;
+//     transform: translate3D(0, 100px, 0);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0, 0, 0);
+//   }
+// }
+// @keyframes translateLeft {
+//   0% {
+//     opacity: 0;
+//     transform: translate3D(-100px, 0, 0);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateZ(0);
+//   }
+// }
+// @keyframes translateRight {
+//   0% {
+//     opacity: 0;
+//     transform: translate3D(100px, 0, 0);
+//   }
+
+//   100% {
+//     opacity: 1;
+//     transform: translateZ(0);
+//   }
+// }
+
+// /*
+//  * // TODO: 提供一些实用常用的 CSS 类，引入组件库后直接可以使用
+//  */
+// /* ----------------------------------- utils ----------------------------------- */
+// .action-ghost--default {
+//   user-select: none;
+//   &:hover {
+//     background: rgb(var(--wb-vc-soft) / 70%);
+//   }
+//   &:active {
+//     background: rgb(var(--wb-vc-soft) / 90%);
+//   }
+// }
+// .action-ghost--primary {
+//   user-select: none;
+//   &:hover {
+//     background: rgb(var(--wb-vc-primary) / 10%);
+//   }
+//   &:active {
+//     background: rgb(var(--wb-vc-soft) / 30%);
+//   }
+// }

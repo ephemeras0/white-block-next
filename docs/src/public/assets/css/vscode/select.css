@@ -1,0 +1,35 @@
+.dark:root {
+  --vscode-select-foreground: rgb(204 204 204);
+  --vscode-select-background: rgb(31 31 31);
+  --vscode-select-border: rgb(60 60 60);
+  --vscode-dropdown-background: rgb(24, 24, 24);
+  --vscode-selectOption-activeBorder: rgb(0 120 212);
+  --vscode-selectOption-activeBackground: rgb(38 79 120);
+  --vscode-selectOption-hoverBackground: rgba(90, 93, 94, 0.31);
+
+  .wb-select {
+    --wb-select-gap: 0;
+    --wb-select-option-hover-background: var(
+      --vscode-selectOption-activeBorder
+    );
+  }
+  .wb-select:focus-within {
+    outline-width: 1px;
+  }
+  .wb-select {
+    --wb-select-panel-padding: 0;
+    --wb-select-radius: 0;
+    --wb-select-text: var(--vscode-select-foreground);
+    --wb-select-panel-radius: 2px;
+    --wb-select-panel-background: var(--vscode-dropdown-background);
+    --wb-select-panel-border: var(--vscode-select-border);
+    --wb-select-option-hover-background: var(
+      --vscode-selectOption-hoverBackground
+    );
+    --wb-select-option-active-background: var(
+      --vscode-selectOption-activeBackground
+    );
+    --wb-select-panel-border: var(--vscode-selectOption-activeBorder);
+    --wb-select-option-active-color: var(--vscode-select-foreground);
+  }
+}

@@ -1,0 +1,48 @@
+@import url(./button.css);
+@import url(./select.css);
+@import url(./input.css);
+
+:root {
+  /* ------------------------------------------- size ------------------------------------------- */
+  --wb-comp-size-xs: 20px;
+  --wb-comp-size-sm: 24px;
+  --wb-comp-size-md: 28px;
+  --wb-comp-size-lg: 32px;
+  --wb-comp-size-xl: 36px;
+
+  --wb-comp-height-xs: 20px;
+  --wb-comp-height-sm: 24px;
+  --wb-comp-height-md: 28px;
+  --wb-comp-height-lg: 32px;
+  --wb-comp-height-xl: 36px;
+
+  --wb-comp-padding-xs: 4px;
+  --wb-comp-padding-sm: 5px;
+  --wb-comp-padding-md: 6px;
+  --wb-comp-padding-lg: 7px;
+  --wb-comp-padding-xl: 8px;
+
+  --wb-comp-font-size-xs: 11px;
+  --wb-comp-font-size-sm: 12px;
+  --wb-comp-font-size-md: 13px;
+  --wb-comp-font-size-lg: 14px;
+  --wb-comp-font-size-xl: 15px;
+
+  --wb-comp-radius-xs: 2px;
+  --wb-comp-radius-sm: 2px;
+  --wb-comp-radius-md: 2px;
+  --wb-comp-radius-lg: 3px;
+  --wb-comp-radius-xl: 4px;
+
+  /* ------------------------------------------- color ------------------------------------------- */
+  --wb-vc-primary: 0 120 212;
+  --wb-vc-primary-lighten: 2 110 193;
+  --wb-vc-primary-darken: 0 120 212;
+}
+
+.dark:root {
+  /* ------------------------------------------- color ------------------------------------------- */
+  --wb-vc-primary: 0 120 212;
+  --wb-vc-primary-lighten: 2 110 193;
+  --wb-vc-primary-darken: 0 120 212;
+}

@@ -1,0 +1,195 @@
+.wb-button {
+  border: none;
+  box-sizing: border-box;
+  --wb-button-color-main: rgb(var(--wb-button-vc-main));
+  --wb-button-color-main-lighten: color-mix(
+    in srgb,
+    var(--wb-button-color-main) 80%,
+    var(--wb-color-foreground)
+  );
+  --wb-button-color-main-darken: color-mix(
+    in srgb,
+    var(--wb-button-color-main) 70%,
+    var(--wb-color-background)
+  );
+
+  --wb-button-border: var(--wb-button-color-main);
+  --wb-button-border-hover: var(--wb-button-color-main-lighten);
+  --wb-button-border-active: var(--wb-button-color-main-darken);
+
+  --wb-button-text: var(--wb-button-color-main);
+  --wb-button-text-hover: var(--wb-button-color-main);
+  --wb-button-text-active: var(--wb-button-color-main);
+
+  --wb-button-background-hover: rgb(var(--wb-button-vc-main) / 20%);
+
+  font-size: var(--wb-button-font-size);
+  transition: var(--wb-transition-ease);
+  backface-visibility: hidden;
+}
+
+/* -------------------------------------------- size --------------------------------------------- */
+.wb-button--xs {
+  --wb-button-height: var(--wb-comp-height-xs);
+  --wb-button-padding: var(--wb-comp-padding-xs);
+  --wb-button-font-size: var(--wb-comp-font-size-xs);
+  --wb-button-radius: var(--wb-comp-radius-xs);
+  --wb-button-gap: var(--wb-comp-content-gap-xs);
+}
+.wb-button--sm {
+  --wb-button-height: var(--wb-comp-height-sm);
+  --wb-button-padding: var(--wb-comp-padding-sm);
+  --wb-button-font-size: var(--wb-comp-font-size-sm);
+  --wb-button-radius: var(--wb-comp-radius-sm);
+  --wb-button-gap: var(--wb-comp-content-gap-sm);
+}
+.wb-button--md {
+  --wb-button-height: var(--wb-comp-height-md);
+  --wb-button-padding: var(--wb-comp-padding-md);
+  --wb-button-font-size: var(--wb-comp-font-size-md);
+  --wb-button-radius: var(--wb-comp-radius-md);
+  --wb-button-gap: var(--wb-comp-content-gap-md);
+}
+.wb-button--lg {
+  --wb-button-height: var(--wb-comp-height-lg);
+  --wb-button-padding: var(--wb-comp-padding-lg);
+  --wb-button-font-size: var(--wb-comp-font-size-lg);
+  --wb-button-radius: var(--wb-comp-radius-lg);
+  --wb-button-gap: var(--wb-comp-content-gap-lg);
+}
+.wb-button--xl {
+  --wb-button-height: var(--wb-comp-height-xl);
+  --wb-button-padding: var(--wb-comp-padding-xl);
+  --wb-button-font-size: var(--wb-comp-font-size-xl);
+  --wb-button-radius: var(--wb-comp-radius-xl);
+  --wb-button-gap: var(--wb-comp-content-gap-xl);
+}
+
+/* -------------------------------------------- theme -------------------------------------------- */
+.wb-button--primary {
+  --wb-button-vc-main: var(--wb-vc-primary);
+}
+.wb-button--contrast {
+  --wb-button-vc-main: var(--wb-vc-foreground);
+}
+.wb-button--success {
+  --wb-button-vc-main: var(--wb-vc-success);
+}
+.wb-button--warning {
+  --wb-button-vc-main: var(--wb-vc-warning);
+}
+.wb-button--danger {
+  --wb-button-vc-main: var(--wb-vc-danger);
+}
+.wb-button--default {
+  --wb-button-vc-main: var(--wb-vc-soft);
+  --wb-button-border: var(--wb-button-color-main-lighten);
+  --wb-button-border-active: var(--wb-button-border);
+  --wb-button-text: var(--wb-color-text-3);
+  --wb-button-text-hover: var(--wb-vc-foreground);
+  --wb-button-text-active: var(--wb-vc-foreground);
+  --wb-button-background-hover: rgb(var(--wb-button-vc-main) / 70%);
+}
+.wb-button--default.wb-button--base {
+  --wb-button-text: var(--wb-color-text-3);
+  --wb-button-text-hover: var(--wb-vc-foreground);
+  --wb-button-text-active: var(--wb-vc-foreground);
+}
+.wb-button--default.wb-button--plain {
+  --wb-button-background-hover: rgb(var(--wb-button-vc-main) / 70%);
+}
+
+/* -------------------------------------------- type -------------------------------------------- */
+.wb-button--base {
+  --wb-button-background: var(--wb-button-color-main);
+  --wb-button-background-hover: var(--wb-button-color-main-lighten);
+  --wb-button-background-active: var(--wb-button-color-main-darken);
+  --wb-button-border: var(--wb-button-background);
+  --wb-button-border-hover: var(--wb-button-background-hover);
+  --wb-button-border-active: var(--wb-button-background-active);
+  --wb-button-text: var(--wb-color-background);
+  --wb-button-text-hover: var(--wb-color-background);
+  --wb-button-text-active: var(--wb-color-background);
+}
+.wb-button--plain {
+  --wb-button-background: rgb(var(--wb-button-vc-main) / 10%);
+  --wb-button-background-hover: rgb(var(--wb-button-vc-main) / 20%);
+}
+.wb-button--outline {
+  --wb-button-background: none;
+}
+.wb-button--ghost {
+  --wb-button-border: transparent;
+  --wb-button-border-hover: transparent;
+  --wb-button-border-active: transparent;
+}
+.wb-button--dashed {
+  box-shadow: none;
+  border: 0.1rem dashed var(--wb-button-border);
+}
+.wb-button--dashed:hover {
+  border-color: var(--wb-button-border-hover);
+}
+.wb-button--dashed:active {
+  border-color: var(--wb-button-border-active);
+}
+.wb-button--link {
+  --wb-button-background: none;
+  --wb-button-background-hover: none;
+  --wb-button-background-active: none;
+  --wb-button-border: transparent;
+  --wb-button-border-hover: transparent;
+  --wb-button-border-active: transparent;
+  --wb-button-text-decoration: underline;
+  --wb-button-text-hover: var(--wb-button-color-main-lighten);
+  --wb-button-text-active: var(--wb-button-color-main-darken);
+}
+.wb-button--link:hover {
+  /* --wb-button-border: transparent; */
+
+  text-decoration-line: var(--wb-button-text-decoration);
+  text-underline-offset: 0.25rem;
+}
+.wb-button--text {
+  --wb-button-background: none;
+  --wb-button-background-hover: none;
+  --wb-button-background-active: none;
+  --wb-button-border: transparent;
+  --wb-button-border-hover: transparent;
+  --wb-button-border-active: transparent;
+  --wb-button-text-hover: var(--wb-button-color-main-lighten);
+  --wb-button-text-active: var(--wb-button-color-main-darken);
+}
+
+/* -------------------------------------------- shape -------------------------------------------- */
+.wb-button--square {
+  --wb-button-padding: 0;
+  width: var(--wb-button-height);
+  overflow: hidden;
+}
+.wb-button--round {
+  --wb-button-radius: calc(var(--wb-button-height) / 2);
+}
+.wb-button--circle {
+  --wb-button-padding: 0;
+  --wb-button-radius: 50%;
+  width: var(--wb-button-height);
+  overflow: hidden;
+}
+
+/* -------------------------------------------- other -------------------------------------------- */
+.wb-button--disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+  user-select: none;
+  --wb-button-text-hover: var(--wb-button-text);
+  --wb-button-text-active: var(--wb-button-text);
+  --wb-button-background-hover: var(--wb-button-background);
+  --wb-button-background-active: var(--wb-button-background);
+  --wb-button-border-hover: var(--wb-button-border);
+  --wb-button-border-active: var(--wb-button-border);
+  --wb-button-text-decoration: none;
+}
+.wb-button--block {
+  width: 100%;
+}

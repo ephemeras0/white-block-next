@@ -1,0 +1,92 @@
+{
+  "button": {
+    "statements": "100%",
+    "branches": "95.23%",
+    "functions": "100%",
+    "lines": "100%"
+  },
+  "button-group": {
+    "statements": "100%",
+    "branches": "92.3%",
+    "functions": "100%",
+    "lines": "100%"
+  },
+  "color-picker": {
+    "statements": "0%",
+    "branches": "0%",
+    "functions": "0%",
+    "lines": "0%"
+  },
+  "config-provider": {
+    "statements": "0%",
+    "branches": "100%",
+    "functions": "100%",
+    "lines": "0%"
+  },
+  "input": {
+    "statements": "0%",
+    "branches": "0%",
+    "functions": "0%",
+    "lines": "0%"
+  },
+  "input-number": {
+    "statements": "0%",
+    "branches": "0%",
+    "functions": "0%",
+    "lines": "0%"
+  },
+  "placeholder": {
+    "statements": "94.28%",
+    "branches": "91.66%",
+    "functions": "100%",
+    "lines": "93.75%"
+  },
+  "popup": {
+    "statements": "0%",
+    "branches": "0%",
+    "functions": "0%",
+    "lines": "0%"
+  },
+  "radio": {
+    "statements": "0%",
+    "branches": "0%",
+    "functions": "0%",
+    "lines": "0%"
+  },
+  "radio-group": {
+    "statements": "0%",
+    "branches": "0%",
+    "functions": "0%",
+    "lines": "0%"
+  },
+  "select": {
+    "statements": "0%",
+    "branches": "0%",
+    "functions": "0%",
+    "lines": "0%"
+  },
+  "slider": {
+    "statements": "0%",
+    "branches": "0%",
+    "functions": "0%",
+    "lines": "0%"
+  },
+  "space": {
+    "statements": "100%",
+    "branches": "100%",
+    "functions": "100%",
+    "lines": "100%"
+  },
+  "table": {
+    "statements": "0%",
+    "branches": "0%",
+    "functions": "100%",
+    "lines": "0%"
+  },
+  "toggle": {
+    "statements": "0%",
+    "branches": "0%",
+    "functions": "0%",
+    "lines": "0%"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules
+dist
+examples
+**/*.md
+
+!docs/.vitepress
+docs/.vitepress/cache/deps/
+

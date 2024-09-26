@@ -1,0 +1,36 @@
+{
+  "components": [
+    { "theme": "primary", "content": "primary" },
+    { "theme": "success", "content": "success" },
+    { "theme": "warning", "content": "warning" },
+    { "theme": "danger", "content": "danger" },
+    { "theme": "contrast", "content": "contrast" },
+    { "theme": "default", "content": "default" }
+  ],
+  "configs": [
+    {
+      "name": "type",
+      "type": "select",
+      "default": "base",
+      "options": [
+        { "label": "base", "value": "base" },
+        { "label": "plain", "value": "plain" },
+        { "label": "dashed", "value": "dashed" },
+        { "label": "outline", "value": "outline" },
+        { "label": "ghost", "value": "ghost" },
+        { "label": "link", "value": "link" },
+        { "label": "text", "value": "text" }
+      ]
+    },
+    {
+      "name": "loading",
+      "type": "toggle",
+      "default": false
+    },
+    {
+      "name": "disabled",
+      "type": "toggle",
+      "default": false
+    }
+  ]
+}

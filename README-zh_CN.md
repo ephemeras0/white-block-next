@@ -4,7 +4,7 @@
     <img src="https://raw.githubusercontent.com/Kythuen/white-block/main/docs/contents/public/logo.png" alt="WhiteBlock - Intuitive Design for Effortless Development" height="120">
   </a>
 </p>
-<h3 align="center">Intuitive Design for Effortless Development</h3>
+<h3 align="center">更符合直觉的设计，更轻松地开发</h3>
 <br>
 
 <p align="center">
@@ -38,17 +38,18 @@
 
 <br>
 
-English | [简体中文](./README-zh_CN.md)
+简体中文 | [English](./README.md)
 
-## Getting Started
 
-### Installation
+## 快速开始
+
+### 安装
 
 ```shell
 pnpm add white-block
 ```
 
-### Usage
+### 使用
 
 ```js
 import { createApp } from 'vue'
@@ -59,19 +60,19 @@ import App from './app.vue'
 createApp(App).use(WhiteBlock).mount('#app')
 ```
 
-Read [Documents](https://kythuen.github.io/white-block) for more detail usage.
+更多用法可查看组件库的 [在线文档](https://kythuen.github.io/white-block) 。
 
 
-## Playground
+## 演练场
 
-[Playground](https://kythuen.github.io/white-block/playground)
-
-
-## White Block Starter
-
-[white-block-starter](https://github.com/Kythuen/white-block-starter)
+[在线尝试](https://kythuen.github.io/white-block/playground)
 
 
-## Welcome Star
+## 项目模板
 
-If there were anything help you, please give me star.
+[后台项目模板](https://github.com/Kythuen/white-block-starter)
+
+
+## 欢迎 Star
+
+如果您觉得本项目在某些方面对你有所帮助，请给我 star 。

@@ -1,0 +1,24 @@
+.dark:root {
+  --vscode-button-foreground: rgb(255 255 255);
+  --vscode-button-background: rgb(0 120 212);
+  --vscode-button-hoverBackground: rgb(2 110 193);
+  --vscode-button-border: rgba(255 255 255 / 0.07);
+  --vscode-button-separator: rgba(255 255 255 / 0.4);
+  --vscode-button-secondaryForeground: rgb(204 204 204);
+  --vscode-button-secondaryBackground: rgb(49 49 49);
+  --vscode-button-secondaryHoverBackground: rgb(60 60 60);
+
+  .wb-button--base:not(.wb-button--contrast) {
+    --wb-button-text: var(--vscode-button-foreground);
+    --wb-button-text-hover: var(--vscode-button-foreground);
+    --wb-button-text-active: var(--vscode-button-foreground);
+
+    --wb-button-border: var(--vscode-button-border);
+    --wb-button-border-hover: var(--vscode-button-border);
+    --wb-button-border-active: var(--vscode-button-border);
+  }
+
+  .wb-button--base.wb-button--default {
+    --wb-button-vc-main: 49 49 49;
+  }
+}

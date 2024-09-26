@@ -1,0 +1,52 @@
+{
+  "components": [
+    { "shape": "rectangle", "content": "A" },
+    { "shape": "round", "content": "B" },
+    { "shape": "square", "content": "C" },
+    { "shape": "circle", "content": "D" }
+  ],
+  "configs": [
+    {
+      "name": "type",
+      "type": "select",
+      "default": "base",
+      "options": [
+        { "label": "base", "value": "base" },
+        { "label": "plain", "value": "plain" },
+        { "label": "dashed", "value": "dashed" },
+        { "label": "outline", "value": "outline" },
+        { "label": "ghost", "value": "ghost" },
+        { "label": "link", "value": "link" },
+        { "label": "text", "value": "text" }
+      ]
+    },
+    {
+      "name": "theme",
+      "type": "select",
+      "default": "primary",
+      "options": [
+        { "label": "primary", "value": "primary" },
+        { "label": "success", "value": "success" },
+        { "label": "warning", "value": "warning" },
+        { "label": "danger", "value": "danger" },
+        { "label": "contrast", "value": "contrast" },
+        { "label": "default", "value": "default" }
+      ]
+    },
+    {
+      "name": "loading",
+      "type": "toggle",
+      "default": false
+    },
+    {
+      "name": "disabled",
+      "type": "toggle",
+      "default": false
+    },
+    {
+      "name": "content",
+      "type": "input",
+      "default": "A"
+    }
+  ]
+}
