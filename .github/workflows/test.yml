@@ -28,8 +28,6 @@ jobs:
 
       - name: Build coverage reports
         run: |
-          pnpm --filter=@white-block/types build
-          pnpm --filter=white-block build
           pnpm --filter=@white-block/types test:coverage
           pnpm --filter=white-block test:coverage
 

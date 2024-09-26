@@ -50,7 +50,8 @@ export default defineConfig({
         'src/index.ts',
         'src/components/index.ts',
         'src/components/*/index.ts',
-        'src/components/*/api.*.ts'
+        'src/components/*/api.*.ts',
+        'src/components/*/examples/*'
       ]
     }
   }
