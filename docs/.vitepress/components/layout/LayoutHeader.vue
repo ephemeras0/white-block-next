@@ -98,9 +98,7 @@
 import { clickDelegate } from '@/utils'
 // import { useState } from '@/composables'
 import { useData, useRouter, withBase } from 'vitepress'
-// @ts-ignore
 import VPNavBarMenu from 'vitepress/dist/client/theme-default/components/VPNavBarMenu.vue'
-// @ts-ignore
 import VPNavBarSearch from 'vitepress/dist/client/theme-default/components/VPNavBarSearch.vue'
 import { computed, ref } from 'vue'
 // import DocumentNavPanel from '~/components/layout/document/DocumentNavPanel.vue'
@@ -128,10 +126,12 @@ function handleMenuOptions(dataset: Record<string, string>) {
     case 'lang': {
       let targetPath = ''
       const { path } = router.route
-      if (path.startsWith('/zh')) {
+      if (path.includes('/zh')) {
         targetPath = path.replace('/zh', '')
       } else {
-        targetPath = `/zh${path}`
+        const { base } = site.value
+        const pure = path.replace(base, '')
+        targetPath = `${base}zh/${pure}`
       }
       router.go(targetPath)
       break
