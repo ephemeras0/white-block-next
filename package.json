@@ -19,7 +19,7 @@
     "docs:build": "pnpm -C docs run build",
     "docs:preview": "pnpm -C docs run preview",
     "test": "pnpm --filter ./packages/** run test",
-    "test:coverage": "pnpm --filter ./packages/* run test:coverage",
+    "test:coverage": "pnpm --filter ./packages/** run test:coverage",
     "build": "pnpm --filter ./packages/** run build",
     "clear": "rimraf 'packages/*/{dist,node_modules}' && rimraf node_modules",
     "change": "changeset",
