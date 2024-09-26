@@ -20,13 +20,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20.x
+          node-version: 18.x
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: |
-          pnpm install
-          pnpm test:coverage
+        run: pnpm install
+
+      - name: Build coverage reports
+        run: pnpm test:coverage
 
       # Push packages reports
       - name: Upload coverage reports to Codecov
