@@ -1,12 +1,9 @@
-import { SizeProps, DisabledProps, ValueProps } from '@/components/api'
-import { Props } from '@/components/input/api'
+import { Props } from '@/components/input/config'
 import Input from '@/components/input/input.vue'
 import { getRawSlots } from '@/utils'
 import { defineComponent, h, ref } from 'vue'
 
-export function useInput(
-  options?: Partial<Props & SizeProps & ValueProps<string> & DisabledProps>
-) {
+export function useInput(options?: Partial<Props>) {
   const inputValue = ref('')
   const node = defineComponent({
     setup(_, { slots }) {
