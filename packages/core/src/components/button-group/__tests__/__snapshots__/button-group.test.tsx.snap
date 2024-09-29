@@ -1,0 +1,85 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`# ButtonGroup > ## Base > ### default config 1`] = `
+<div
+  class="wb-button-group wb-button-group--base wb-button-group--primary wb-button-group--md wb-button-group--rectangle wb-button-group-gap--md"
+  flex="~ row nowrap"
+  gap=""
+  rounded="$wb-radio-group-radius"
+>
+  
+  <button
+    aria-disabled="false"
+    bg="$wb-button-background hover:$wb-button-background-hover active:$wb-button-background-active"
+    box="border"
+    class="wb-button wb-button--base wb-button--primary wb-button--rectangle wb-button--md"
+    color="$wb-button-text hover:$wb-button-text-hover active:$wb-button-text-active"
+    cursor="pointer"
+    flex="1 inline"
+    focus-visible="outline outline-2 outline-offset-2 outline-$wb-color-primary"
+    gap="$wb-button-gap"
+    h="$wb-button-height"
+    items="center"
+    justify="center"
+    outline="none"
+    p="x-$wb-button-padding"
+    ring="1 inset $wb-button-border hover:$wb-button-border-hover active:$wb-button-border-active"
+    rounded="$wb-button-radius"
+    select="none"
+    transition="all ease duration-200"
+  >
+    <!--v-if-->
+    button1
+    <!---->
+  </button>
+  <button
+    aria-disabled="false"
+    bg="$wb-button-background hover:$wb-button-background-hover active:$wb-button-background-active"
+    box="border"
+    class="wb-button wb-button--base wb-button--primary wb-button--rectangle wb-button--md"
+    color="$wb-button-text hover:$wb-button-text-hover active:$wb-button-text-active"
+    cursor="pointer"
+    flex="1 inline"
+    focus-visible="outline outline-2 outline-offset-2 outline-$wb-color-primary"
+    gap="$wb-button-gap"
+    h="$wb-button-height"
+    items="center"
+    justify="center"
+    outline="none"
+    p="x-$wb-button-padding"
+    ring="1 inset $wb-button-border hover:$wb-button-border-hover active:$wb-button-border-active"
+    rounded="$wb-button-radius"
+    select="none"
+    transition="all ease duration-200"
+  >
+    <!--v-if-->
+    button2
+    <!---->
+  </button>
+  <button
+    aria-disabled="false"
+    bg="$wb-button-background hover:$wb-button-background-hover active:$wb-button-background-active"
+    box="border"
+    class="wb-button wb-button--base wb-button--primary wb-button--rectangle wb-button--md"
+    color="$wb-button-text hover:$wb-button-text-hover active:$wb-button-text-active"
+    cursor="pointer"
+    flex="1 inline"
+    focus-visible="outline outline-2 outline-offset-2 outline-$wb-color-primary"
+    gap="$wb-button-gap"
+    h="$wb-button-height"
+    items="center"
+    justify="center"
+    outline="none"
+    p="x-$wb-button-padding"
+    ring="1 inset $wb-button-border hover:$wb-button-border-hover active:$wb-button-border-active"
+    rounded="$wb-button-radius"
+    select="none"
+    transition="all ease duration-200"
+  >
+    <!--v-if-->
+    button3
+    <!---->
+  </button>
+  
+</div>
+`;

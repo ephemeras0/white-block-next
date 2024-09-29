@@ -1,0 +1,40 @@
+/* .wb-button-group .wb-button:not(.wb-button:last-of-type) { */
+.wb-button-group:not(.wb-button-group--separate)
+  .wb-button:not(.wb-button:last-child) {
+  border-radius: 0;
+  margin-right: -1px;
+}
+.wb-button-group:not(.wb-button-group--separate) .wb-button:first-child {
+  border-radius: var(--wb-button-radius) 0 0 var(--wb-button-radius) !important;
+}
+.wb-button-group:not(.wb-button-group--separate) .wb-button:last-child {
+  border-radius: 0 var(--wb-button-radius) var(--wb-button-radius) 0;
+}
+
+.wb-button-group .wb-button {
+  flex: 1;
+}
+.wb-button-group .wb-button:hover {
+  position: relative;
+}
+
+/* -------------------------------------------- gap -------------------------------------------- */
+.wb-button-group-gap--xs {
+  --wb-button-group-gap: var(--wb-comp-padding-xs);
+}
+.wb-button-group-gap--sm {
+  --wb-button-group-gap: var(--wb-comp-padding-sm);
+}
+.wb-button-group-gap--md {
+  --wb-button-group-gap: var(--wb-comp-padding-md);
+}
+.wb-button-group-gap--lg {
+  --wb-button-group-gap: var(--wb-comp-padding-lg);
+}
+.wb-button-group-gap--xl {
+  --wb-button-group-gap: var(--wb-comp-padding-xl);
+}
+/* -------------------------------------------- shape -------------------------------------------- */
+.wb-button-group--round .wb-radio-button--round {
+  --wb-button-radius: 9999px;
+}

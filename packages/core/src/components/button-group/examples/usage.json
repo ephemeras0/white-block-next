@@ -1,0 +1,7 @@
+{
+  "options": [
+    { "key": "1", "content": "button1" },
+    { "key": "2", "content": "button2" },
+    { "key": "3", "content": "button3" }
+  ]
+}

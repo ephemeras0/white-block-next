@@ -3,7 +3,7 @@ import MarkdownIt from 'markdown-it'
 import mdContainer from 'markdown-it-container'
 import { readFileSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { COMPONENT_PROPERTIES } from '../../config/data'
+import { COMPONENT_PROPERTIES } from '../../config/components'
 
 const ROOT_PATH_RELATIVE = '../../../..'
 const COMPONENTS_PATH_RELATIVE = `${ROOT_PATH_RELATIVE}/packages/core/src/components`
@@ -112,11 +112,11 @@ export default (md: MarkdownIt) => {
             if (COMPONENT_PROPERTIES[item].includes(component)) {
               resolveProps = {
                 ...resolveProps,
-                ...CommonExportData[`${item}Props`]
+                ...CommonExportData[item]
               }
               resolveDefaultProps = {
                 ...resolveDefaultProps,
-                ...(CommonExportData[`${item}DefaultProps`] || {}),
+                ...(CommonExportData[`${item}Default`] || {}),
                 ...contentProps
               }
             }

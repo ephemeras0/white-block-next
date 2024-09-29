@@ -1,5 +1,6 @@
+export * from './style'
 export * from './data'
 export * from './dom'
 export * from './model'
 export * from './node'
-export * from './style'
+export * from './emit'

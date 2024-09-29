@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "type": "plain",
+      "options": [
+        { "key": "1", "content": "button1", "href": "https://kythuen.github.io/white-block" },
+        { "key": "2", "content": "button2", "href": "https://kythuen.github.io/white-block" },
+        { "key": "3", "content": "button3", "href": "https://kythuen.github.io/white-block" }
+      ]
+    }
+  ],
+  "configs": [
+    {
+      "name": "tag",
+      "type": "select",
+      "default": "button",
+      "options": [
+        { "label": "button", "value": "button" },
+        { "label": "div", "value": "div" },
+        { "label": "a", "value": "a" },
+        { "label": "span", "value": "span" }
+      ]
+    },
+    {
+      "name": "disabled",
+      "type": "toggle",
+      "default": false
+    }
+  ]
+}

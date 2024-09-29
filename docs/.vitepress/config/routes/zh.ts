@@ -7,7 +7,9 @@ const SidebarGuides: DefaultTheme.NavItemWithLink[] = [
 ]
 
 const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
-  { text: '按钮', link: '/components/button' }
+  { text: '按钮', link: '/components/button' },
+  { text: '按钮组', link: '/components/button-group' },
+  { text: '输入框', link: '/components/input' }
 ]
 
 export const SIDEBAR: DefaultTheme.SidebarItem[] = [
@@ -16,8 +18,8 @@ export const SIDEBAR: DefaultTheme.SidebarItem[] = [
 ]
 
 export const NAV = [
-  { text: '指南', link: '/guide/' },
-  { text: '组件', link: '/guide/overview' },
+  { text: '指南', link: '/zh/guide/' },
+  { text: '组件', link: '/zh/guide/overview' },
   { text: '演练场', link: PLAYGROUND_URL },
   { text: '主题', link: '/themes' }
 ]

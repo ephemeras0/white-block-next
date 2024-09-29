@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "type": "plain",
+      "options": [
+        { "key": "1", "content": "button1" },
+        { "key": "2", "content": "button2" },
+        { "key": "3", "content": "button3" }
+      ]
+    }
+  ],
+  "configs": [
+    {
+      "name": "shape",
+      "type": "select",
+      "default": "rectangle",
+      "options": [
+        { "label": "rectangle", "value": "rectangle" },
+        { "label": "round", "value": "round" }
+      ]
+    },
+    {
+      "name": "disabled",
+      "type": "toggle",
+      "default": false
+    }
+  ]
+}

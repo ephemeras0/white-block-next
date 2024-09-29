@@ -4,7 +4,7 @@ import { getComponentSizeStyles } from '@/utils'
 
 interface UseClassesOptions<T = string> {
   valueProps?: T[]
-  stateProps?: T[]
+  nameProps?: T[]
   nameValueProps?: T[]
 }
 export function useClasses<T = string>(options: UseClassesOptions<T>) {
@@ -14,13 +14,13 @@ export function useClasses<T = string>(options: UseClassesOptions<T>) {
 
   return computed(() => {
     const result = [name]
-    const { valueProps = [], stateProps = [], nameValueProps = [] } = options
+    const { valueProps = [], nameProps = [], nameValueProps = [] } = options
     for (const item of valueProps) {
       if (instanceProps[item]) {
         result.push(`${name}--${instanceProps[item]}`)
       }
     }
-    for (const item of stateProps) {
+    for (const item of nameProps) {
       if (instanceProps[item]) {
         result.push(`${name}--${item}`)
       }

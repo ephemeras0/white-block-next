@@ -1,0 +1,25 @@
+{
+  "components": [{ "placeholder": "align" }],
+  "configs": [
+    {
+      "name": "loading",
+      "type": "toggle",
+      "default": false
+    },
+    {
+      "name": "disabled",
+      "type": "toggle",
+      "default": false
+    },
+    {
+      "name": "align",
+      "type": "select",
+      "default": "start",
+      "options": [
+        { "label": "start", "value": "start" },
+        { "label": "center", "value": "center" },
+        { "label": "end", "value": "end" }
+      ]
+    }
+  ]
+}

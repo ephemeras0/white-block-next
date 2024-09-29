@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "options": [
+        { "key": "1", "content": "button1" },
+        { "key": "2", "content": "button2" },
+        { "key": "3", "content": "button3" }
+      ]
+    }
+  ],
+  "configs": [
+    {
+      "name": "type",
+      "type": "select",
+      "default": "plain",
+      "options": [
+        { "label": "base", "value": "base" },
+        { "label": "plain", "value": "plain" },
+        { "label": "dashed", "value": "dashed" },
+        { "label": "outline", "value": "outline" },
+        { "label": "ghost", "value": "ghost" },
+        { "label": "link", "value": "link" },
+        { "label": "text", "value": "text" }
+      ]
+    },
+    {
+      "name": "theme",
+      "type": "select",
+      "default": "primary",
+      "options": [
+        { "label": "default", "value": "default" },
+        { "label": "primary", "value": "primary" },
+        { "label": "success", "value": "success" },
+        { "label": "warning", "value": "warning" },
+        { "label": "danger", "value": "danger" }
+      ]
+    },
+    {
+      "name": "disabled",
+      "type": "toggle",
+      "default": false
+    }
+  ]
+}

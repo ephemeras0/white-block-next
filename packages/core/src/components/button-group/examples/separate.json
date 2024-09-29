@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "type": "primary",
+      "options": [
+        { "key": "1", "content": "button1" },
+        { "key": "2", "content": "button2" },
+        { "key": "3", "content": "button3" }
+      ]
+    }
+  ],
+  "configs": [
+    {
+      "name": "gap",
+      "type": "select",
+      "default": "md",
+      "options": [
+        { "label": "xs", "value": "xs" },
+        { "label": "sm", "value": "sm" },
+        { "label": "md", "value": "md" },
+        { "label": "lg", "value": "lg" },
+        { "label": "xl", "value": "xl" }
+      ]
+    },
+    {
+      "name": "separate",
+      "type": "toggle",
+      "default": true
+    }
+  ]
+}

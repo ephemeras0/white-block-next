@@ -12,7 +12,7 @@ import { posix, resolve } from 'node:path'
 import { pascal } from 'radash'
 import { PageData } from 'vitepress'
 import CoverageData from '../../../coverage.json'
-import { COMPONENT_PROPERTIES } from '../../config/data'
+import { COMPONENT_PROPERTIES } from '../../config/components'
 import { getCommonAPI } from './common'
 import { getEmitsHeader, getPropsHeader } from './constant'
 

@@ -22,7 +22,7 @@
     v-bind="$attrs"
     :class="propsClasses"
     :style="propsStyles"
-    @click="$emit('click', $event)"
+    @click="propEmits('click', $event)"
   >
     <div
       v-if="prefix || $slots.prefix || loading"
@@ -41,8 +41,14 @@
 </template>
 
 <script setup lang="ts">
-import { useClasses, useNode, useNodes, useStyles } from '@/composables'
 import Color from 'color'
+import {
+  useClasses,
+  useNode,
+  useNodes,
+  useStyles,
+  usePropEmits
+} from '@/composables'
 import { DefaultProps, Emits, Props, Slots } from './config'
 
 defineOptions({ name: 'WbButton' })
@@ -53,7 +59,7 @@ defineSlots<Slots>()
 
 const propsClasses = useClasses<keyof Props>({
   valueProps: ['type', 'theme', 'shape', 'size'],
-  stateProps: ['block', 'loading', 'disabled']
+  nameProps: ['block', 'loading', 'disabled']
 })
 const propsStyles = useStyles(() => {
   if (props.color) {
@@ -72,4 +78,6 @@ const ContentNode = () => renderNodes(['content', 'default'])
 const renderNode = useNode()
 const PrefixNode = () => renderNode('prefix')
 const SuffixNode = () => renderNode('suffix')
+
+const propEmits = usePropEmits()
 </script>

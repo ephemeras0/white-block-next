@@ -73,6 +73,7 @@ export type Value<T = any> = {
   onChange?: (payload: T) => void
 }
 
+/* ----------------------------------- emits ----------------------------------- */
 export type ValueEmits<T = any> = {
   /**
    * Event emitted when ${COMPONENT_NAME} value change.

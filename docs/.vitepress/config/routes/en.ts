@@ -7,7 +7,9 @@ const SidebarGuides: DefaultTheme.NavItemWithLink[] = [
 ]
 
 const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
-  { text: 'Button', link: '/components/button' }
+  { text: 'Button', link: '/components/button' },
+  { text: 'ButtonGroup', link: '/components/button-group' },
+  { text: 'Input', link: '/components/input' }
 ]
 
 export const SIDEBAR: DefaultTheme.SidebarItem[] = [

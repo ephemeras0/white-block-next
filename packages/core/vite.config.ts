@@ -45,7 +45,7 @@ export default defineConfig({
     environment: 'jsdom',
     coverage: {
       provider: 'istanbul',
-      include: ['src', 'src/**/*.tsx'],
+      include: ['src'],
       exclude: [
         'src/index.ts',
         'src/components/index.ts',

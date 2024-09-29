@@ -72,7 +72,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { withBase, useData } from 'vitepress'
-import { COMPONENTS_CATEGORY } from '~/config/data'
+import { COMPONENTS_CATEGORY } from '~/config/components'
 
 defineOptions({ name: 'WBComponentOverview' })
 
