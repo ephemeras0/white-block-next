@@ -1,3 +1,5 @@
 export * from './button'
 export * from './button-group'
 export * from './input'
+export * from './space'
+export * from './toggle'

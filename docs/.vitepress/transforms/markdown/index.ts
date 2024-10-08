@@ -51,6 +51,7 @@ export default (md: MarkdownIt) => {
         const sourceFileToken = tokens[idx + 2] || {}
 
         let contentProps: any = null
+        let fileType: string = ''
         let sourceCode = ''
         const propOptions: any = {
           input: [],
@@ -72,21 +73,26 @@ export default (md: MarkdownIt) => {
             const data = readFileSync(dataFile, 'utf-8')
             contentProps = JSON.parse(data) || {}
           }
+          fileType = 'url'
         } else if (existsSync(resolve(COMPONENT_ROOT, 'examples/usage.json'))) {
           const data = readFileSync(
             resolve(COMPONENT_ROOT, 'examples/usage.json'),
             'utf-8'
           )
           contentProps = JSON.parse(data) || {}
+          fileType = 'json'
         } else if (existsSync(resolve(COMPONENT_ROOT, 'examples/usage.tsx'))) {
           // const data = readFileSync(resolve(usageRoot, 'usage.json'), 'utf-8')
           contentProps = {}
+          fileType = 'tsx'
         }
         if (existsSync(resolve(COMPONENT_ROOT, 'examples/usage.vue'))) {
           sourceCode = readFileSync(
             resolve(COMPONENT_ROOT, 'examples/usage.vue'),
             'utf-8'
           )
+          contentProps = {}
+          fileType = 'vue'
         }
 
         if (contentProps) {
@@ -175,6 +181,7 @@ export default (md: MarkdownIt) => {
 
         return `<UsageBlock
                   component="${component}"
+                  fileType="${fileType}"
                   options="${encodeURIComponent(JSON.stringify(propOptions))}"
                   data="${encodeURIComponent(JSON.stringify(contentProps))}"
                   source="${encodeURIComponent(sourceCode)}"

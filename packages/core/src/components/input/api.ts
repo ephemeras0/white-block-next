@@ -1,5 +1,5 @@
-import { InputType, InputAlign } from './types'
 import { XNode as VNode } from '../types'
+import { InputAlign, InputShape, InputType } from './types'
 
 export type Slots = {
   /*
@@ -29,19 +29,24 @@ export type Emits = {
 
 export type Props = {
   /*
+   * Placeholder text of input area.
+   */
+  placeholder?: string
+  /*
    * Display style of the input.
    * 'base' | 'ghost'
    */
   type?: InputType
   /*
-   * Placeholder text of input area.
-   */
-  placeholder?: string
-  /*
    * Content Align.
    * 'start' | 'center' | 'end'
    */
   align?: InputAlign
+  /*
+   * Shape of the input.
+   * 'rectangle' |'round'
+   */
+  shape?: InputShape
   /*
    * Maximum length allowed of input text.
    */
@@ -63,8 +68,7 @@ export type Props = {
 export default {
   type: 'base',
   placeholder: '',
-  clearable: true,
+  shape: 'rectangle',
   maxLength: -1,
-  align: 'start',
-  readonly: false
+  align: 'start'
 } as Props

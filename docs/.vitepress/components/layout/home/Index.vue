@@ -85,7 +85,7 @@
             </template>
           </wb-button>
           <wb-input
-            w="56"
+            w="58"
             size="lg"
             text="$wb-color-foreground"
             readonly

@@ -19,7 +19,7 @@
           justify="between"
         >
           <span>{{ component }}</span>
-          <div v-if="!isUsageFile" flex>
+          <div flex>
             <wb-button type="ghost" theme="default" @click="resetChange">
               <i i="tdesign-refresh" />
             </wb-button>
@@ -45,9 +45,10 @@
                     >
                       {{ item.name }}
                       <wb-input
-                        w="32"
                         :default-value="item.value"
+                        w="32"
                         size="sm"
+                        align="end"
                         @change="(e: any) => changeProps(item.name, e)"
                       />
                     </div>
@@ -198,9 +199,10 @@
               >
                 {{ item.name }}
                 <wb-input
-                  w="32"
                   :default-value="propsData[item.name] ?? item.value"
+                  w="32"
                   size="sm"
+                  align="end"
                   @change="(e: any) => changeProps(item.name, e)"
                 />
               </div>
@@ -220,10 +222,11 @@
               >
                 {{ item.name }}
                 <wb-input-number
-                  w="32"
                   :default-value="propsData[item.name] ?? item.value"
+                  w="32"
                   theme="inner"
                   size="sm"
+                  align="end"
                   @change="(e: any) => changeProps(item.name, e)"
                 />
               </div>
@@ -317,6 +320,10 @@ const props = defineProps({
   contentHeight: {
     type: String,
     default: ''
+  },
+  fileType: {
+    type: String,
+    default: ''
   }
 })
 const { lang } = useData()
@@ -327,10 +334,10 @@ const boxHeight = props.contentHeight
   ? JSON.parse(decodeURIComponent(props.contentHeight))
   : 24
 
-const isUsageFile = decodeURIComponent(props.data) === 'null'
+const fileType = decodeURIComponent(props.fileType)
 
 let UsageComponent: any = null
-if (isUsageFile) {
+if (fileType === 'vue') {
   const components: Record<string, any> = import.meta.glob(
     '../../../../packages/core/src/components/*/examples/usage.vue'
   )
@@ -352,7 +359,7 @@ if (isUsageFile) {
     )?.default ?? null
 }
 
-const isTSXProps = decodeURIComponent(props.data) === '{}'
+const isTSXProps = props.fileType === 'tsx'
 const TSXProps = ref({})
 if (isTSXProps) {
   TSXProps.value =
@@ -416,7 +423,7 @@ const compCode = computed(() => {
       semi: false
     })}</${tag}>`
   }
-  if (isUsageFile || isTSXProps) {
+  if (props.fileType === 'vue' || isTSXProps) {
     const name = props.component
     return formatCode(
       decodeURIComponent(props.source).replace(

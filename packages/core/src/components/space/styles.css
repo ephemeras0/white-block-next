@@ -1,0 +1,33 @@
+/* ----------------------------------- size ----------------------------------- */
+.wb-space--xs {
+  --wb-space-gap: var(--wb-comp-padding-xs);
+}
+.wb-space--sm {
+  --wb-space-gap: var(--wb-comp-padding-sm);
+}
+.wb-space--md {
+  --wb-space-gap: var(--wb-comp-padding-md);
+}
+.wb-space--lg {
+  --wb-space-gap: var(--wb-comp-padding-lg);
+}
+.wb-space--xl {
+  --wb-space-gap: var(--wb-comp-padding-xl);
+}
+
+/* -------------------------------- direction --------------------------------- */
+
+.wb-space--vertical {
+  flex-direction: column;
+}
+
+/* ---------------------------------- align ---------------------------------- */
+.wb-space--start {
+  --wb-space-align: start;
+}
+.wb-space--center {
+  --wb-space-align: center;
+}
+.wb-space--end {
+  --wb-space-align: end;
+}

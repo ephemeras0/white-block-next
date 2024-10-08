@@ -5,4 +5,5 @@ examples
 
 !docs/.vitepress
 docs/.vitepress/cache/deps/
+packages/cli/files/
 

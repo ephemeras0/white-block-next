@@ -1,0 +1,48 @@
+.wb-toggle {
+  font-size: var(--wb-toggle-font-size);
+  transition: var(--transition-ease);
+}
+
+
+/* -------------------------------------------- size -------------------------------------------- */
+.wb-toggle--xs {
+  --wb-toggle-height: var(--comp-height-xs);
+  --wb-toggle-padding: var(--comp-padding-xs);
+  --wb-toggle-font-size: var(--comp-font-size-xs);
+  --wb-toggle-radius: var(--comp-radius-xs);
+  --wb-toggle-gap: var(--comp-content-gap-xs);
+}
+.wb-toggle--sm {
+  --wb-toggle-height: var(--comp-height-sm);
+  --wb-toggle-padding: var(--comp-padding-sm);
+  --wb-toggle-font-size: var(--comp-font-size-sm);
+  --wb-toggle-radius: var(--comp-radius-sm);
+  --wb-toggle-gap: var(--comp-content-gap-sm);
+}
+.wb-toggle--md {
+  --wb-toggle-height: var(--comp-height-md);
+  --wb-toggle-padding: var(--comp-padding-md);
+  --wb-toggle-font-size: var(--comp-font-size-md);
+  --wb-toggle-radius: var(--comp-radius-md);
+  --wb-toggle-gap: var(--comp-content-gap-md);
+}
+.wb-toggle--lg {
+  --wb-toggle-height: var(--comp-height-lg);
+  --wb-toggle-padding: var(--comp-padding-lg);
+  --wb-toggle-font-size: var(--comp-font-size-lg);
+  --wb-toggle-radius: var(--comp-radius-lg);
+  --wb-toggle-gap: var(--comp-content-gap-lg);
+}
+.wb-toggle--xl {
+  --wb-toggle-height: var(--comp-height-xl);
+  --wb-toggle-padding: var(--comp-padding-xl);
+  --wb-toggle-font-size: var(--comp-font-size-xl);
+  --wb-toggle-radius: var(--comp-radius-xl);
+  --wb-toggle-gap: var(--comp-content-gap-xl);
+}
+
+/* -------------------------------------------- theme -------------------------------------------- */
+/* .wb-toggle--primary {
+  --wb-toggle-vc-main: var(--wb-vc-primary);
+  --wb-toggle-color-main: var(--wb-color-primary);
+} */

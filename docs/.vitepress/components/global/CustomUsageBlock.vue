@@ -51,9 +51,10 @@
                     >
                       {{ item.name }}
                       <wb-input
-                        w="32"
                         :default-value="item.value"
+                        w="32"
                         size="sm"
+                        align="end"
                         @change="(e: any) => changeProps(item.name, e)"
                       />
                     </div>
@@ -73,10 +74,11 @@
                     >
                       {{ item.name }}
                       <wb-input-number
-                        w="32"
                         :default-value="item.value"
+                        w="32"
                         theme="inner"
                         size="sm"
+                        align="end"
                         @change="(e: any) => changeProps(item.name, e)"
                       />
                     </div>
@@ -226,11 +228,11 @@
               >
                 {{ item.name }}
                 <wb-input
+                  :default-value="item.value"
                   w="32"
                   theme="ghost"
-                  align="end"
-                  :default-value="item.value"
                   size="sm"
+                  align="end"
                   @change="(e: any) => changeProps(item.name, e)"
                 />
               </div>
@@ -250,10 +252,11 @@
               >
                 {{ item.name }}
                 <wb-input-number
-                  w="32"
                   :default-value="item.value"
+                  w="32"
                   theme="inner"
                   size="sm"
+                  align="end"
                   @change="(e: any) => changeProps(item.name, e)"
                 />
               </div>

@@ -1,0 +1,58 @@
+{
+  "name": "@white-block/cli",
+  "version": "0.0.1",
+  "description": "command line tool for white-block",
+  "keywords": [
+    "white-block",
+    "command line tool"
+  ],
+  "author": {
+    "name": "ephemeras",
+    "email": "ephemeras@qq.com"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "files"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./*": "./dist/*"
+  },
+  "bin": {
+    "wb": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsup --watch src",
+    "build": "tsup",
+    "test": "echo \"@white-block/cli ignore\"",
+    "test:coverage": "echo \"@white-block/cli coverage ignore\""
+  },
+  "dependencies": {
+    "@ephemeras/compiler": "^0.0.2",
+    "@ephemeras/file": "^0.0.2",
+    "@ephemeras/fs": "^0.0.1",
+    "@ephemeras/profile": "^0.0.1",
+    "cac": "^6.7.14",
+    "gradient-string": "^2.0.2",
+    "i18next": "^23.5.1",
+    "minimatch": "^9.0.4",
+    "nunjucks": "^3.2.4",
+    "ora": "^7.0.1",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "radash": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/gradient-string": "^1.1.4",
+    "@types/nunjucks": "^3.2.6",
+    "@types/prompts": "^2.4.7"
+  }
+}

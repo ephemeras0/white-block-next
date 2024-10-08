@@ -1,0 +1,48 @@
+.wb-{{ COMPONENT }} {
+  font-size: var(--wb-{{ COMPONENT }}-font-size);
+  transition: var(--transition-ease);
+}
+{% if COMPONENT_PROPERTIES.includes('Size') %}
+
+/* -------------------------------------------- size -------------------------------------------- */
+.wb-{{ COMPONENT }}--xs {
+  --wb-{{ COMPONENT }}-height: var(--comp-height-xs);
+  --wb-{{ COMPONENT }}-padding: var(--comp-padding-xs);
+  --wb-{{ COMPONENT }}-font-size: var(--comp-font-size-xs);
+  --wb-{{ COMPONENT }}-radius: var(--comp-radius-xs);
+  --wb-{{ COMPONENT }}-gap: var(--comp-content-gap-xs);
+}
+.wb-{{ COMPONENT }}--sm {
+  --wb-{{ COMPONENT }}-height: var(--comp-height-sm);
+  --wb-{{ COMPONENT }}-padding: var(--comp-padding-sm);
+  --wb-{{ COMPONENT }}-font-size: var(--comp-font-size-sm);
+  --wb-{{ COMPONENT }}-radius: var(--comp-radius-sm);
+  --wb-{{ COMPONENT }}-gap: var(--comp-content-gap-sm);
+}
+.wb-{{ COMPONENT }}--md {
+  --wb-{{ COMPONENT }}-height: var(--comp-height-md);
+  --wb-{{ COMPONENT }}-padding: var(--comp-padding-md);
+  --wb-{{ COMPONENT }}-font-size: var(--comp-font-size-md);
+  --wb-{{ COMPONENT }}-radius: var(--comp-radius-md);
+  --wb-{{ COMPONENT }}-gap: var(--comp-content-gap-md);
+}
+.wb-{{ COMPONENT }}--lg {
+  --wb-{{ COMPONENT }}-height: var(--comp-height-lg);
+  --wb-{{ COMPONENT }}-padding: var(--comp-padding-lg);
+  --wb-{{ COMPONENT }}-font-size: var(--comp-font-size-lg);
+  --wb-{{ COMPONENT }}-radius: var(--comp-radius-lg);
+  --wb-{{ COMPONENT }}-gap: var(--comp-content-gap-lg);
+}
+.wb-{{ COMPONENT }}--xl {
+  --wb-{{ COMPONENT }}-height: var(--comp-height-xl);
+  --wb-{{ COMPONENT }}-padding: var(--comp-padding-xl);
+  --wb-{{ COMPONENT }}-font-size: var(--comp-font-size-xl);
+  --wb-{{ COMPONENT }}-radius: var(--comp-radius-xl);
+  --wb-{{ COMPONENT }}-gap: var(--comp-content-gap-xl);
+}{% endif %}
+
+/* -------------------------------------------- theme -------------------------------------------- */
+/* .wb-{{ COMPONENT }}--primary {
+  --wb-{{ COMPONENT }}-vc-main: var(--wb-vc-primary);
+  --wb-{{ COMPONENT }}-color-main: var(--wb-color-primary);
+} */
