@@ -7,7 +7,7 @@ describe('# Space', () => {
   describe('## Base', () => {
     it('### default config', () => {
       const wrapper = mount(Space)
-      expect(wrapper.classes()).toEqual(['wb-'])
+      expect(wrapper.classes()).toContain('wb-space')
       // expect(wrapper.props()).toEqual({})
       expect(wrapper.element).toMatchSnapshot()
     })

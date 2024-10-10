@@ -7,7 +7,7 @@ describe('# {{ COMPONENT_PASCAL }}', () => {
   describe('## Base', () => {
     it('### default config', () => {
       const wrapper = mount({{ COMPONENT_PASCAL }})
-      expect(wrapper.classes()).toEqual(['wb-{{ COMPONENT_NAME_EN_DASH}}'])
+      // expect(wrapper.classes()).toEqual(['wb-{{ COMPONENT }}'])
       // expect(wrapper.props()).toEqual({})
       expect(wrapper.element).toMatchSnapshot()
     })

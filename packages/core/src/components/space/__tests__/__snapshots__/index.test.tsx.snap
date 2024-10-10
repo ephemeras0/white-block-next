@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`# Space > ## Base > ### default config 1`] = `
+<div
+  class="wb-space wb-space--start wb-space--md"
+  flex="~ row wrap"
+  gap="$wb-space-gap"
+  items="$wb-space-align"
+>
+  <!---->
+</div>
+`;

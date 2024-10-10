@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`# Toggle > ## Base > ### default config 1`] = `
+<div
+  class="wb-toggle"
+>
+   Toggle 
+  <contentnode />
+</div>
+`;

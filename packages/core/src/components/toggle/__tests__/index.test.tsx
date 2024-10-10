@@ -7,7 +7,7 @@ describe('# Toggle', () => {
   describe('## Base', () => {
     it('### default config', () => {
       const wrapper = mount(Toggle)
-      expect(wrapper.classes()).toEqual(['wb-'])
+      expect(wrapper.classes()).toContain('wb-toggle')
       // expect(wrapper.props()).toEqual({})
       expect(wrapper.element).toMatchSnapshot()
     })

@@ -54,7 +54,7 @@
                         :default-value="item.value"
                         w="32"
                         size="sm"
-                        align="end"
+                        clearable
                         @change="(e: any) => changeProps(item.name, e)"
                       />
                     </div>
@@ -78,7 +78,7 @@
                         w="32"
                         theme="inner"
                         size="sm"
-                        align="end"
+                        clearable
                         @change="(e: any) => changeProps(item.name, e)"
                       />
                     </div>
@@ -232,7 +232,7 @@
                   w="32"
                   theme="ghost"
                   size="sm"
-                  align="end"
+                  clearable
                   @change="(e: any) => changeProps(item.name, e)"
                 />
               </div>
@@ -256,7 +256,7 @@
                   w="32"
                   theme="inner"
                   size="sm"
-                  align="end"
+                  clearable
                   @change="(e: any) => changeProps(item.name, e)"
                 />
               </div>
