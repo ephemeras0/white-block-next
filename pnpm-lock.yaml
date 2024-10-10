@@ -169,8 +169,8 @@ importers:
         specifier: ^0.0.2
         version: 0.0.2(chokidar@3.6.0)
       '@ephemeras/file':
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.8
+        version: 0.0.8
       '@ephemeras/fs':
         specifier: ^0.0.1
         version: 0.0.1
@@ -659,8 +659,8 @@ packages:
   '@ephemeras/compiler@0.0.2':
     resolution: {integrity: sha512-0Cw9t9aSxJ+XXZlw9S7Bv5FAFSUARUVIh18gzIIS8UL0jFb9Xvh/zsonN8Wuli4t4k9KRanai/ak/UUmHo0ZGg==}
 
-  '@ephemeras/file@0.0.2':
-    resolution: {integrity: sha512-RSvYmnVWIxkbwoEVIAiRsO6Yf/ioR9fxIr+7SdbXBs6VigagkB8U3xDA0nnrSBpbt1vCcqdhQjcWyC4fpfKnJw==}
+  '@ephemeras/file@0.0.8':
+    resolution: {integrity: sha512-T5nUew9xikkrtzKWkQt7XNmEiC8fLoDQ/KY2wxqEDRbgGncAvDaCcaWyek+kF0+PG+0wgKkKJjJ1pjxSlXw2jA==}
 
   '@ephemeras/fs@0.0.1':
     resolution: {integrity: sha512-JBymyN3I/1sThlKv5xCSa3hSN+W3tXuVZ+4OHhkDg6ussiPejGOsRcLkOhT4hIWZPHqGRXAjyyy1SD2g4QARBg==}
@@ -5318,7 +5318,7 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@ephemeras/file@0.0.2':
+  '@ephemeras/file@0.0.8':
     dependencies:
       '@babel/generator': 7.25.6
       '@babel/parser': 7.25.6

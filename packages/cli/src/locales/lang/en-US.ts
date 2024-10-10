@@ -20,10 +20,11 @@ const TIP = {
   ADD_COMPONENT_FILES: 'add component files',
   REGISTER_COMPONENT: 'register component',
   ADD_COMPONENT_DOCS: 'add component docs',
-  ADD_COMPONENT_ROUTER: 'add component router',
+  ADD_COMPONENT_ROUTES: 'add component routes',
   REMOVE_COMPONENT_FILES: 'remove component files',
   UNREGISTER_COMPONENT: 'unregister component',
-  REMOVE_COMPONENT_DOCS: 'remove component document'
+  REMOVE_COMPONENT_DOCS: 'remove component document',
+  REMOVE_COMPONENT_ROUTES: 'remove component routes'
 }
 
 const TITLE = {

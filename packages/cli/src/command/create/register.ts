@@ -29,13 +29,14 @@ export default async function (name: string, data: MetaData) {
   })
   await writeFile(componentsFile, formatContent, { encoding: 'utf-8' })
 
-  console.log(component)
-  const configFile = new File(resolve(PROJECT_ROOT, COMPONENT_CONFIG_FILE))
+  const configFile = new File(resolve(PROJECT_ROOT, COMPONENT_CONFIG_FILE), {
+    generator: { retainLines: true }
+  })
   if (data.COMPONENTS_CATEGORY) {
     configFile
       .get('COMPONENTS_CATEGORY')
       .get(data.COMPONENTS_CATEGORY)
-      .add(component, true)
+      .set(9999, component)
   }
   if (data.COMPONENT_PROPERTIES.length) {
     data.COMPONENT_PROPERTIES.forEach((item: any) => {
@@ -43,7 +44,7 @@ export default async function (name: string, data: MetaData) {
         .root()
         .get('COMPONENT_PROPERTIES')
         .get(item)
-        .add(component, true)
+        .set(9999, component)
     })
   }
   configFile.save()

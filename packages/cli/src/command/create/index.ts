@@ -16,7 +16,7 @@ import { answerPrompts } from '../../utils'
 import addComponentDocs from './docs'
 import createComponentFiles from './files'
 import registerComponent from './register'
-import addComponentRouter from './router'
+import addComponentRoutes from './routes'
 
 export default async function create(component: string, lang: 'en' | 'zh') {
   const componentInfo = await answerPrompts<ComponentInfoPromptResult>(
@@ -71,9 +71,9 @@ export default async function create(component: string, lang: 'en' | 'zh') {
   await addComponentDocs(COMPONENT_NAME, answerData)
   spinner.succeed(TEXT.TIP_ADD_COMPONENT_DOCS)
 
-  spinner = ora(`${TEXT.TIP_ADD_COMPONENT_ROUTER}...`).start()
-  await addComponentRouter(COMPONENT_NAME, answerData)
-  spinner.succeed(TEXT.TIP_ADD_COMPONENT_ROUTER)
+  spinner = ora(`${TEXT.TIP_ADD_COMPONENT_ROUTES}...`).start()
+  await addComponentRoutes(COMPONENT_NAME, answerData)
+  spinner.succeed(TEXT.TIP_ADD_COMPONENT_ROUTES)
 
   console.log()
   console.log(TEXT.TIP_SUCCESS_DONE_ADD)

@@ -6,6 +6,7 @@ import { answerPrompts } from '../../utils'
 import removeComponentDocs from './docs'
 import removeComponentFiles from './files'
 import unregisterComponent from './register'
+import removeComponentRoutes from './routes'
 
 export default async function remove(component: string) {
   const { COMPONENT_FEATURES } = await answerPrompts<{
@@ -31,6 +32,11 @@ export default async function remove(component: string) {
     spinner = ora(`${TEXT.TIP_REMOVE_COMPONENT_DOCS}...`).start()
     await removeComponentDocs(COMPONENT_DASH)
     spinner.succeed(TEXT.TIP_REMOVE_COMPONENT_DOCS)
+  }
+  if (COMPONENT_FEATURES.includes('routes')) {
+    spinner = ora(`${TEXT.TIP_REMOVE_COMPONENT_ROUTES}...`).start()
+    await removeComponentRoutes(COMPONENT_DASH)
+    spinner.succeed(TEXT.TIP_REMOVE_COMPONENT_ROUTES)
   }
 
   console.log()

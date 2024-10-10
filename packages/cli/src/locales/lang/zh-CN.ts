@@ -19,10 +19,11 @@ const TIP = {
   ADD_COMPONENT_FILES: '添加组件源文件',
   REGISTER_COMPONENT: '注册组件',
   ADD_COMPONENT_DOCS: '添加组件文档',
-  ADD_COMPONENT_ROUTER: '添加组件路由',
+  ADD_COMPONENT_ROUTES: '添加组件菜单',
   REMOVE_COMPONENT_FILES: '移除组件源文件',
   UNREGISTER_COMPONENT: '注销组件',
-  REMOVE_COMPONENT_DOCS: '移除组件文档'
+  REMOVE_COMPONENT_DOCS: '移除组件文档',
+  REMOVE_COMPONENT_ROUTES: '移除组件菜单'
 }
 
 const TITLE = {

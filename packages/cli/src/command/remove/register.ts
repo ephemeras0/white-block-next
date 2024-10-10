@@ -32,14 +32,24 @@ export default async function (component: string) {
   )
   await writeFile(componentsFile, formatContent, { encoding: 'utf-8' })
 
-  const configFile = new File(resolve(PROJECT_ROOT, COMPONENT_CONFIG_FILE))
+  const configFile = new File(resolve(PROJECT_ROOT, COMPONENT_CONFIG_FILE), {
+    generator: { retainLines: true }
+  })
 
   ;['Base', 'Form', 'Data'].forEach((item: any) => {
-    configFile.root().get('COMPONENTS_CATEGORY').get(item)?.remove(component)
+    const data = configFile.root().get('COMPONENTS_CATEGORY').get(item)
+    const list = data.json()
+    const index = list.findIndex((i: string) => i === component)
+    data.delete(index)
+    configFile.save()
   })
   ;['Size', 'Loading', 'Disabled', 'Readonly', 'Clearable', 'Value'].forEach(
     (item: any) => {
-      configFile.root().get('COMPONENT_PROPERTIES').get(item)?.remove(component)
+      const data = configFile.root().get('COMPONENT_PROPERTIES').get(item)
+      const list = data.json()
+      const index = list.findIndex((i: string) => i === component)
+      data.delete(index)
+      configFile.save()
     }
   )
   configFile.save()

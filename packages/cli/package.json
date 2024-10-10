@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@ephemeras/compiler": "^0.0.2",
-    "@ephemeras/file": "^0.0.2",
+    "@ephemeras/file": "^0.0.8",
     "@ephemeras/fs": "^0.0.1",
     "@ephemeras/profile": "^0.0.1",
     "cac": "^6.7.14",

@@ -125,7 +125,8 @@ export function removeComponentPrompt() {
       choices: [
         { title: 'Remove files', value: 'file' },
         { title: 'Unregister component', value: 'register' },
-        { title: 'Remove document', value: 'doc' }
+        { title: 'Remove document', value: 'doc' },
+        { title: 'Remove routes', value: 'routes' }
       ]
     }
   ] as PromptObject[]
