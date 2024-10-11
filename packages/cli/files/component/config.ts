@@ -1,7 +1,6 @@
 import {
   {% for item in COMPONENT_PROPERTIES %}{{item}},
-  {% endfor %}{% for item in COMPONENT_PROPERTIES %}{% if item !== 'Value' %}{{item}}Default,
-  {% endif %}{% endfor %}
+  {% endfor %}{% for item in COMPONENT_PROPERTIES %}{% if item !== 'Value' %}{{item}}Default,{% endif %}{% endfor %}
 } from '../api'
 import XDefaultProps, { Emits as XEmits, Props as XProps, Slots as XSlot } from './api'
 

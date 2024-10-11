@@ -1,45 +1,58 @@
 ---
 component: toggle
-category: Form
+category: form
 
 title: Toggle
-description: Element used to toggle a state
+description: Element used to toggle a state.
 decoration: /assets/img/components/toggle.png
 ---
 
 ## Playground
-
 :::usage toggle
 :::
 
 ## Properties
 
-### type
-
-Use property `type` to control the display style of `Toggle`.
+### color
+You can give your customize color when specific needs, it can also well displayed.
 
 :::custom-usage toggle
-toggle/examples/type.json
+toggle/examples/color.json
 :::
 
-## Slots
+### theme
+Built-in color presets provided for commonly used.
 
-<!-- Provide slots `default` and `content` to define button content.
+:::custom-usage toggle
+toggle/examples/theme.json
+:::
 
-And slots `prefix` and `suffix` around the button content.  -->
+### shape
+Sometime, you need different shapes.
 
-<!-- :::demo
-button/examples/slot.vue
-::: -->
+:::custom-usage toggle
+toggle/examples/shape.json
+:::
+
+### size
+For `form-type` elements, use property `size` to set the size of the element. 
+
+Allow `number` for pixel value or option in [`ComponentSize`](https://github.com/Kythuen/white-block/blob/main/packages/core/src/components/types.ts).
+
+:::demo
+toggle/examples/size.vue
+:::
 
 ## Events
+Click action emit event `click`.
 
-<!-- Click action emit event `click`. -->
+:::demo
+toggle/examples/event.vue
+:::
+
 
 ## Composables
-
 You can also use `Toggle` in a composable manner.
-
 :::demo
 toggle/examples/composables.vue
 :::

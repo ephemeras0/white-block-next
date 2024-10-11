@@ -4,32 +4,36 @@ export type Slots = {}
 
 export type Emits = {
   /*
-   * Click action.
+   * 点击事件。
    */
   click: [e: MouseEvent]
 }
 
 export type Props = {
   /*
-   * Display style of the toggle.
+   * 显示风格。
    * 'primary' | 'success' | 'warning' | 'danger' | 'white' | 'default'
    */
   theme?: ToggleTheme
   /*
-   * Customize color of the button. Can be `named-color`, `hex`, `rgb`, etc.
+   * 开关颜色, 支持颜色别名、十六进制、rgb 等。
    */
   color?: string
   /*
-   * Shape of the toggle.
+   * 开关形状。
    * 'rectangle' | 'round'
    */
   shape?: ToggleShape
   /*
-   * Readonly or not.
+   * 是否只读。
    */
   readonly?: boolean
   /*
-   * Click action.
+   * 开关的值, 支持语法糖 `v-model` 或 `v-model:value`。
+   */
+  value?: boolean
+  /*
+   * 点击事件。
    */
   onClick?: (e: MouseEvent) => void
 }

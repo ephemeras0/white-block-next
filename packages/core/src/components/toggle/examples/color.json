@@ -1,0 +1,35 @@
+{
+  "components": [{ "defaultValue": true }],
+  "configs": [
+    {
+      "name": "color",
+      "type": "select",
+      "default": "orange",
+      "options": [
+        { "label": "orange", "value": "orange" },
+        { "label": "#3b82f6", "value": "#3b82f6" },
+        { "label": "#84cc16cc", "value": "#84cc16cc" },
+        { "label": "rgb(192 132 252)", "value": "rgb(192 132 252)" },
+        { "label": "rgb(6 182 212 / 80%)", "value": "rgb(6 182 212 / 80%)" },
+        {
+          "label": "hsl(215.38deg, 16.32%, 46.86%)",
+          "value": "hsl(215.38deg, 16.32%, 46.86%)"
+        },
+        {
+          "label": "hwb(243.4deg, 27.45%, 10.2%)",
+          "value": "hwb(243.4deg, 27.45%, 10.2%)"
+        }
+      ]
+    },
+    {
+      "name": "loading",
+      "type": "toggle",
+      "default": false
+    },
+    {
+      "name": "disabled",
+      "type": "toggle",
+      "default": false
+    }
+  ]
+}

@@ -18,9 +18,9 @@ decoration: /assets/img/components/toggle.png
 
 结合使用属性 `type` 和 `theme` 来控制 `Toggle` 的显示样式。
 
-:::custom-usage toggle
+<!-- :::custom-usage toggle
 toggle/examples/type.json
-:::
+::: -->
 
 ## Slots
 <!-- 提供插槽 `default` 和 `content` 来定义按钮内容。
@@ -40,6 +40,6 @@ button/examples/event.vue
 
 您也可以用组合式的方式使用 `Toggle`。
 
-:::demo
+<!-- :::demo
 toggle/examples/composables.vue
-:::
+::: -->

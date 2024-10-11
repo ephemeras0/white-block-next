@@ -131,6 +131,7 @@ export default (md: MarkdownIt) => {
           for (const prop in resolveProps) {
             const data: any = resolveProps[prop]
             const description = data.comment[0].match(/\s*\*\s+(.*)/)[1] || ''
+
             if (['defaultValue', 'value', 'modelValue'].includes(prop)) continue
             // DISCUSSION: If prop defined in default, should list in Properties.
             if (Slots[prop] && DefaultProps[prop] === undefined) continue

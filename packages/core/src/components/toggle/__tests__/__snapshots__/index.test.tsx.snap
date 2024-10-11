@@ -2,9 +2,37 @@
 
 exports[`# Toggle > ## Base > ### default config 1`] = `
 <div
-  class="wb-toggle"
+  class="wb-toggle wb-toggle--primary wb-toggle--round wb-toggle--md"
+  flex="~ row"
+  h="$wb-toggle-height"
+  items="center"
 >
-   Toggle 
-  <contentnode />
+  <button
+    bg="$wb-toggle-background"
+    border="2 solid transparent"
+    cursor="disabled:not-allowed"
+    flex="inline shrink-0"
+    focus-visible="rounded-full outline outline-2 outline-offset-2 outline-$wb-color-primary"
+    h="$wb-toggle-height-content"
+    op="disabled:50"
+    rounded="$wb-toggle-radius"
+    transition="colors ease-in-out duration-200"
+    w="[calc(var(--wb-toggle-height-content)*1.8)]"
+  >
+    <span
+      flex="0"
+      pointer-events="none"
+      transition="all ease-in-out duration-200"
+    />
+    <span
+      bg="$wb-toggle-indicator"
+      h="full"
+      inline-block=""
+      pointer-events="none"
+      rounded="$wb-toggle-radius"
+      shadow="md"
+      w="[calc(var(--wb-toggle-height-content)-0.25rem)]"
+    />
+  </button>
 </div>
 `;

@@ -1,48 +1,58 @@
 .wb-toggle {
-  font-size: var(--wb-toggle-font-size);
+  --wb-toggle-background: var(--wb-color-layer);
+  --wb-toggle-indicator: var(--wb-color-background);
+  --wb-toggle-background-active: var(--wb-toggle-color);
   transition: var(--transition-ease);
 }
 
-
-/* -------------------------------------------- size -------------------------------------------- */
+/* ----------------------------------- size ----------------------------------- */
 .wb-toggle--xs {
-  --wb-toggle-height: var(--comp-height-xs);
-  --wb-toggle-padding: var(--comp-padding-xs);
-  --wb-toggle-font-size: var(--comp-font-size-xs);
-  --wb-toggle-radius: var(--comp-radius-xs);
-  --wb-toggle-gap: var(--comp-content-gap-xs);
+  --wb-toggle-height: var(--wb-comp-height-xs);
+  --wb-toggle-height-content: calc(var(--wb-comp-height-xs) - 0.25rem);
+  --wb-toggle-radius: var(--wb-comp-radius-xs);
 }
 .wb-toggle--sm {
-  --wb-toggle-height: var(--comp-height-sm);
-  --wb-toggle-padding: var(--comp-padding-sm);
-  --wb-toggle-font-size: var(--comp-font-size-sm);
-  --wb-toggle-radius: var(--comp-radius-sm);
-  --wb-toggle-gap: var(--comp-content-gap-sm);
+  --wb-toggle-height: var(--wb-comp-height-sm);
+  --wb-toggle-height-content: calc(var(--wb-comp-height-sm) - 0.375rem);
+  --wb-toggle-radius: var(--wb-comp-radius-sm);
 }
 .wb-toggle--md {
-  --wb-toggle-height: var(--comp-height-md);
-  --wb-toggle-padding: var(--comp-padding-md);
-  --wb-toggle-font-size: var(--comp-font-size-md);
-  --wb-toggle-radius: var(--comp-radius-md);
-  --wb-toggle-gap: var(--comp-content-gap-md);
+  --wb-toggle-height: var(--wb-comp-height-md);
+  --wb-toggle-height-content: calc(var(--wb-comp-height-md) - 0.625rem);
+  --wb-toggle-radius: var(--wb-comp-radius-md);
 }
 .wb-toggle--lg {
-  --wb-toggle-height: var(--comp-height-lg);
-  --wb-toggle-padding: var(--comp-padding-lg);
-  --wb-toggle-font-size: var(--comp-font-size-lg);
-  --wb-toggle-radius: var(--comp-radius-lg);
-  --wb-toggle-gap: var(--comp-content-gap-lg);
+  --wb-toggle-height: var(--wb-comp-height-lg);
+  --wb-toggle-height-content: calc(var(--wb-comp-height-lg) - 0.75rem);
+  --wb-toggle-radius: var(--wb-comp-radius-lg);
 }
 .wb-toggle--xl {
-  --wb-toggle-height: var(--comp-height-xl);
-  --wb-toggle-padding: var(--comp-padding-xl);
-  --wb-toggle-font-size: var(--comp-font-size-xl);
-  --wb-toggle-radius: var(--comp-radius-xl);
-  --wb-toggle-gap: var(--comp-content-gap-xl);
+  --wb-toggle-height: var(--wb-comp-height-xl);
+  --wb-toggle-height-content: calc(var(--wb-comp-height-xl) - 1rem);
+  --wb-toggle-radius: var(--wb-comp-radius-xl);
 }
 
-/* -------------------------------------------- theme -------------------------------------------- */
-/* .wb-toggle--primary {
-  --wb-toggle-vc-main: var(--wb-vc-primary);
-  --wb-toggle-color-main: var(--wb-color-primary);
-} */
+/* ----------------------------------- theme ----------------------------------- */
+.wb-toggle--primary {
+  --wb-toggle-color: var(--wb-color-primary);
+}
+.wb-toggle--white {
+  --wb-toggle-color: rgb(var(--wb-vc-foreground));
+}
+.wb-toggle--success {
+  --wb-toggle-color: rgb(var(--vc-success));
+}
+.wb-toggle--warning {
+  --wb-toggle-color: rgb(var(--vc-warning));
+}
+.wb-toggle--danger {
+  --wb-toggle-color: rgb(var(--vc-danger));
+}
+.wb-toggle--default {
+  --wb-toggle-color: var(--wb-color-border-base);
+}
+
+/* ----------------------------------- shape ----------------------------------- */
+.wb-toggle--round {
+  --wb-toggle-radius: calc(var(--wb-toggle-height) / 2);
+}

@@ -18,9 +18,9 @@ decoration: /assets/img/components/{{ COMPONENT }}.png
 
 Use property `type` to control the display style of `{{ COMPONENT_PASCAL }}`.
 
-:::custom-usage {{ COMPONENT }}
+<!-- :::custom-usage {{ COMPONENT }}
 {{ COMPONENT }}/examples/type.json
-:::
+::: -->
 
 ## Slots
 
@@ -40,6 +40,6 @@ button/examples/slot.vue
 
 You can also use `{{ COMPONENT_PASCAL }}` in a composable manner.
 
-:::demo
+<!-- :::demo
 {{ COMPONENT }}/examples/composables.vue
-:::
+::: -->

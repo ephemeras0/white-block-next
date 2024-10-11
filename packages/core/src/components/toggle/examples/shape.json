@@ -1,0 +1,37 @@
+{
+  "components": [{}],
+  "configs": [
+    {
+      "name": "shape",
+      "type": "select",
+      "default": "round",
+      "options": [
+        { "label": "rectangle", "value": "rectangle" },
+        { "label": "round", "value": "round" }
+      ]
+    },
+    {
+      "name": "theme",
+      "type": "select",
+      "default": "primary",
+      "options": [
+        { "label": "primary", "value": "primary" },
+        { "label": "success", "value": "success" },
+        { "label": "warning", "value": "warning" },
+        { "label": "danger", "value": "danger" },
+        { "label": "white", "value": "white" },
+        { "label": "default", "value": "default" }
+      ]
+    },
+    {
+      "name": "loading",
+      "type": "toggle",
+      "default": false
+    },
+    {
+      "name": "disabled",
+      "type": "toggle",
+      "default": false
+    }
+  ]
+}

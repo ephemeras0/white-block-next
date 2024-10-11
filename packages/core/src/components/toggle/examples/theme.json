@@ -1,12 +1,6 @@
 {
   "components": [
-    { "type": "base", "content": "base" },
-    { "type": "plain", "content": "plain" },
-    { "type": "dashed", "content": "dashed" },
-    { "type": "outline", "content": "outline" },
-    { "type": "ghost", "content": "ghost" },
-    { "type": "link", "content": "link" },
-    { "type": "text", "content": "text" }
+    { "defaultValue": true }
   ],
   "configs": [
     {

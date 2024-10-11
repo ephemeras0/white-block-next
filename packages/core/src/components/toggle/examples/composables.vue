@@ -1,16 +1,17 @@
 <template>
-  <MyToggle @click="handleClick"> button </MyToggle>
+  <MyToggle @change="handleChange" />
 </template>
 
 <script setup lang="ts">
 // @ts-ignore
 import { useToggle } from 'white-block'
 
-const { node: MyToggle } = useToggle({
-  type: 'plain'
+const { node: MyToggle, value } = useToggle({
+  defaultValue: true,
+  shape: 'rectangle'
 })
 
-function handleClick(e: MouseEvent) {
-  console.log('click:', e)
+function handleChange(data: boolean) {
+  console.log('change:', data, value.value)
 }
 </script>
