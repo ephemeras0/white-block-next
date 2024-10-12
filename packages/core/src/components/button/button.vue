@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="tag"
+    :is="tag || 'button'"
     :disabled="loading || disabled"
     :aria-disabled="loading || disabled"
     h="$wb-button-height"

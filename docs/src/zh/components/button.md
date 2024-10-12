@@ -65,7 +65,7 @@ button/examples/tag.json
 :::
 
 ### size
-对于表单类型元素，请使用属性 `size` 来设置元素的大小。
+对于表单类型元素，可以使用属性 `size` 来设置元素的大小。
 
 允许像素值`number`或为[`ComponentSize`](https://github.com/Kythuen/white-block/blob/main/packages/core/src/components/types.ts)的选项值.
 

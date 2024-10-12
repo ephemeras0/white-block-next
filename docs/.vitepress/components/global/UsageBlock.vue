@@ -427,8 +427,8 @@ const compCode = computed(() => {
     const name = props.component
     return formatCode(
       decodeURIComponent(props.source).replace(
-        new RegExp(`<wb-${name}`),
-        `<wb-${name}${divide}${componentAttrs.value}`
+        new RegExp(`(<wb-${name}[^>/]*)`),
+        `$1${componentAttrs.value}${divide}`
       )
     )
   }

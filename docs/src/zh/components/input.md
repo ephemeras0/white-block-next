@@ -3,39 +3,39 @@ component: input
 category: form
 
 title: Input
-description: Use to collect user input.
+description: 用于收集用户输入。
 decoration: /assets/img/components/input.png
 ---
 
-## Playground
+## 演示
 :::usage input
 :::
 
-## Properties
+## 组件属性
 
 ### type
-Use property `type` to control display style of the input.
+使用属性 `type` 控制输入框的显示样式。
 
 :::custom-usage input
 input/examples/type.json
 :::
 
 ### align
-Use property `align` to control text align in input.
+使用属性 `type` 控制输入框文本的对齐方式。
 
 :::custom-usage input
 input/examples/align.json
 :::
 
 ### size
-For `form-type` elements, use property `size` to set the size of the element. 
+对于表单类型元素，可以使用属性 `size` 来设置元素的大小。
 
 :::demo
 input/examples/size.vue
 :::
 
 ### value
-Use property `v-model` or `v-model:value` to control text value of input.
+输入框的值，支持 `v-model` 或 `v-model:value`。
 
 :::demo
 input/examples/value.vue
@@ -43,7 +43,7 @@ input/examples/value.vue
 
 
 ## Slots
-Provide slots `prefix` and `suffix` around the input content. 
+提供插槽了前置插槽 `prefix` 和 后置插槽 `suffix` 来自定义输入框。
 
 :::demo
 input/examples/slot.vue
@@ -51,14 +51,14 @@ input/examples/slot.vue
 
 
 ## Events
-Event `change` emitted when value change.
+输入框值变动时会触发 `change` 事件。
 
 :::demo
 input/examples/event.vue
 :::
 
 ## Composables
-You can also use `Input` in a composable manner.
+组合式的方式使用 `Input`。
 
 :::demo
 input/examples/composables.vue

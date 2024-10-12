@@ -327,7 +327,7 @@ import { useData } from 'vitepress'
 import { computed, nextTick, ref } from 'vue'
 import { copyToClipboard, formatCode } from '~/utils'
 
-defineOptions({ name: 'UsageBlock', inheritAttrs: false })
+defineOptions({ name: 'CustomUsageBlock', inheritAttrs: false })
 
 const props = defineProps({
   component: {
