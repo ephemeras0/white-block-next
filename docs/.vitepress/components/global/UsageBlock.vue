@@ -286,7 +286,6 @@
       transition="all duration-200 ease-in-out"
       class="scrollable"
     >
-      <!-- eslint-disable-next-line vue/no-v-html -->
       <div p="x-6" v-html="getHighlighCode(compCode)" />
     </div>
   </div>
@@ -295,7 +294,7 @@
 import { clickDelegate } from '@/utils'
 import { createHighlighter } from 'shiki'
 import { useData } from 'vitepress'
-import { computed, nextTick, ref } from 'vue'
+import { nextTick, ref, watchEffect } from 'vue'
 import { copyToClipboard, formatCode } from '~/utils'
 
 defineOptions({ name: 'UsageBlock', inheritAttrs: false })
@@ -326,6 +325,7 @@ const props = defineProps({
     default: ''
   }
 })
+
 const { lang } = useData()
 
 const propsOptions = JSON.parse(decodeURIComponent(props.options))
@@ -334,10 +334,8 @@ const boxHeight = props.contentHeight
   ? JSON.parse(decodeURIComponent(props.contentHeight))
   : 24
 
-const fileType = decodeURIComponent(props.fileType)
-
 let UsageComponent: any = null
-if (fileType === 'vue') {
+if (props.fileType === 'vue') {
   const components: Record<string, any> = import.meta.glob(
     '../../../../packages/core/src/components/*/examples/usage.vue'
   )
@@ -382,7 +380,6 @@ function changeCode(data: Record<string, any>) {
       }
     } else if (typeof data[key] === 'string') {
       if (!data[key]) continue
-      // if (propsData[key] && propsData[key] === data[key]) continue
       attrs.push(`${key}="${data[key]}"`)
     } else {
       attrs.push(`:${key}="${key}"`)
@@ -412,7 +409,9 @@ function getHighlighCode(code: string) {
 }
 
 const tag = 'script'
-const compCode = computed(() => {
+
+const compCode = ref('')
+watchEffect(async () => {
   const divide = componentAttrs.value ? ' ' : ''
   let scriptCode = ''
   if (componentVariables.value) {
@@ -425,14 +424,15 @@ const compCode = computed(() => {
   }
   if (props.fileType === 'vue' || isTSXProps) {
     const name = props.component
-    return formatCode(
+    compCode.value = await formatCode(
       decodeURIComponent(props.source).replace(
         new RegExp(`(<wb-${name}[^>/]*)`),
-        `$1${componentAttrs.value}${divide}`
+        `$1${divide}${componentAttrs.value}${divide}`
       )
     )
+    return
   }
-  return formatCode(`<template>
+  compCode.value = await formatCode(`<template>
   <wb-${props.component}${divide}${componentAttrs.value} />
 </template>${scriptCode}`)
 })

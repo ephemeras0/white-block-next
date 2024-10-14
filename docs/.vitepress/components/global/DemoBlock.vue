@@ -57,7 +57,6 @@
       transition="all duration-300 ease-in-out"
       class="scrollable"
     >
-      <!-- eslint-disable-next-line vue/no-v-html -->
       <div p="x-6" v-html="compCode" />
     </div>
   </div>

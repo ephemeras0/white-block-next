@@ -1,0 +1,19 @@
+{
+  "configs": [
+    {
+      "name": "align",
+      "type": "select",
+      "default": "primary",
+      "options": [
+        { "label": "start", "value": "start" },
+        { "label": "center", "value": "center" },
+        { "label": "end", "value": "end" }
+      ]
+    },
+    {
+      "name": "vertical",
+      "type": "toggle",
+      "default": false
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "configs": [
+    {
+      "name": "theme",
+      "type": "select",
+      "default": "primary",
+      "options": [
+        { "label": "primary", "value": "primary" },
+        { "label": "success", "value": "success" },
+        { "label": "warning", "value": "warning" },
+        { "label": "danger", "value": "danger" },
+        { "label": "contrast", "value": "contrast" },
+        { "label": "default", "value": "default" }
+      ]
+    },
+    {
+      "name": "loading",
+      "type": "toggle",
+      "default": false
+    },
+    {
+      "name": "disabled",
+      "type": "toggle",
+      "default": false
+    }
+  ]
+}

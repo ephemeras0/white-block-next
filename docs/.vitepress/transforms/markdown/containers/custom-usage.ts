@@ -1,28 +1,80 @@
-import MarkdownIt from 'markdown-it'
-import MdContainer from 'markdown-it-container'
-import { readFileSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { existsSync, readFileSync } from 'node:fs'
+import { join, extname, basename } from 'node:path'
+import { COMPONENTS_ROOT } from '../constant'
 
-export default function (md: MarkdownIt, payload: Record<string, any>) {
-  const { COMPONENTS_PATH_RELATIVE } = payload
-
+/**
+ * Custom usage block for component.
+ *
+ * @usage
+ * :::custom-usage <COMPONENT> [HEIGHT]
+ * <CONFIG>
+ * :::
+ *
+ * @description
+ * COMPONENT: Component name.
+ * HEIGHT: Height of the usage block, REM.
+ * CONFIG: Default properties config file(json/tsx/vue) of the component.
+ */
+export default function (md: any, MdContainer: any) {
   md.use(MdContainer, 'custom-usage', {
     validate(params: string) {
-      return !!params.trim().match(/^custom-usage\s*(.*)$/)
+      return !!params.trim().match(/^custom-usage\s+(.*)$/)
     },
     render(tokens: any, idx: number) {
-      const m = tokens[idx].info.trim().match(/^custom-usage\s*(\S*)\s*(\S*)$/)
+      const m = tokens[idx].info.trim().match(/^custom-usage\s+(\S*)\s*(\S*)$/)
       if (tokens[idx].nesting === 1) {
         const component = m && m.length > 1 ? m[1] : ''
         const contentHeight = m && m.length > 1 ? m[2] : ''
         const sourceFileToken = tokens[idx + 2]
         const sourceFile = sourceFileToken.children?.[0].content ?? ''
-        const isUsageFile = sourceFile.includes('examples/usage.vue')
-        const data = readFileSync(
-          resolve(__dirname, COMPONENTS_PATH_RELATIVE, `${sourceFile}`),
-          'utf-8'
+        const sourceFileExt = extname(sourceFile).replace('.', '')
+        const sourceFileName = basename(sourceFile).replace(
+          extname(sourceFile),
+          ''
         )
-        const contentProps = JSON.parse(data)
+
+        let contentProps: Record<string, any> = {
+          components: [{}],
+          configs: []
+        }
+        let componentList: Record<string, any>[] = [{}]
+        let sourceCode = ''
+
+        if (
+          sourceFileExt === 'json' &&
+          existsSync(join(COMPONENTS_ROOT, sourceFile))
+        ) {
+          const data = readFileSync(
+            join(COMPONENTS_ROOT, `${sourceFile}`),
+            'utf-8'
+          )
+          contentProps = JSON.parse(data) || {}
+          componentList = contentProps.components || [{}]
+        } else {
+          const file = join(COMPONENTS_ROOT, sourceFile)
+          if (existsSync(file)) {
+            if (sourceFileExt === 'tsx') {
+              sourceCode = `<template>
+              <wb-${component} />
+              </template>`
+            } else if (sourceFileExt === 'vue') {
+              sourceCode = readFileSync(file, 'utf-8')
+            }
+          }
+
+          const COMPONENT_DIR = join(COMPONENTS_ROOT, component)
+          if (
+            existsSync(join(COMPONENT_DIR, `examples/${sourceFileName}.json`))
+          ) {
+            const data = readFileSync(
+              join(COMPONENT_DIR, `examples/${sourceFileName}.json`),
+              'utf-8'
+            )
+            contentProps = JSON.parse(data) || {}
+            componentList = contentProps.components || [{}]
+          }
+        }
+
         const propOptions: any = {
           input: [],
           number: [],
@@ -67,12 +119,14 @@ export default function (md: MarkdownIt, payload: Record<string, any>) {
         }
         return `<CustomUsageBlock
                   component="${component}"
+                  fileType="${sourceFileExt}"
+                  fileName="${sourceFileName}"
                   options="${encodeURIComponent(JSON.stringify(propOptions))}"
-                  configs="${encodeURIComponent(JSON.stringify(contentProps))}"
+                  items="${encodeURIComponent(JSON.stringify(componentList))}"
                   data="${encodeURIComponent(JSON.stringify(propData))}"
-                  usage="${isUsageFile}"
+                  source="${encodeURIComponent(sourceCode)}"
                   contentHeight="${contentHeight}"
-                >`
+                  >`
       }
       return '</CustomUsageBlock>'
     }

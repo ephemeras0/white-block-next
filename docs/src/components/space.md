@@ -12,25 +12,18 @@ decoration: /assets/img/components/space.png
 
 ## Properties
 
-### align
-Use property `align` to set alignment of children elements.
+### align & vertical
+Use properties `align` & `vertical` to set alignment of children elements.
 
-:::demo
-space/examples/align.vue
+:::custom-usage space
+space/examples/align_vertical.vue
 :::
-<!-- 
+
 ### gap
 Use property `gap` to set gap between children elements.
 
-:::demo
+:::custom-usage
 space/examples/gap.vue
-:::
-
-### vertical
-Use property `vertical` to change main-axis direction.
-
-:::demo
-space/examples/vertical.vue
 :::
 
 ## Slots
@@ -39,14 +32,14 @@ Provide slots `default` and `content` to define button content.
 
 And slots `prefix` and `suffix` around the button content.
 
-:::demo
-button/examples/slot.vue
-:::
+<!-- :::demo
+space/examples/slot.vue
+::: -->
 
 ## Composables
 
 You can also use `Space` in a composable manner.
 
-:::demo
+:::custom-usage space
 space/examples/composables.vue
-::: -->
+:::

@@ -11,18 +11,9 @@
   >
     <div w="full" h="84" flex :style="{ height: `${boxHeight}rem` }">
       <div w="full" h="full" flex="~ 1 col">
-        <div
-          h="12"
-          p="x-4"
-          :border="isUsage ? '0 b-px solid $wb-color-border-base' : 'none'"
-          flex="none ~ row"
-          items="center"
-          justify="between"
-        >
-          <div>
-            <span v-if="isUsage">{{ component }}</span>
-          </div>
-          <div flex>
+        <div h="12" p="x-4" flex="none ~ row" items="center" justify="between">
+          <div />
+          <div v-if="hasProperties" flex>
             <wb-button type="ghost" theme="default" @click="resetChange">
               <i i="tdesign-refresh" />
             </wb-button>
@@ -144,7 +135,10 @@
             gap="2"
             class="scrollable"
           >
-            <template v-for="(item, index) in componentList" :key="index">
+            <template
+              v-for="(item, index) in resolveComponentList"
+              :key="index"
+            >
               <component
                 :is="UsageComponent"
                 v-if="UsageComponent && showProperties"
@@ -156,7 +150,9 @@
         <div
           h="12"
           p="2"
-          border="0 t-px solid $wb-color-border-base"
+          :border="
+            hasProperties ? '0 t-px solid $wb-color-border-base' : 'none'
+          "
           flex
           items-center
           justify-end
@@ -187,7 +183,13 @@
           </div>
         </div>
       </div>
-      <div flex="none" w="72" h="full" class="hidden md:block">
+      <div
+        v-if="hasProperties"
+        flex="none"
+        w="72"
+        h="full"
+        class="hidden md:block"
+      >
         <div
           v-if="showProperties"
           w="full"
@@ -196,23 +198,7 @@
           border="0 l-px solid $wb-color-border-base"
           class="scrollable"
         >
-          <div
-            v-if="isUsage"
-            h="12"
-            p="x-4"
-            border="0 b-px solid $wb-color-border-base"
-            flex
-            items="center"
-          >
-            {{ lang === 'en' ? 'Properties' : '属性配置' }}
-          </div>
-          <div
-            :h="isUsage ? '[calc(100%-3rem)]' : 'full'"
-            overflow="auto"
-            text="3.5"
-            p="1"
-            class="scrollable"
-          >
+          <div overflow="auto" text="3.5" p="1" class="scrollable">
             <div
               v-if="propsOptions.input.length"
               p="3"
@@ -315,7 +301,6 @@
       transition="all duration-200 ease-in-out"
       class="scrollable"
     >
-      <!-- eslint-disable-next-line vue/no-v-html -->
       <div p="x-6" v-html="getHighlighCode(compCode)" />
     </div>
   </div>
@@ -323,8 +308,8 @@
 <script setup lang="ts">
 import { clickDelegate } from '@/utils'
 import { createHighlighter } from 'shiki'
-import { useData } from 'vitepress'
-import { computed, nextTick, ref } from 'vue'
+// import { useData } from 'vitepress'
+import { nextTick, ref, watchEffect } from 'vue'
 import { copyToClipboard, formatCode } from '~/utils'
 
 defineOptions({ name: 'CustomUsageBlock', inheritAttrs: false })
@@ -338,9 +323,9 @@ const props = defineProps({
     type: String,
     default: '{"toggle": [], "select": []}'
   },
-  configs: {
+  items: {
     type: String,
-    default: '[]'
+    default: '[{}]'
   },
   data: {
     type: String,
@@ -350,36 +335,72 @@ const props = defineProps({
     type: String,
     default: ''
   },
-  usage: {
-    type: String,
-    default: 'false'
-  },
   contentHeight: {
+    type: String,
+    default: ''
+  },
+  fileName: {
+    type: String,
+    default: ''
+  },
+  fileType: {
     type: String,
     default: ''
   }
 })
-const { lang } = useData()
+
+// const { lang } = useData()
 
 const propsOptions = JSON.parse(decodeURIComponent(props.options))
-const propsConfigs = JSON.parse(decodeURIComponent(props.configs))
+const propsComponents = JSON.parse(decodeURIComponent(props.items))
 const propsData = JSON.parse(decodeURIComponent(props.data))
-const isUsage = JSON.parse(decodeURIComponent(props.usage))
+
+const hasProperties =
+  propsOptions.input.length ||
+  propsOptions.number.length ||
+  propsOptions.toggle.length ||
+  propsOptions.select.length
+
 const boxHeight = props.contentHeight
   ? JSON.parse(decodeURIComponent(props.contentHeight))
   : 18
 
-const { components: componentList } = propsConfigs
-
-const components: Record<string, any> = import.meta.glob(
-  '../../../../packages/core/src/components/**/*.vue'
+const resolveComponentList: any = ref(
+  props.fileType !== 'vue' ? propsComponents || [{}] : [{}]
 )
-const UsageComponent =
-  (
-    await components[
-      `../../../../packages/core/src/components/${props.component}/${props.component}.vue`
-    ]?.()
-  )?.default ?? null
+const componentList: Record<string, any>[] = propsComponents || [{}]
+
+const isTSXComponents = props.fileType === 'tsx'
+if (isTSXComponents) {
+  resolveComponentList.value = (
+    await import(
+      `../../../../packages/core/src/components/${props.component}/examples/${props.fileName}.tsx`
+    )
+  ).default ?? [{}]
+}
+
+let UsageComponent: any = null
+if (props.fileType === 'vue') {
+  const components: Record<string, any> = import.meta.glob(
+    '../../../../packages/core/src/components/*/examples/*.vue'
+  )
+  UsageComponent =
+    (
+      await components[
+        `../../../../packages/core/src/components/${props.component}/examples/${props.fileName}.vue`
+      ]?.()
+    )?.default ?? null
+} else {
+  const components: Record<string, any> = import.meta.glob(
+    '../../../../packages/core/src/components/**/*.vue'
+  )
+  UsageComponent =
+    (
+      await components[
+        `../../../../packages/core/src/components/${props.component}/${props.component}.vue`
+      ]?.()
+    )?.default ?? null
+}
 
 const componentAttrs = ref('')
 const componentVariables = ref('')
@@ -403,6 +424,7 @@ function changeCode(data: Record<string, any>) {
   componentAttrs.value = attrs.join(' ')
   componentVariables.value = variables.join('\n')
 }
+
 if (Object.keys(propsData).length) {
   changeCode(propsData)
 }
@@ -430,8 +452,21 @@ function getHighlighCode(code: string) {
 }
 
 const tag = 'script'
-const compCode = computed(() => {
+const compCode = ref('')
+watchEffect(async () => {
   const divide = componentAttrs.value ? ' ' : ''
+
+  if (props.fileType === 'vue' || isTSXComponents) {
+    const name = props.component
+    compCode.value = await formatCode(
+      decodeURIComponent(props.source).replace(
+        new RegExp(`(<wb-${name}[^>/]*)`),
+        `$1${divide}${componentAttrs.value}${divide}`
+      )
+    )
+    return
+  }
+
   let scriptCode = ''
   if (componentVariables.value) {
     scriptCode = `
@@ -441,10 +476,36 @@ const compCode = computed(() => {
       semi: false
     })}</${tag}>`
   }
-  return formatCode(`<template>
+  compCode.value = await formatCode(`<template>
   <wb-${props.component}${divide}${componentAttrs.value} />
 </template>${scriptCode}`)
 })
+// const compCode = computed(() => {
+//   const divide = componentAttrs.value ? ' ' : ''
+
+//   if (props.fileType === 'vue' || isTSXComponents) {
+//     const name = props.component
+//     return formatCode(
+//       decodeURIComponent(props.source).replace(
+//         new RegExp(`(<wb-${name}[^>/]*)`),
+//         `$1${divide}${componentAttrs.value}${divide}`
+//       )
+//     )
+//   }
+
+//   let scriptCode = ''
+//   if (componentVariables.value) {
+//     scriptCode = `
+
+// <${tag} setup lang="ts">${formatCode(componentVariables.value, {
+//       parser: 'babel-ts',
+//       semi: false
+//     })}</${tag}>`
+//   }
+//   return formatCode(`<template>
+//   <wb-${props.component}${divide}${componentAttrs.value} />
+// </template>${scriptCode}`)
+// })
 
 const showCode = ref(false)
 const CODE_BLOCK_OPERATIONS = [

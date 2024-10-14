@@ -1,5 +1,9 @@
 <template>
-  <MySpace @click="handleClick"> button </MySpace>
+  <MySpace>
+    <wb-button v-for="item in 3" :key="item">
+      {{ item }}
+    </wb-button>
+  </MySpace>
 </template>
 
 <script setup lang="ts">

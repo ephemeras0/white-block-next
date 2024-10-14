@@ -1,0 +1,36 @@
+{
+  "components": [
+    { "type": "base", "content": "base" },
+    { "type": "plain", "content": "plain" },
+    { "type": "dashed", "content": "dashed" },
+    { "type": "outline", "content": "outline" },
+    { "type": "ghost", "content": "ghost" },
+    { "type": "link", "content": "link" },
+    { "type": "text", "content": "text" }
+  ],
+  "configs": [
+    {
+      "name": "theme",
+      "type": "select",
+      "default": "primary",
+      "options": [
+        { "label": "primary", "value": "primary" },
+        { "label": "success", "value": "success" },
+        { "label": "warning", "value": "warning" },
+        { "label": "danger", "value": "danger" },
+        { "label": "contrast", "value": "contrast" },
+        { "label": "default", "value": "default" }
+      ]
+    },
+    {
+      "name": "loading",
+      "type": "toggle",
+      "default": false
+    },
+    {
+      "name": "disabled",
+      "type": "toggle",
+      "default": false
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import type { ParserOptions } from 'prettier'
-// import parserTS from 'prettier/parser-babel'
-// import parserHtml from 'prettier/parser-html'
-// import prettier from 'prettier/standalone'
+import parserTS from 'prettier/plugins/babel'
+import parserHtml from 'prettier/plugins/html'
+import prettier from 'prettier/standalone'
 
 const DEFAULT_OPTIONS: Partial<ParserOptions> = {
   printWidth: 80,
@@ -18,12 +18,10 @@ const DEFAULT_OPTIONS: Partial<ParserOptions> = {
 }
 
 export function formatCode(code: string, options = DEFAULT_OPTIONS) {
-  // eslint-disable-next-line no-console
-  console.log(options)
-  // return prettier.format(code, {
-  //   parser: 'vue',
-  //   ...options,
-  //   plugins: [parserHtml, parserTS]
-  // })
-  return code
+  return prettier.format(code, {
+    parser: 'vue',
+    ...options,
+    plugins: [parserHtml, parserTS]
+  })
+  // return code
 }

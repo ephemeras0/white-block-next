@@ -6,7 +6,7 @@ export type Emits = {
   /*
    * Click action.
    */
-  click: [e: MouseEvent]
+  click: [e: boolean]
 }
 
 export type Props = {
@@ -31,7 +31,7 @@ export type Props = {
   /*
    * Click action.
    */
-  onClick?: (e: MouseEvent) => void
+  onClick?: (e: boolean) => void
 }
 
 export default {
