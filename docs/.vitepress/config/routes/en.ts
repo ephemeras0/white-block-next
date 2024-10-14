@@ -11,7 +11,8 @@ const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: 'ButtonGroup', link: '/components/button-group' },
   { text: 'Input', link: '/components/input' },
   { text: 'Space', link: '/components/space' },
-  { text: 'Toggle', link: '/components/toggle' }
+  { text: 'Toggle', link: '/components/toggle' },
+  { text: 'Radio', link: '/components/radio' }
 ]
 
 export const SIDEBAR: DefaultTheme.SidebarItem[] = [

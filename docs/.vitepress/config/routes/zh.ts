@@ -11,7 +11,8 @@ const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: '按钮组', link: '/zh/components/button-group' },
   { text: '输入框', link: '/zh/components/input' },
   { text: '间距', link: '/zh/components/space' },
-  { text: '开关', link: '/zh/components/toggle' }
+  { text: '开关', link: '/zh/components/toggle' },
+  { text: '单选按钮', link: '/zh/components/radio' }
 ]
 
 export const SIDEBAR: DefaultTheme.SidebarItem[] = [

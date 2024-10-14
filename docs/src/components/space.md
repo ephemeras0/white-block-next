@@ -28,13 +28,11 @@ space/examples/gap.vue
 
 ## Slots
 
-Provide slots `default` and `content` to define button content.
+Provide `default` slot to define space content.
 
-And slots `prefix` and `suffix` around the button content.
-
-<!-- :::demo
+:::demo
 space/examples/slot.vue
-::: -->
+:::
 
 ## Composables
 
