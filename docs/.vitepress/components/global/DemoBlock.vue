@@ -63,9 +63,8 @@
 </template>
 <script setup lang="ts">
 import { clickDelegate } from '@/utils'
-import { createHighlighter } from 'shiki'
 import { ref } from 'vue'
-import { copyToClipboard, utoa } from '~/utils'
+import { copyToClipboard, getHighlighter, utoa } from '~/utils'
 
 defineOptions({ name: 'DemoBlock', inheritAttrs: false })
 
@@ -90,10 +89,7 @@ const DemoComponent =
     ]?.()
   )?.default ?? null
 
-const shiki = await createHighlighter({
-  themes: ['material-theme-palenight'],
-  langs: ['vue']
-})
+const shiki = await getHighlighter()
 
 const compCode = shiki.codeToHtml(
   decodeURIComponent(props.source).replace(/\/\/\s+\S*\s/g, ''),

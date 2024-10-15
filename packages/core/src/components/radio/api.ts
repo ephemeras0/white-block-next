@@ -3,9 +3,13 @@ import { RadioTheme } from './types'
 
 export type Slots = {
   /*
-   * Default slot of the button.
+   * Default slot of the radio.
    */
   default?: () => any
+  /*
+   * Content slot of the radio.
+   */
+  content?: () => any
 }
 
 export type Emits = {
@@ -17,7 +21,7 @@ export type Emits = {
 
 export type Props = {
   /*
-   * Customize color of the button. Can be `named-color`, `hex`, `rgb`, etc.
+   * Customize color of the radio. Can be `named-color`, `hex`, `rgb`, etc.
    */
   color?: string
   /*
@@ -34,17 +38,12 @@ export type Props = {
    */
   default?: string | VNode
   /*
-   * Content of the button.
+   * Content of the radio.
    */
   content?: string | VNode
 }
 
 export default {
-  content: '',
-  type: 'base',
   color: '',
-  theme: 'primary',
-  shape: 'rectangle',
-  block: false,
-  tag: 'button'
+  theme: 'primary'
 } as Props

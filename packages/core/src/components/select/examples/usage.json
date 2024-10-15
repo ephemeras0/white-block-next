@@ -1,0 +1,10 @@
+{
+  "placeholder": "Try it",
+  "defaultValue": "1",
+  "icon": true,
+  "options": [
+    { "label": "label 1", "value": "1" },
+    { "label": "label 2", "value": "2" },
+    { "label": "label 3", "value": "3" }
+  ]
+}

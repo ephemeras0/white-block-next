@@ -121,7 +121,7 @@ ${scriptContent}</script>`
           if (['defaultValue', 'value', 'modelValue'].includes(prop)) continue
 
           if (Slots[prop] && DefaultProps[prop] === undefined) continue
-          if (data.type.includes('string')) {
+          if (data.type.includes('string') && !data.type.includes('string[]')) {
             propOptions.input.push({
               name: prop,
               description,

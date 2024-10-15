@@ -1,0 +1,72 @@
+.wb-select {
+  --wb-select-arrow: calc(var(--wb-select-height) / 3 + 0.5rem);
+  --wb-select-border: var(--wb-color-border-base);
+  --wb-select-vc-main: var(--wb-vc-primary);
+  --wb-select-color-main: var(--wb-color-primary);
+  font-size: var(--wb-select-font-size);
+}
+.wb-select-option {
+  font-size: var(--wb-select-font-size);
+  transition: var(--transition-ease);
+}
+.wb-select-option--hover {
+  background: var(--wb-select-option-hover-background);
+}
+.wb-select-option--active {
+  background: var(--wb-select-option-active-background);
+  color: var(--wb-select-option-active-color);
+}
+.wb-select-input--value:hover .wb-select-input-arrow {
+  display: none;
+}
+
+/* ----------------------------------- size ----------------------------------- */
+.wb-select--xs {
+  --wb-select-height: var(--wb-comp-height-xs);
+  --wb-select-padding: calc(var(--wb-comp-padding-xs) / 2);
+  --wb-select-font-size: var(--wb-comp-font-size-xs);
+  --wb-select-radius: var(--wb-comp-radius-xs);
+  --wb-select-gap: var(--wb-comp-content-gap-xs);
+}
+.wb-select--sm {
+  --wb-select-height: var(--wb-comp-height-sm);
+  --wb-select-padding: var(--wb-comp-padding-sm);
+  --wb-select-font-size: var(--wb-comp-font-size-sm);
+  --wb-select-radius: var(--wb-comp-radius-sm);
+  --wb-select-gap: var(--wb-comp-content-gap-sm);
+}
+.wb-select--md {
+  --wb-select-height: var(--wb-comp-height-md);
+  --wb-select-padding: calc(var(--wb-comp-padding-md) / 2);
+  --wb-select-font-size: var(--wb-comp-font-size-md);
+  --wb-select-radius: var(--wb-comp-radius-md);
+  --wb-select-gap: var(--wb-comp-content-gap-md);
+}
+.wb-select--lg {
+  --wb-select-height: var(--wb-comp-height-lg);
+  --wb-select-padding: var(--wb-comp-padding-lg);
+  --wb-select-font-size: var(--wb-comp-font-size-lg);
+  --wb-select-radius: var(--wb-comp-radius-lg);
+  --wb-select-gap: var(--wb-comp-content-gap-lg);
+}
+.wb-select--xl {
+  --wb-select-height: var(--wb-comp-height-xl);
+  --wb-select-padding: var(--wb-comp-padding-xl);
+  --wb-select-font-size: var(--wb-comp-font-size-xl);
+  --wb-select-radius: var(--wb-comp-radius-xl);
+  --wb-select-gap: var(--wb-comp-content-gap-xl);
+}
+
+/* ----------------------------------- theme-type ----------------------------------- */
+.wb-select--soft {
+  --wb-select-background: var(--wb-color-background);
+  --wb-select-option-hover-background: var(--wb-color-container);
+  --wb-select-option-active-background: rgb(var(--wb-select-vc-main) / 10%);
+  --wb-select-option-active-color: var(--wb-select-color-main);
+}
+.wb-select--emphasize {
+  --wb-select-background: var(--wb-color-container);
+  --wb-select-option-hover-background: var(--wb-color-layer);
+  --wb-select-option-active-background: var(--wb-select-color-main);
+  --wb-select-option-active-color: var(--wb-color-background);
+}

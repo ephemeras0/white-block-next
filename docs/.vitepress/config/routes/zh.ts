@@ -12,7 +12,13 @@ const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: '输入框', link: '/zh/components/input' },
   { text: '间距', link: '/zh/components/space' },
   { text: '开关', link: '/zh/components/toggle' },
-  { text: '单选按钮', link: '/zh/components/radio' }
+  { text: '单选按钮', link: '/zh/components/radio' },
+  { text: '单选按钮组', link: '/zh/components/radio-group' },
+  { text: '占位', link: '/zh/components/placeholder' },
+  { text: '弹出层', link: '/zh/components/popup' },
+  { text: '下拉框', link: '/zh/components/select' },
+  { text: '滑块', link: '/zh/components/slider' },
+  { text: '数字输入框', link: '/zh/components/input-number' }
 ]
 
 export const SIDEBAR: DefaultTheme.SidebarItem[] = [

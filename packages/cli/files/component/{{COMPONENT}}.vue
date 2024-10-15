@@ -27,5 +27,5 @@ const renderNode = useNode()
 const ContentNode = () => renderNode('default'){% endif %}
 {% if COMPONENT_PROPERTIES.includes('Value') %}
 
-// const [{{ COMPONENT }}Value, set{{ COMPONENT_PASCAL }}Value] = useVModel<string>({ props: toRefs(props) }){% endif %}
+// const [{{ COMPONENT_CAMEL }}Value, set{{ COMPONENT_PASCAL }}Value] = useVModel<string>({ props: toRefs(props) }){% endif %}
 </script>

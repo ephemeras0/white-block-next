@@ -1,13 +1,14 @@
 import {
-  Size,
-  Disabled,
-  Readonly,
   Clearable,
-  Value,
-  SizeDefault,
+  ClearableDefault,
+  Disabled,
   DisabledDefault,
+  Readonly,
   ReadonlyDefault,
-  ClearableDefault
+  Size,
+  SizeDefault,
+  Value,
+  ValueEmits
 } from '../api'
 import XDefaultProps, {
   Emits as XEmits,
@@ -17,14 +18,14 @@ import XDefaultProps, {
 
 export type Slots = XSlot
 
-export type Emits = XEmits
+export type Emits = XEmits & ValueEmits<boolean>
 
 export type Props = XProps &
   Size &
   Disabled &
   Readonly &
   Clearable &
-  Value<string>
+  Value<boolean>
 
 export const DefaultProps = {
   ...SizeDefault,

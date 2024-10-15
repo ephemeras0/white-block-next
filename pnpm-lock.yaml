@@ -169,8 +169,8 @@ importers:
   packages/cli:
     dependencies:
       '@ephemeras/compiler':
-        specifier: ^0.0.2
-        version: 0.0.2(chokidar@3.6.0)
+        specifier: ^0.0.5
+        version: 0.0.5(chokidar@3.6.0)
       '@ephemeras/file':
         specifier: ^0.0.8
         version: 0.0.8
@@ -659,8 +659,8 @@ packages:
       search-insights:
         optional: true
 
-  '@ephemeras/compiler@0.0.2':
-    resolution: {integrity: sha512-0Cw9t9aSxJ+XXZlw9S7Bv5FAFSUARUVIh18gzIIS8UL0jFb9Xvh/zsonN8Wuli4t4k9KRanai/ak/UUmHo0ZGg==}
+  '@ephemeras/compiler@0.0.5':
+    resolution: {integrity: sha512-PewdZtzj6bry/mRpD5wkc3FKijPAlxiicXPV5fX61FapyyqkNyRrDrg1lfnDahiLng4ObFYU2vwFi+iIKY8pag==}
 
   '@ephemeras/file@0.0.8':
     resolution: {integrity: sha512-T5nUew9xikkrtzKWkQt7XNmEiC8fLoDQ/KY2wxqEDRbgGncAvDaCcaWyek+kF0+PG+0wgKkKJjJ1pjxSlXw2jA==}
@@ -5316,11 +5316,13 @@ snapshots:
     transitivePeerDependencies:
       - '@algolia/client-search'
 
-  '@ephemeras/compiler@0.0.2(chokidar@3.6.0)':
+  '@ephemeras/compiler@0.0.5(chokidar@3.6.0)':
     dependencies:
       '@ephemeras/fs': 0.0.1
+      '@prettier/sync': 0.5.2(prettier@3.3.3)
       minimatch: 7.4.6
       nunjucks: 3.2.4(chokidar@3.6.0)
+      prettier: 3.3.3
     transitivePeerDependencies:
       - chokidar
 
@@ -5651,6 +5653,11 @@ snapshots:
     dependencies:
       make-synchronized: 0.2.9
       prettier: 3.3.2
+
+  '@prettier/sync@0.5.2(prettier@3.3.3)':
+    dependencies:
+      make-synchronized: 0.2.9
+      prettier: 3.3.3
 
   '@rollup/pluginutils@5.1.2(rollup@4.22.4)':
     dependencies:

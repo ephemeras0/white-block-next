@@ -1,0 +1,117 @@
+.wb-radio-group {
+  --wb-radio-group-text: var(--wb-color-text-3);
+  --wb-radio-group-item-border: transparent;
+  --wb-radio-group-item-border-active: transparent;
+}
+.wb-radio-group .wb-radio {
+  --wb-radio-text-active: var(--wb-radio-group-color-main);
+  border-radius: 0;
+}
+.wb-radio-group .wb-radio:first-of-type {
+  border-radius: var(--wb-radio-radius) 0 0 var(--wb-radio-radius);
+}
+.wb-radio-group .wb-radio:last-of-type {
+  border-radius: 0 var(--wb-radio-radius) var(--wb-radio-radius) 0;
+}
+
+/* -------------------------------------------- size -------------------------------------------- */
+.wb-radio-group--xs {
+  --wb-radio-group-padding: var(--wb-comp-content-gap-xs);
+  --wb-radio-group-radius: var(--wb-comp-radius-xs);
+}
+.wb-radio-group--sm {
+  --wb-radio-group-padding: var(--wb-comp-content-gap-sm);
+  --wb-radio-group-radius: var(--wb-comp-radius-sm);
+}
+.wb-radio-group--md {
+  --wb-radio-group-padding: var(--wb-comp-content-gap-md);
+  --wb-radio-group-radius: var(--wb-comp-radius-md);
+}
+.wb-radio-group--lg {
+  --wb-radio-group-padding: var(--wb-comp-content-gap-lg);
+  --wb-radio-group-radius: var(--wb-comp-radius-lg);
+}
+.wb-radio-group--xl {
+  --wb-radio-group-padding: var(--wb-comp-content-gap-xl);
+  --wb-radio-group-radius: var(--wb-comp-radius-xl);
+}
+
+/* -------------------------------------------- theme -------------------------------------------- */
+.wb-radio-group--primary {
+  --wb-radio-group-vc-main: var(--wb-vc-primary);
+  --wb-radio-group-color-main: var(--wb-color-primary);
+}
+.wb-radio-group--white {
+  --wb-radio-group-vc-main: var(--wb-vc-foreground);
+  --wb-radio-group-color-main: rgb(var(--wb-vc-foreground));
+}
+.wb-radio-group--success {
+  --wb-radio-group-vc-main: var(--wb-vc-success);
+  --wb-radio-group-color-main: rgb(var(--wb-vc-success));
+}
+.wb-radio-group--warning {
+  --wb-radio-group-vc-main: var(--wb-vc-warning);
+  --wb-radio-group-color-main: rgb(var(--wb-vc-warning));
+}
+.wb-radio-group--danger {
+  --wb-radio-group-vc-main: var(--wb-vc-danger);
+  --wb-radio-group-color-main: rgb(var(--wb-vc-danger));
+}
+/* TODO: theme default --wb-vc-layer */
+.wb-radio-group--default {
+  --wb-radio-group-vc-main: var(--wb-vc-foreground);
+  --wb-radio-group-color-main: rgb(var(--wb-vc-foreground));
+}
+
+/* -------------------------------------------- type -------------------------------------------- */
+.wb-radio-group--tab .wb-radio {
+  position: relative;
+  z-index: 1;
+}
+.wb-radio-group--tab .wb-radio input {
+  display: none;
+}
+.wb-radio-group--tab .wb-radio .wb-radio-content {
+  justify-content: center;
+}
+.wb-radio-group--tab.wb-radio-group--soft {
+  --wb-radio-group-background: var(--wb-color-background);
+  --wb-radio-group-indicator: rgb(var(--wb-radio-group-vc-main) / 15%);
+}
+.wb-radio-group--tab.wb-radio-group--emphasize {
+  --wb-radio-group-background: var(--wb-color-container);
+  --wb-radio-group-indicator: var(--wb-radio-group-color-main);
+  --wb-radio-group-border: var(--wb-color-border-base);
+}
+.wb-radio-group--tab.wb-radio-group--emphasize .wb-radio {
+  --wb-radio-text-active: var(--wb-color-background);
+}
+
+.wb-radio-group--outline {
+  --wb-radio-group-item-border: var(--wb-color-border-base);
+  --wb-radio-group-item-border-active: var(--wb-radio-group-color-main);
+}
+.wb-radio-group--outline .wb-radio input {
+  display: none;
+}
+.wb-radio-group--outline .wb-radio .wb-radio-content {
+  justify-content: center;
+}
+.wb-radio-group--outline .wb-radio--checked {
+  --wb-radio-group-item-border: var(--wb-radio-group-item-border-active);
+  z-index: 1;
+}
+.wb-radio-group--outline .wb-radio {
+  --wb-radio-group-border: var(--wb-color-border-base);
+}
+.wb-radio-group--outline .wb-radio:hover {
+  position: relative;
+  --wb-radio-text: var(--wb-radio-group-color-main);
+}
+/* -------------------------------------------- shape -------------------------------------------- */
+.wb-radio-group--tab.wb-radio-group--round {
+  --wb-radio-group-radius: 9999px;
+}
+.wb-radio-group--outline.wb-radio-group--round .wb-radio {
+  --wb-radio-radius: 9999px;
+}

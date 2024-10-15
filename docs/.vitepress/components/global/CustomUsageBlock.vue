@@ -307,10 +307,8 @@
 </template>
 <script setup lang="ts">
 import { clickDelegate } from '@/utils'
-import { createHighlighter } from 'shiki'
-// import { useData } from 'vitepress'
 import { nextTick, ref, watchEffect } from 'vue'
-import { copyToClipboard, formatCode } from '~/utils'
+import { copyToClipboard, formatCode, getHighlighter } from '~/utils'
 
 defineOptions({ name: 'CustomUsageBlock', inheritAttrs: false })
 
@@ -442,10 +440,7 @@ function changeProps(prop: string, value: any) {
   changeCode({ ...propsData, ...componentAttrsPreset, ...changedProps.value })
 }
 
-const shiki = await createHighlighter({
-  themes: ['material-theme-palenight', 'material-theme'],
-  langs: ['vue']
-})
+const shiki = await getHighlighter()
 
 function getHighlighCode(code: string) {
   return shiki.codeToHtml(code, { lang: 'vue', theme: 'material-theme' })

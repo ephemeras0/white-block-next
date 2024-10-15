@@ -59,8 +59,7 @@ const propsStyles = useStyles(() => {
     const palette: any = Color(props.color)
     const { color, valpha } = palette.rgb()
     return {
-      '--wb-button-color-main': `rgb(${color.join(' ')} / ${valpha})`,
-      '--wb-button-vc-main': color.join(' ')
+      '--wb-radio-text-active': `rgb(${color.join(' ')} / ${valpha})`
     }
   }
 })

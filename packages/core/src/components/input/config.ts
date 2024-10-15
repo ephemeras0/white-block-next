@@ -19,7 +19,7 @@ import XDefaultProps, {
 } from './api'
 
 export type Slots = XSlot
-export type Emits = XEmits & ValueEmits
+export type Emits = XEmits & ValueEmits<string>
 export type Props = XProps &
   Size &
   Loading &

@@ -1,8 +1,8 @@
-import { XNode as VNode } from '../types'
+import type { XNode as VNode } from '../types'
 
 export type Slots = {
   /*
-   * Default slot of the `{{ COMPONENT_PASCAL }}`.
+   * Default slot of the `{{ COMPONENT }}`.
    */
   default?: () => any
 }
@@ -20,13 +20,11 @@ export type Props = {
    */
   onClick?: (e: MouseEvent) => void
   /*
-   * Content of the `{{ COMPONENT_PASCAL }}`.
+   * Content of the `{{ COMPONENT }}`.
    */
   default?: string | VNode
 }
 
 export default {
-  content: '',
-  color: '',
-  theme: 'primary',
+  default: ''
 } as Props

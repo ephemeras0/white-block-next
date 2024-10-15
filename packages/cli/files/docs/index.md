@@ -3,7 +3,7 @@ component: {{ COMPONENT }}
 category: {{ COMPONENTS_CATEGORY }}
 
 title: {{ COMPONENT_PASCAL }}
-description: {{ COMPONENT_DESC }}
+description: {{ COMPONENT_DESC }}.
 decoration: /assets/img/components/{{ COMPONENT }}.png
 ---
 

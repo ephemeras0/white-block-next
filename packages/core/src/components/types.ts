@@ -7,7 +7,7 @@ export type ContentAlignment = 'start' | 'center' | 'end'
 
 export interface OptionsItem {
   label: string
-  value: string | number
+  value: any
   extra?: any
 }
 

@@ -36,7 +36,7 @@
     "test:coverage": "echo \"@white-block/cli coverage ignore\""
   },
   "dependencies": {
-    "@ephemeras/compiler": "^0.0.2",
+    "@ephemeras/compiler": "^0.0.5",
     "@ephemeras/file": "^0.0.8",
     "@ephemeras/fs": "^0.0.1",
     "@ephemeras/profile": "^0.0.1",

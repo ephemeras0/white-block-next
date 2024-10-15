@@ -24,7 +24,11 @@
               <i i="tdesign-refresh" />
             </wb-button>
             <wb-popup placement="bottom-end" class="md:hidden lg:hidden">
-              <wb-button type="ghost" theme="default">
+              <wb-button
+                type="ghost"
+                theme="default"
+                class="md:hidden lg:hidden"
+              >
                 <i i="tdesign-ellipsis" />
               </wb-button>
               <template #content>
@@ -292,10 +296,9 @@
 </template>
 <script setup lang="ts">
 import { clickDelegate } from '@/utils'
-import { createHighlighter } from 'shiki'
 import { useData } from 'vitepress'
 import { nextTick, ref, watchEffect } from 'vue'
-import { copyToClipboard, formatCode } from '~/utils'
+import { copyToClipboard, formatCode, getHighlighter } from '~/utils'
 
 defineOptions({ name: 'UsageBlock', inheritAttrs: false })
 
@@ -399,10 +402,7 @@ function changeProps(prop: string, value: any) {
   changeCode({ ...propsData, ...changedProps.value })
 }
 
-const shiki = await createHighlighter({
-  themes: ['material-theme-palenight', 'material-theme'],
-  langs: ['vue']
-})
+const shiki = await getHighlighter()
 
 function getHighlighCode(code: string) {
   return shiki.codeToHtml(code, { lang: 'vue', theme: 'material-theme' })
@@ -417,7 +417,7 @@ watchEffect(async () => {
   if (componentVariables.value) {
     scriptCode = `
 
-<${tag} setup lang="ts">${formatCode(componentVariables.value, {
+<${tag} setup lang="ts">${await formatCode(componentVariables.value, {
       parser: 'babel-ts',
       semi: false
     })}</${tag}>`

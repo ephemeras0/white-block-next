@@ -3,7 +3,7 @@ component: {{ COMPONENT }}
 category: {{ COMPONENTS_CATEGORY }}
 
 title: {{ COMPONENT_ZH }}
-description: {{ COMPONENT_DESC_ZH }}
+description: {{ COMPONENT_DESC_ZH }}。
 decoration: /assets/img/components/{{ COMPONENT }}.png
 ---
 

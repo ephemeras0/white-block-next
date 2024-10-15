@@ -82,9 +82,9 @@ export type ValueEmits<T = any> = {
   /*
    * Sync value for `v-model:value`.
    */
-  'update:value': [value: any]
+  'update:value': [value: T]
   /*
    * Sync value for `v-model`.
    */
-  'update:modelValue': [value: any]
+  'update:modelValue': [value: T]
 }

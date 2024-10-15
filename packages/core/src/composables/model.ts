@@ -33,6 +33,7 @@ export function useVModel<T = any>(
       options.props.modelValue,
       (newValue, ...args) => {
         emit('update:modelValue', newValue)
+        emit('change', newValue)
         changeHandler(newValue, ...args)
         onSetValue?.(newValue)
       }
@@ -44,6 +45,7 @@ export function useVModel<T = any>(
       options.props[propName],
       (newValue, ...args) => {
         emit(`update:${propName}`, newValue)
+        emit('change', newValue)
         changeHandler(newValue, ...args)
         onSetValue?.(newValue)
       }
@@ -57,6 +59,7 @@ export function useVModel<T = any>(
     (newValue, ...args) => {
       internalValue.value = newValue
       changeHandler(newValue, ...args)
+      emit('change', newValue)
       onSetValue?.(newValue)
     }
   ]

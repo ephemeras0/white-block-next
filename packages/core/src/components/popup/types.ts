@@ -1,0 +1,26 @@
+export type PopupPlacement =
+  | 'auto'
+  | 'top'
+  | 'top-start'
+  | 'top-end'
+  | 'bottom'
+  | 'bottom-start'
+  | 'bottom-end'
+  | 'left'
+  | 'left-start'
+  | 'left-end'
+  | 'right'
+  | 'right-start'
+  | 'right-end'
+
+export type PopupTrigger = 'hover' | 'press' | 'click' | 'focus' | 'contextmenu'
+
+export type PopupEventType =
+  | 'mouseenter'
+  | 'mousedown'
+  | 'click'
+  | 'focusin'
+  | 'focusout'
+  | 'mouseleave'
+  | 'mouseup'
+  | 'contextmenu'

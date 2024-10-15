@@ -13,13 +13,13 @@ decoration: /assets/img/components/button.png
 
 ## Properties
 
-:::custom-usage button
+<!-- :::custom-usage button
 button/examples/type1.tsx
 :::
 
 :::custom-usage button
 button/examples/type2.vue
-:::
+::: -->
 
 ### content
 Use property `content` to define content of the button. Support `text` and `VNode`, also can be a function that return `text` or `VNode`.

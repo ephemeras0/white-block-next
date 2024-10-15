@@ -43,6 +43,26 @@
   --wb-radio-gap: var(--wb-comp-content-gap-xl);
 }
 
+/* -------------------------------------------- theme -------------------------------------------- */
+.wb-radio--primary {
+  --wb-radio-text-active: var(--wb-color-primary);
+}
+.wb-radio--contrast {
+  --wb-radio-text-active: var(--wb-color-foreground);
+}
+.wb-radio--success {
+  --wb-radio-text-active: var(--wb-color-success);
+}
+.wb-radio--warning {
+  --wb-radio-text-active: var(--wb-color-warning);
+}
+.wb-radio--danger {
+  --wb-radio-text-active: var(--wb-color-danger);
+}
+.wb-radio--default {
+  --wb-radio-text-active: var(--wb-color-soft);
+}
+
 /* -------------------------------------------- other -------------------------------------------- */
 .wb-radio--disabled {
   cursor: not-allowed;

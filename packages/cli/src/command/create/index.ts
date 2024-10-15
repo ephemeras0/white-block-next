@@ -1,5 +1,5 @@
 import ora from 'ora'
-import { dash, pascal, title } from 'radash'
+import { dash, pascal, camel, title } from 'radash'
 import TEXT from '../../locales/text'
 import {
   getComponentInfoPrompt,
@@ -32,22 +32,27 @@ export default async function create(component: string, lang: 'en' | 'zh') {
     await answerPrompts<UnitTestPromptResult>(getUnitTestPrompt())
   const { COMPONENT_NAME = pascal(title(component)), COMPONENT_DESC } =
     componentInfo
-  const { COMPONENT_NAME_LOCALE, COMPONENT_DESC_LOCALE } = componentLocale
+  const { COMPONENT_NAME_LOCALE, COMPONENT_DESC_LOCALE, USE_LOCALE } =
+    componentLocale
 
   let localeData = {
+    USE_LOCALE,
     COMPONENT_PASCAL: COMPONENT_NAME || pascal(title(component)),
+    COMPONENT_CAMEL: COMPONENT_NAME || camel(title(component)),
     COMPONENT: dash(title(COMPONENT_NAME)),
     COMPONENT_ZH: COMPONENT_NAME_LOCALE,
-    COMPONENT_DESC,
-    COMPONENT_DESC_ZH: COMPONENT_DESC_LOCALE
+    COMPONENT_DESC: COMPONENT_DESC.trim(),
+    COMPONENT_DESC_ZH: COMPONENT_DESC_LOCALE.trim()
   }
   if (lang === 'zh') {
     localeData = {
+      USE_LOCALE,
       COMPONENT_PASCAL: COMPONENT_NAME_LOCALE || pascal(title(component)),
+      COMPONENT_CAMEL: COMPONENT_NAME || camel(title(component)),
       COMPONENT: dash(title(COMPONENT_NAME_LOCALE)),
       COMPONENT_ZH: COMPONENT_NAME || '',
-      COMPONENT_DESC: COMPONENT_DESC_LOCALE,
-      COMPONENT_DESC_ZH: COMPONENT_DESC
+      COMPONENT_DESC: COMPONENT_DESC_LOCALE.trim(),
+      COMPONENT_DESC_ZH: COMPONENT_DESC.trim()
     }
   }
   const answerData = {
