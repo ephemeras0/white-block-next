@@ -2,8 +2,73 @@
 
 exports[`# Slider > ## Base > ### default config 1`] = `
 <div
-  class="wb-slider"
+  bg="$wb-color-layer"
+  h="1"
+  relative=""
+  rounded="full"
+  select="none"
+  w="full"
 >
-  Slider
+  <div
+    absolute=""
+    h="full"
+    inset="0"
+    p="x-2"
+    rounded="full"
+    w="full"
+  >
+    <div
+      absolute=""
+      bg="$wb-color-primary"
+      h="full"
+      left="0"
+      rounded="full"
+      style="width: 0%;"
+      top="0"
+    />
+    <div
+      cursor="pointer"
+      flex="1"
+      h="full"
+      select="none"
+      w="full"
+    />
+  </div>
+  <div
+    absolute=""
+    bg="$wb-color-primary"
+    cursor="pointer"
+    h="4"
+    left="0"
+    rounded="full"
+    select="none"
+    shadow="sm black"
+    style="left: 0%;"
+    top="50%"
+    transform="translate-x--50% translate-y--50%"
+    w="4"
+  >
+    <div
+      class="wb-popup-wrapper"
+    >
+      <div
+        class="wb-popup-trigger"
+        cursor="pointer"
+        select="none"
+      >
+        
+        <div
+          h="4"
+          ring="2 inset $wb-color-foreground"
+          rounded="full"
+          w="4"
+        />
+        
+      </div>
+      <!--teleport start-->
+      <!--v-if-->
+      <!--teleport end-->
+    </div>
+  </div>
 </div>
 `;
