@@ -1,13 +1,18 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`# Popup > ## Base > ### default config 1`] = `
-<div>
+<div
+  class="wb-popup-wrapper"
+>
   <div
+    class="wb-popup-trigger"
     cursor="pointer"
     select="none"
   >
     <!---->
   </div>
+  <!--teleport start-->
   <!--v-if-->
+  <!--teleport end-->
 </div>
 `;

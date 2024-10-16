@@ -99,6 +99,11 @@
   --wb-color-layer: rgb(var(--wb-vc-layer));
   --wb-color-panel: rgb(var(--wb-vc-layer));
   --wb-color-scrollbar: rgb(var(--wb-vc-scrollbar));
+  --wb-color-placeholder: color-mix(
+    in srgb,
+    var(--wb-color-soft) 80%,
+    var(--wb-color-foreground)
+  );
 
   --wb-vc-white: 255 255 255;
   --wb-vc-black: 0 0 0;

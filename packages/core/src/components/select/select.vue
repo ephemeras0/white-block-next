@@ -32,6 +32,7 @@
     <template #content="{ trigger }">
       <div :class="propsClasses">
         <ul
+          max-h="$wb-select-max-content-height"
           p="$wb-select-padding"
           bg="$wb-select-background"
           rounded="$wb-select-radius"
@@ -55,7 +56,7 @@
               bg="hover:$wb-select-option-hover-background"
               p="x-$wb-select-padding"
               rounded="$wb-select-radius"
-              flex
+              flex="~ none"
               items="center"
               cursor="pointer"
               class="wb-select-option"
@@ -87,8 +88,6 @@ import type { SelectOptionsItem } from './types'
 
 defineOptions({ name: 'WbSelect', inheritAttrs: false })
 
-// prettier-ignore
-// @ts-ignore
 const props = withDefaults(defineProps<Props>(), DefaultProps) as Props
 const emits = defineEmits<Emits>()
 defineSlots<Slots>()
@@ -98,8 +97,10 @@ const propsClasses = useClasses({
   nameProps: ['arrow']
 })
 const propsStyles = useStyles(() => {
-  if (props.maxContentHeight) {
-    return { '--wb-select-max-content-height': props.maxContentHeight }
+  if (props.maxItems && props.options!.length > props.maxItems) {
+    return {
+      '--wb-select-max-content-height': `calc(var(--wb-select-height) * ${props.maxItems} + var(--wb-select-padding) * 2 + var(--wb-select-gap) * ${props.maxItems - 1})`
+    }
   }
 })
 
@@ -107,7 +108,7 @@ const propsStyles = useStyles(() => {
 const [selectValue, setSelectValue] = useVModel<any>({
   props: toRefs(props)
 })
-const [showOptions, setShowOptions] = useState(false)
+const [showOptions, setShowOptions] = useState<boolean>(false)
 
 const optionsDataMap: any = {}
 const optionsIndexMap: any = {}

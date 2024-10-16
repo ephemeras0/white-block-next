@@ -38,9 +38,9 @@ export type Props = {
    */
   icon?: boolean
   /*
-   * Max content height.
+   * Max item count.
    */
-  maxContentHeight?: string
+  maxItems?: number
   /*
    * Continuous transmission the properties for the `Input` component.
    */
@@ -66,6 +66,6 @@ export type Props = {
 export default {
   options: [],
   theme: 'soft',
-  maxContentHeight: '15rem',
+  maxItems: 10,
   icon: true
 } as any

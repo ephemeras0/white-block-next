@@ -27,6 +27,10 @@
             </div>
           </div>
         </div>
+        <ThemeEditor
+          v-if="themeEditorVisible"
+          @close="toggleThemeEditor(false)"
+        />
       </div>
     </Suspense>
   </ClientOnly>
@@ -40,6 +44,7 @@ import LayoutDocument from '~/components/layout/document/Index.vue'
 import LayoutHome from '~/components/layout/home/Index.vue'
 import LayoutHeader from './LayoutHeader.vue'
 import LayoutSidebar from './LayoutSidebar.vue'
+import ThemeEditor from './theme-editor/Index.vue'
 
 defineOptions({ name: 'WBLayout', inheritAttrs: false })
 

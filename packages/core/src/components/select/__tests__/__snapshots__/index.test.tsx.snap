@@ -2,9 +2,10 @@
 
 exports[`# Select > ## Base > ### default config 1`] = `
 <div
-  class="wb-select wb-select--md wb-select--soft"
+  class="wb-popup-wrapper wb-select wb-select--md wb-select--soft"
 >
   <div
+    class="wb-popup-trigger"
     cursor="pointer"
     select="none"
   >
@@ -49,6 +50,8 @@ exports[`# Select > ## Base > ### default config 1`] = `
     </div>
     
   </div>
+  <!--teleport start-->
   <!--v-if-->
+  <!--teleport end-->
 </div>
 `;

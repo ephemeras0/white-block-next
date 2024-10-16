@@ -1,0 +1,51 @@
+.wb-color-picker {
+  --wb-color-picker-background: var(--wb-color-background);
+  --wb-color-picker-color: var(--wb-color-foreground);
+  --wb-color-picker-border: var(--wb-color-border-base);
+  --wb-color-picker-z: 1;
+  font-size: var(--wb-color-picker-font-size);
+}
+
+/* ----------------------------------- size ----------------------------------- */
+.wb-color-picker--xs {
+  --wb-color-picker-width: var(--wb-size-128);
+  --wb-color-picker-radius: var(--wb-comp-radius-xs);
+  --wb-color-picker-padding: var(--wb-comp-padding-sm);
+  --wb-color-picker-gap: var(--wb-comp-padding-sm);
+  --wb-color-picker-font-size: var(--wb-comp-font-size-sm);
+}
+.wb-color-picker--sm {
+  --wb-color-picker-width: var(--wb-size-160);
+  --wb-color-picker-radius: var(--wb-comp-radius-sm);
+  --wb-color-picker-padding: var(--wb-comp-padding-sm);
+  --wb-color-picker-gap: var(--wb-comp-padding-sm);
+  --wb-color-picker-font-size: var(--wb-comp-font-size-sm);
+}
+.wb-color-picker--md {
+  --wb-color-picker-width: var(--wb-size-192);
+  --wb-color-picker-radius: var(--wb-comp-radius-md);
+  --wb-color-picker-padding: var(--wb-comp-padding-md);
+  --wb-color-picker-gap: var(--wb-comp-padding-md);
+  --wb-color-picker-font-size: var(--wb-comp-font-size-md);
+}
+.wb-color-picker--lg {
+  --wb-color-picker-width: var(--wb-size-224);
+  --wb-color-picker-radius: var(--wb-comp-radius-lg);
+  --wb-color-picker-padding: var(--wb-comp-padding-lg);
+  --wb-color-picker-gap: var(--wb-comp-padding-lg);
+  --wb-color-picker-font-size: var(--wb-comp-font-size-lg);
+}
+.wb-color-picker--xl {
+  --wb-color-picker-width: var(--wb-size-256);
+  --wb-color-picker-radius: var(--wb-comp-radius-xl);
+  --wb-color-picker-padding: var(--wb-comp-padding-xl);
+  --wb-color-picker-gap: var(--wb-comp-padding-xl);
+  --wb-color-picker-font-size: var(--wb-comp-font-size-xl);
+}
+
+/* --------------------------------- other -------------------------------- */
+.wb-color-picker--pure {
+  --wb-color-picker-background: transparent;
+  --wb-color-picker-border: transparent;
+  --wb-color-picker-padding: 0.0625rem;
+}

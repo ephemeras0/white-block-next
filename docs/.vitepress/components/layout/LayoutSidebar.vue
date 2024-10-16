@@ -9,7 +9,10 @@
     class="hidden xl:block scrollable"
   >
     <div m="b-8">
-      <wb-select placeholder="0.0.1"></wb-select>
+      <wb-select
+        :options="[{ label: '0.0.1', value: '0.0.1' }]"
+        placeholder="0.0.1"
+      ></wb-select>
     </div>
     <div text="sm" flex="~ col" gap="4">
       <div v-for="group in theme.sidebar" :key="group.text">

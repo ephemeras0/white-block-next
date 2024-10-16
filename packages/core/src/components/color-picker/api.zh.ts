@@ -15,6 +15,14 @@ export type Emits = {
 }
 
 export type Props = {
+  /*
+   * 无预设样式.
+   */
+  pure?: boolean
+  /*
+   * 是否显示 dropper.
+   */
+  dropper?: boolean
   /**
    * 点击事件处理函数, 参数为 `MouseEvent` 对象。
    */
@@ -26,5 +34,6 @@ export type Props = {
 }
 
 export default {
-  default: ''
+  pure: false,
+  dropper: false
 } as Props

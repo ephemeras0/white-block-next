@@ -41,7 +41,7 @@
       flex="~ shrink-0"
       items="center"
       justify="center"
-      color="$wb-color-text-placeholder"
+      color="$wb-color-placeholder"
     >
       <i v-if="loading" w="1em" h="1em" i="svg-spinners-180-ring" />
       <i
