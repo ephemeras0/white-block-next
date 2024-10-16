@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`# Popup > ## Base > ### default config 1`] = `
+<div>
+  <div
+    cursor="pointer"
+    select="none"
+  >
+    <!---->
+  </div>
+  <!--v-if-->
+</div>
+`;

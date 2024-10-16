@@ -1,0 +1,54 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`# Select > ## Base > ### default config 1`] = `
+<div
+  class="wb-select wb-select--md wb-select--soft"
+>
+  <div
+    cursor="pointer"
+    select="none"
+  >
+    
+    <div
+      bg="$wb-input-background"
+      class="wb-input wb-input--base wb-input--start wb-input--rectangle wb-input--md wb-input--readonly wb-select-input"
+      flex="inline"
+      focus-within="outline outline-2 outline-$wb-color-primary"
+      gap="$wb-input-gap"
+      h="$wb-input-height"
+      items="center"
+      overflow="hidden"
+      p="x-$wb-input-padding y-2px"
+      relative=""
+      ring="1 $wb-input-border"
+      rounded="$wb-input-radius"
+      w="$wb-input-width"
+    >
+      <!---->
+      <input
+        border="none"
+        class="wb-select-input wb-input-content"
+        color="$wb-input-text"
+        flex="1"
+        h="full"
+        maxlength="-1"
+        placeholder=""
+        readonly=""
+        w="full"
+      />
+      <!--v-if-->
+      
+      <i
+        color="$wb-color-text-5"
+        h="$wb-select-arrow"
+        i="heroicons-chevron-down-20-solid"
+        w="$wb-select-arrow"
+      />
+      <!-- pointer-events-none -->
+      
+    </div>
+    
+  </div>
+  <!--v-if-->
+</div>
+`;

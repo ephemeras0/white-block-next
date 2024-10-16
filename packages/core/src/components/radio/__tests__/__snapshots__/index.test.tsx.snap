@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`# Radio > ## Base > ### default config 1`] = `
+<label
+  class="wb-radio wb-radio--primary wb-radio--md"
+  color="$wb-radio-text"
+  cursor="pointer"
+  flex="inline"
+  gap="$wb-radio-gap"
+  h="$wb-radio-height"
+  items="center"
+  p="x-$wb-radio-padding"
+  rounded="$wb-radio-radius"
+  select="none"
+  tabindex="0"
+>
+  <input
+    cursor="pointer"
+    h="$wb-radio-size"
+    m="0"
+    overflow="hidden"
+    tabindex="-1"
+    type="radio"
+    w="$wb-radio-size"
+  />
+  <div
+    class="wb-radio-content"
+    flex=""
+    gap="$wb-radio-gap"
+    items="center"
+    truncate=""
+    w="full"
+  >
+    <!---->
+  </div>
+</label>
+`;

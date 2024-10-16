@@ -1,12 +1,18 @@
 <template>
-  <div>
-    <div ref="TriggerRef" cursor="pointer" select="none">
-      <Trigger />
+  <div class="wb-popup-wrapper">
+    <div
+      ref="TriggerRef"
+      cursor="pointer"
+      select="none"
+      class="wb-popup-trigger"
+    >
+      <TriggerNode />
     </div>
-    <teleport v-if="mountContent" :disabled="!firstRender" :to="attach">
+    <teleport :disabled="!firstRender" :to="attach">
       <div
         v-if="firstRender"
         v-show="visible"
+        v-bind="$attrs"
         ref="PopperRef"
         z="$wb-popup-z"
         :class="propsClasses"
@@ -15,7 +21,6 @@
       >
         <transition :name="animate ? 'pop' : ''">
           <div
-            v-if="showContent"
             v-show="visible"
             relative
             p="$wb-popup-padding"
@@ -27,7 +32,7 @@
             class="wb-popup-content"
           >
             <slot name="content" :trigger="TriggerClientRect">
-              <Content />
+              <ContentNode />
             </slot>
             <div
               v-if="arrow"
@@ -78,12 +83,10 @@ const propsStyles = useStyles(() => {
 })
 
 const renderNode = useNode()
-const Trigger = () => renderNode('default')
-const Content = () => renderNode('content')
+const TriggerNode = () => renderNode('default')
+const ContentNode = () => renderNode('content')
 
 const firstRender = ref(false)
-const showContent = ref(false)
-const mountContent = ref(false)
 
 const BodyEvents = GlobalEventCenter.get('body') as EventCenter
 const TriggerRef = ref()
@@ -98,11 +101,10 @@ const [visible, setVisible] = useVModel<boolean>({
   onSetValue: v => {
     emits((v ? 'show' : 'hide') as any)
     if (!v && props.destroyOnHide) {
-      mountContent.value = false
+      firstRender.value = false
       popper.destroy()
       popper = null as any
       firstRender.value = false
-      showContent.value = false
     }
     emits('change', v)
   }
@@ -115,8 +117,6 @@ function initPopper() {
   popper = createPopper(TriggerRef.value, PopperRef.value, {
     placement: props.placement,
     onFirstUpdate: () => {
-      // firstRender
-      showContent.value = true
       popper.update()
     }
   })
@@ -140,9 +140,6 @@ function hidePopup(e: MouseEvent) {
 }
 
 function showPopup() {
-  if (!mountContent.value) {
-    mountContent.value = true
-  }
   if (!firstRender.value) {
     firstRender.value = true
   }

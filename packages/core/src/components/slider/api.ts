@@ -1,28 +1,22 @@
-import type { XNode as VNode } from '../types'
+import { Props as PopupProps } from '../popup/api'
 
-export type Slots = {
-  /*
-   * Default slot of the `slider`.
-   */
-  default?: () => any
-}
+export type Slots = {}
 
-export type Emits = {
-  /*
-   * Click action.
-   */
-  click: [e: MouseEvent]
-}
+export type Emits = {}
 
 export type Props = {
   /*
-   * Click action.
+   * Maximum value.
    */
-  onClick?: (e: MouseEvent) => void
+  max?: number
   /*
-   * Content of the `slider`.
+   * Minimum value.
    */
-  default?: string | VNode
+  min?: number
+  /*
+   * Continuous transmission the properties for the `Popup` component.
+   */
+  popupProps?: PopupProps
 }
 
-export default {} as Props
+export default {} as any

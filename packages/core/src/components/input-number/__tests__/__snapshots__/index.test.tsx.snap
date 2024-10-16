@@ -1,0 +1,75 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`# InputNumber > ## Base > ### default config 1`] = `
+<div
+  class="wb-input-number wb-input-number--base wb-input-number--start wb-input-number--inner wb-input-number--md"
+  flex="~ inline"
+  focus-within="outline outline-2 outline-$wb-color-primary"
+  gap="$wb-input-number-gap"
+  items="center"
+  overflow="hidden"
+  p="0"
+  relative=""
+  ring="1 inset $wb-input-number-border"
+  rounded="$wb-input-number-radius"
+  w="$wb-input-number-width"
+>
+  <!---->
+  <!-- TODO: 无法输入 -->
+  <input
+    bg="$wb-input-number-background"
+    flex="1"
+    focus-visible=""
+    h="$wb-input-number-height"
+    maxlength="15"
+    overflow="hidden"
+    p="x-$wb-input-number-padding"
+    placeholder=""
+    ring=""
+    rounded="$wb-input-number-radius"
+    step="1"
+    text="$wb-input-number-text"
+  />
+  <!---->
+  <div
+    bg="$wb-color-soft"
+    class="wb-input-number-options"
+    flex="~ none col"
+    gap="1px"
+    h="[calc(var(--wb-input-number-height)-3px)]"
+    m="r-px"
+    p="b-px"
+  >
+    <wb-button
+      data-key="add"
+      disabled="false"
+      focus-visible="outline-0 bg-$wb-color-primary"
+      h="[calc(50%)]"
+      rounded="rt-$wb-input-number-radius"
+      size="md"
+      tabindex="-1"
+      theme="default"
+      w="full"
+    >
+      <i
+        i="tdesign-chevron-up"
+      />
+    </wb-button>
+    <wb-button
+      data-key="sub"
+      disabled="false"
+      focus-visible="outline-0 bg-$wb-color-primary"
+      h="[calc(50%)]"
+      rounded="rb-$wb-input-number-radius"
+      size="md"
+      tabindex="-1"
+      theme="default"
+      w="full"
+    >
+      <i
+        i="tdesign-chevron-down"
+      />
+    </wb-button>
+  </div>
+</div>
+`;

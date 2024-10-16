@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`# RadioGroup > ## Base > ### default config 1`] = `
+<div
+  bg="$wb-radio-group-background"
+  class="wb-radio-group wb-radio-group--base wb-radio-group--soft wb-radio-group--primary wb-radio-group--rectangle wb-radio-group--md"
+  color="$wb-radio-group-text"
+  p="$wb-radio-group-padding"
+  ring="1 inset $wb-radio-group-border"
+  rounded="$wb-radio-group-radius"
+>
+  <div
+    flex="~ row nowrap"
+    relative=""
+  >
+    
+    
+    <!--v-if-->
+  </div>
+</div>
+`;

@@ -8,7 +8,7 @@ import { DefaultProps, Emits, Props, Slots } from './config'
 
 defineOptions({ name: 'WbSlider' })
 
-withDefaults(defineProps<Props>(), DefaultProps)
+withDefaults(defineProps<Props>(), DefaultProps) as Props
 defineEmits<Emits>()
 defineSlots<Slots>()
 

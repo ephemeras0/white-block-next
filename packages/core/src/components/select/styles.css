@@ -3,7 +3,12 @@
   --wb-select-border: var(--wb-color-border-base);
   --wb-select-vc-main: var(--wb-vc-primary);
   --wb-select-color-main: var(--wb-color-primary);
+  --wb-select-max-content-height: 15rem;
   font-size: var(--wb-select-font-size);
+}
+.wb-select-content {
+  max-height: var(--wb-select-max-content-height);
+  overflow-y: scroll;
 }
 .wb-select-option {
   font-size: var(--wb-select-font-size);

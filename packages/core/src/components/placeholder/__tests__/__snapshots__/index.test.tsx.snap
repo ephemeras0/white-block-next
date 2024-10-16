@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`# Placeholder > ## Base > ### default config 1`] = `
+<div
+  class="wb-placeholder wb-placeholder--line wb-placeholder--md"
+  flex="~ row"
+  h="full"
+  items="center"
+  justify="center"
+  overflow="hidden"
+  ring="1 $wb-placeholder-border"
+  rounded="$wb-placeholder-radius"
+  w="full"
+>
+  <div
+    max-h="85%"
+    max-w="85%"
+    overflow="hidden"
+    p="x-$wb-placeholder-padding"
+    select="none"
+  >
+    <!---->
+  </div>
+</div>
+`;

@@ -13,11 +13,11 @@ describe('# Toggle', () => {
     })
   })
 
-  describe.skip('## Slots', () => {})
+  // describe('## Slots', () => {})
 
-  describe.skip('## Events', () => {})
+  // describe('## Events', () => {})
 
-  describe.skip('## Props', () => {})
+  // describe('## Props', () => {})
 
-  describe.skip('## Composables', () => {})
+  // describe('## Composables', () => {})
 })

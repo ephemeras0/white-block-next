@@ -17,7 +17,6 @@
       class="wb-select-input"
     >
       <!-- @change="emits('change', selectedValue)" -->
-      <!-- TODO: 最大高度，滚动 -->
       <!-- TODO: 加载数据效果 -->
       <!-- TODO: loading -->
       <template #suffix>
@@ -39,8 +38,8 @@
           ring="1 $wb-select-border"
           flex="~ col"
           gap="$wb-select-gap"
-          class="wb-select-content"
-          :style="{ minWidth: `${trigger.width}px` }"
+          class="wb-select-content scrollable"
+          :style="{ minWidth: `${trigger.width}px`, ...propsStyles }"
           @click.stop="
             clickDelegate($event, 'wb-select-option', handleSelectOptionItem)
           "
@@ -51,6 +50,7 @@
               :key="item.value"
               :data-index="index"
               relative
+              w="full"
               h="$wb-select-height"
               bg="hover:$wb-select-option-hover-background"
               p="x-$wb-select-padding"
@@ -77,7 +77,7 @@
 </template>
 
 <script setup lang="ts">
-import { useClasses, useState, useVModel } from '@/composables'
+import { useClasses, useStyles, useState, useVModel } from '@/composables'
 import { EventCenter, GlobalEventCenter, clickDelegate } from '@/utils'
 import { onBeforeUnmount, onMounted, ref, toRefs } from 'vue'
 import Input from '../input'
@@ -96,6 +96,11 @@ defineSlots<Slots>()
 const propsClasses = useClasses({
   valueProps: ['size', 'theme'],
   nameProps: ['arrow']
+})
+const propsStyles = useStyles(() => {
+  if (props.maxContentHeight) {
+    return { '--wb-select-max-content-height': props.maxContentHeight }
+  }
 })
 
 // const { globalConfig } = useConfig()
