@@ -19,7 +19,9 @@ const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: 'Space', link: '/components/space' },
   { text: 'Popup', link: '/components/popup' },
   { text: 'Placeholder', link: '/components/placeholder' },
-  { text: 'ColorPicker', link: '/components/color-picker' }
+  { text: 'ColorPicker', link: '/components/color-picker' },
+  { text: 'Form', link: '/components/form' },
+  { text: 'FormItem', link: '/components/form-item' }
 ]
 
 export const SIDEBAR: DefaultTheme.SidebarItem[] = [

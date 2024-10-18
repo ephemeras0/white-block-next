@@ -1,0 +1,35 @@
+{
+  "name": "@white-block/resolver",
+  "version": "0.0.17",
+  "description": "unplugin-vue-components resolver for white-block",
+  "keywords": [
+    "white-block",
+    "unplugin vue components",
+    "resolver"
+  ],
+  "author": {
+    "name": "ephemeras",
+    "email": "ephemeras@qq.com"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./*": "./dist/*"
+  },
+  "scripts": {
+    "dev": "tsup --watch src",
+    "build": "tsup",
+    "test": "echo \"playground resolver ignore\"",
+    "test:coverage": "echo \"playground resolver coverage ignore\""
+  },
+  "devDependencies": {
+    "unplugin-vue-components": "^0.25.2"
+  }
+}

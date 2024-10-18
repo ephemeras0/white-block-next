@@ -9,7 +9,7 @@ import glob from 'fast-glob'
 import MarkdownIt from 'markdown-it'
 import { existsSync, readFileSync } from 'node:fs'
 import { posix, resolve } from 'node:path'
-import { pascal } from 'radash'
+import { pascal, title } from 'radash'
 import { PageData } from 'vitepress'
 import CoverageData from '../../../coverage.json'
 import { COMPONENT_PROPERTIES } from '../../config/components'
@@ -29,12 +29,20 @@ export async function transformPageData(pageData: PageData) {
       `../packages/core/src/components/${componentName}/*api*.ts`
     ])
 
-    const langReg = new RegExp(
-      `core/src/components/${componentName}/api.?(.*).ts$`
+    const localeReg = new RegExp(
+      `core/src/components/${componentName}/.*api.?(.*).ts$`
     )
+    const moduleReg = new RegExp(
+      `core/src/components/${componentName}/(.+)-api.*ts$`
+    )
+
     for (const file of components) {
-      const name = pascal(componentName)
-      const match = file.match(langReg)
+      let name = pascal(title(componentName))
+      const match = file.match(localeReg)
+      const matchModule = file.match(moduleReg)
+      if (matchModule) {
+        name = pascal(title(matchModule[1]))
+      }
       const lang = match?.[1] || 'en'
 
       const CommonData = getCommonAPI(lang)
@@ -76,7 +84,7 @@ export async function transformPageData(pageData: PageData) {
 
       const importData = resolver.getImports()
       const typeRoot =
-        'https://github.com/Kythuen/white-block/blob/main/packages/core/src/components'
+        'https://github.com/Kythuen/white-block-next/blob/main/packages/core/src/components'
 
       let resolvePropsData = propsData
       let resolveEmitsData = emitsData

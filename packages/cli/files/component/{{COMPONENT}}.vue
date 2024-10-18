@@ -21,11 +21,10 @@ const propsClasses = useClasses<keyof Props>({
   nameProps: []
 })
 const propsStyles = useStyles()
-{% if slot %}
 
 const renderNode = useNode()
-const ContentNode = () => renderNode('default'){% endif %}
+const ContentNode = () => renderNode('default')
 {% if COMPONENT_PROPERTIES.includes('Value') %}
 
-// const [{{ COMPONENT_CAMEL }}Value, set{{ COMPONENT_PASCAL }}Value] = useVModel<string>({ props: toRefs(props) }){% endif %}
+const [{{ COMPONENT_CAMEL }}Value, set{{ COMPONENT_PASCAL }}Value] = useVModel<string>({ props: toRefs(props) }){% endif %}
 </script>

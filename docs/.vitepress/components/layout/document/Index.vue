@@ -29,17 +29,19 @@
         <div
           v-if="frontmatter?.component"
           v-show="currentTab === 'api'"
+          relative
           class="vp-doc-api"
         >
           <div
             v-for="(item, name) in page.params.api"
             :key="name"
-            relative
+            p="b-4 last:b-0"
+            border="0 b-px last:b-0 solid $wb-color-border-base "
             color="$wb-color-text-3"
           >
             <template v-if="item[lang]?.props">
               <h2 :id="`API${name}Props`">
-                {{ `${name}Props` }}
+                {{ lang === 'en' ? `${name} Props` : `${name} 属性` }}
                 <a class="header-anchor" :href="`#API${name}Props`"></a>
               </h2>
               <div
@@ -49,7 +51,7 @@
             </template>
             <template v-if="item[lang]?.events">
               <h2 :id="`API${name}Events`">
-                {{ `${name}Events` }}
+                {{ lang === 'en' ? `${name} Events` : `${name} 事件` }}
                 <a class="header-anchor" :href="`#API${name}Events`"></a>
               </h2>
               <div

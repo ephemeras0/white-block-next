@@ -1,0 +1,30 @@
+{
+  "name": "@white-block/playground",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vue/repl": "^4.3.1",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.6.0",
+    "semver": "^7.6.3",
+    "vue": "3.5.3",
+    "white-block": "workspace:*"
+  },
+  "devDependencies": {
+    "@iconify-json/heroicons": "^1.1.20",
+    "@iconify-json/simple-icons": "^1.1.96",
+    "@types/file-saver": "^2.0.7",
+    "@types/semver": "^7.5.8",
+    "@vitejs/plugin-vue": "^4.3.1",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "@vue/compiler-sfc": "3.4.21",
+    "unocss": "^0.58.6",
+    "vue-tsc": "^2.0.29"
+  }
+}

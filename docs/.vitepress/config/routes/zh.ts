@@ -19,7 +19,9 @@ const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: '间距', link: '/zh/components/space' },
   { text: '弹出层', link: '/zh/components/popup' },
   { text: '占位', link: '/zh/components/placeholder' },
-  { text: '颜色选择器', link: '/zh/components/color-picker' }
+  { text: '颜色选择器', link: '/zh/components/color-picker' },
+  { text: '表单', link: '/zh/components/form' },
+  { text: '表单项', link: '/zh/components/form-item' }
 ]
 
 export const SIDEBAR: DefaultTheme.SidebarItem[] = [

@@ -1,3 +1,4 @@
 dist
 **/*.md
 packages/cli/files
+packages/core/src/components/keys.ts

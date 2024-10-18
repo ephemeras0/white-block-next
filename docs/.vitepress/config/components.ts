@@ -11,7 +11,9 @@ export const COMPONENTS_CATEGORY: Record<string, string[]> = {
     'select',
     'slider',
     'input-number',
-    'color-picker'
+    'color-picker',
+    'form',
+    'form-item'
   ],
 
   Data: []
@@ -29,10 +31,12 @@ export const COMPONENT_PROPERTIES: Record<string, string[]> = {
     'select',
     'slider',
     'input-number',
-    'color-picker'
+    'color-picker',
+    'form',
+    'form-item'
   ],
 
-  Loading: ['button', 'input', 'popup', 'select', 'input-number'],
+  Loading: ['button', 'input', 'popup', 'select', 'input-number', 'form'],
   Disabled: [
     'button',
     'button-group',
@@ -44,7 +48,8 @@ export const COMPONENT_PROPERTIES: Record<string, string[]> = {
     'select',
     'slider',
     'input-number',
-    'color-picker'
+    'color-picker',
+    'form'
   ],
 
   Readonly: [
@@ -55,7 +60,8 @@ export const COMPONENT_PROPERTIES: Record<string, string[]> = {
     'select',
     'slider',
     'input-number',
-    'color-picker'
+    'color-picker',
+    'form'
   ],
 
   Clearable: ['input', 'radio', 'radio-group', 'select', 'input-number'],
@@ -68,6 +74,7 @@ export const COMPONENT_PROPERTIES: Record<string, string[]> = {
     'select',
     'slider',
     'input-number',
-    'color-picker'
+    'color-picker',
+    'form'
   ]
 }

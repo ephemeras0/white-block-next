@@ -1,0 +1,47 @@
+.wb-form-item {
+  font-size: var(--wb-form-item-font-size);
+  transition: var(--transition-ease);
+}
+
+/* -------------------------------------------- size -------------------------------------------- */
+.wb-form-item--xs {
+  --wb-form-item-height: var(--wb-comp-height-xs);
+  --wb-form-item-padding: var(--wb-comp-padding-xs);
+  --wb-form-item-font-size: var(--wb-comp-font-size-xs);
+  --wb-form-item-radius: var(--wb-comp-radius-xs);
+  --wb-form-item-gap: var(--wb-comp-content-gap-xs);
+}
+.wb-form-item--sm {
+  --wb-form-item-height: var(--wb-comp-height-sm);
+  --wb-form-item-padding: var(--wb-comp-padding-sm);
+  --wb-form-item-font-size: var(--wb-comp-font-size-sm);
+  --wb-form-item-radius: var(--wb-comp-radius-sm);
+  --wb-form-item-gap: var(--wb-comp-content-gap-sm);
+}
+.wb-form-item--md {
+  --wb-form-item-height: var(--wb-comp-height-md);
+  --wb-form-item-padding: var(--wb-comp-padding-md);
+  --wb-form-item-font-size: var(--wb-comp-font-size-md);
+  --wb-form-item-radius: var(--wb-comp-radius-md);
+  --wb-form-item-gap: var(--wb-comp-content-gap-md);
+}
+.wb-form-item--lg {
+  --wb-form-item-height: var(--wb-comp-height-lg);
+  --wb-form-item-padding: var(--wb-comp-padding-lg);
+  --wb-form-item-font-size: var(--wb-comp-font-size-lg);
+  --wb-form-item-radius: var(--wb-comp-radius-lg);
+  --wb-form-item-gap: var(--wb-comp-content-gap-lg);
+}
+.wb-form-item--xl {
+  --wb-form-item-height: var(--wb-comp-height-xl);
+  --wb-form-item-padding: var(--wb-comp-padding-xl);
+  --wb-form-item-font-size: var(--wb-comp-font-size-xl);
+  --wb-form-item-radius: var(--wb-comp-radius-xl);
+  --wb-form-item-gap: var(--wb-comp-content-gap-xl);
+}
+
+/* -------------------------------------------- theme -------------------------------------------- */
+/* .wb-form-item--primary {
+  --wb-form-item-vc-main: var(--wb-vc-primary);
+  --wb-form-item-color-main: var(--wb-color-primary);
+} */

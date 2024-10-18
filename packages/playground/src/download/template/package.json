@@ -1,0 +1,18 @@
+{
+  "name": "white-block-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.21",
+    "white-block": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.1",
+    "@vue/compiler-sfc": "^3.4.21",
+    "vite": "^4.3.9"
+  }
+}
