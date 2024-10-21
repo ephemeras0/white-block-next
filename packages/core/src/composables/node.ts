@@ -95,6 +95,12 @@ export function useNodeKey() {
   return instance.vnode.key
 }
 
+export function useNodeChildren() {
+  const instance = getCurrentInstance()
+  if (!instance?.slots.default) return []
+  return instance.slots.default?.(instance.props)
+}
+
 // function checkChildrenType(
 //   nodes: any,
 //   nodeType: string,

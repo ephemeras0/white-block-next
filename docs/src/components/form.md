@@ -18,7 +18,7 @@ decoration: /assets/img/components/form.png
 
 Use property `type` to control the display style of `Form`.
 
-:::custom-usage form
+:::custom-usage form 35
 form/examples/type.vue
 :::
 

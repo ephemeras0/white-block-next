@@ -3,12 +3,10 @@ import {
   Loading,
   Disabled,
   Readonly,
-  Value,
   SizeDefault,
   LoadingDefault,
   DisabledDefault,
-  ReadonlyDefault,
-  ValueEmits
+  ReadonlyDefault
 } from '../api'
 import XDefaultProps, {
   Emits as XEmits,
@@ -18,14 +16,9 @@ import XDefaultProps, {
 
 export type Slots = XSlot
 
-export type Emits = XEmits & ValueEmits<Record<string, any>>
+export type Emits = XEmits
 
-export type Props = XProps &
-  Size &
-  Loading &
-  Disabled &
-  Readonly &
-  Value<Record<string, any>>
+export type Props = XProps & Size & Loading & Disabled & Readonly
 
 export const DefaultProps = {
   ...SizeDefault,

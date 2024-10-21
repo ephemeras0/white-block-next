@@ -40,8 +40,18 @@
   --wb-form-item-gap: var(--wb-comp-content-gap-xl);
 }
 
-/* -------------------------------------------- theme -------------------------------------------- */
-/* .wb-form-item--primary {
-  --wb-form-item-vc-main: var(--wb-vc-primary);
-  --wb-form-item-color-main: var(--wb-color-primary);
-} */
+/* -------------------------------------------- status -------------------------------------------- */
+.wb-form-item--warning {
+  --wb-form-item-color-tip: var(--wb-color-warning);
+}
+.wb-form-item--warning .wb-input {
+  --wb-input-border: var(--wb-color-warning);
+  --wb-color-primary: var(--wb-color-warning);
+}
+.wb-form-item--error {
+  --wb-form-item-color-tip: var(--wb-color-error);
+}
+.wb-form-item--error .wb-input {
+  --wb-form-item-color-tip: var(--wb-color-danger);
+  --wb-input-border: var(--wb-color-danger);
+}

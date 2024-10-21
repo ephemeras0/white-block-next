@@ -14,6 +14,10 @@ export type Emits = {
    */
   submit: [data: Record<string, any>]
   /*
+   * Reset form action.
+   */
+  reset: [data: Record<string, any>]
+  /*
    * Click action.
    */
   click: [e: MouseEvent]
@@ -23,7 +27,7 @@ export type Props = {
   /*
    * Validate rules of the form data.
    */
-  rules?: Record<string, any>[]
+  rules?: Record<string, any>
   /*
    * Data of the form.
    */
@@ -43,13 +47,17 @@ export type Props = {
    */
   labelAlign?: FormLabelAlign
   /*
+   * Children node types allowed.
+   */
+  allowTypes?: string[]
+  /*
    * Submit form action.
    */
   onSubmit?: (e: any) => void
   /*
    * Reset form action.
    */
-  onReset?: (e: any) => void
+  onReset?: () => void
   /*
    * Content of the `form`.
    */
@@ -57,5 +65,6 @@ export type Props = {
 }
 
 export default {
-  layout: 'normal'
+  layout: 'normal',
+  allowTypes: ['WbFormItem']
 } as any

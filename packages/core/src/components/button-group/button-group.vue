@@ -54,7 +54,7 @@ const propsStyles = useStyles(result => {
 
 const renderNode = useNode()
 const ContentNode = () =>
-  renderNode('default', { allowNodeTypes: props.allowTypes })
+  renderNode('default', { allowNodeTypes: props.allowTypes || ['WbButton'] })
 
 function handleGroupClick(key: string, e?: MouseEvent) {
   if (key) {

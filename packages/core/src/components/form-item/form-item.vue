@@ -1,5 +1,12 @@
 <template>
-  <div m="b-8" flex items="center" :class="propsClasses" :style="propsStyles">
+  <div
+    w="full"
+    m="b-8"
+    flex
+    items="center"
+    :class="`${propsClasses} wb-form-item--${resolveValidateResult.type}`"
+    :style="propsStyles"
+  >
     <div
       v-if="label"
       ref="FormItemRef"
@@ -8,18 +15,29 @@
     >
       {{ label }}
     </div>
-    <div relative>
+    <div w="full" relative>
       <ContentNode />
-      <div absolute top="100%" left="0" un-text="3">必填</div>
+      <div
+        v-if="resolveValidateResult.tip"
+        absolute
+        top="100%"
+        left="0"
+        un-text="3 $wb-form-item-color-tip"
+        class="wb-form-item-tip"
+      >
+        {{ resolveValidateResult.tip }}
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { KEY_FORM_LABEL_WIDTH, KEY_FORM_RULES } from '@/components/keys'
+import { KEY_FORM_PROVIDE } from '@/components/keys'
 import { useClasses, useNode, useStyles } from '@/composables'
+import { GlobalEventCenter } from '@/utils'
 import { computed, inject, onMounted, ref } from 'vue'
 import { DefaultProps, Emits, Props, Slots } from './config'
+import type { FormProvidePayload } from '../form/types'
 
 defineOptions({ name: 'WbFormItem' })
 
@@ -36,30 +54,40 @@ const propsStyles = useStyles()
 const renderNode = useNode()
 const ContentNode = () => renderNode('default')
 
-const { formLabelWidth, labelWidth, setLabelWidth } =
-  inject(KEY_FORM_LABEL_WIDTH) || {}
 const FormItemRef = ref()
+
+const { labelWidthForm, labelWidth, formValidate } = inject(
+  KEY_FORM_PROVIDE
+) as FormProvidePayload
+
 const labelWidthResolve = computed(() => {
   if (props.labelWidth) return props.labelWidth
-  if (formLabelWidth) return formLabelWidth
+  if (labelWidthForm) return labelWidthForm
   if (labelWidth?.value === 0) return null
   return labelWidth?.value
 })
 
-const { formRules, rules, setFormRules } = inject(KEY_FORM_RULES) || {}
-if (props.rules && props.name) {
-  setFormRules?.(props.name, rules)
-}
-const formItemRulesResolve = computed(() => [
-  ...(props.rules || []),
-  // @ts-ignore
-  ...(formRules?.[props.name] || [])
-])
-console.log(formItemRulesResolve)
+const resolveValidateResult = computed(() => {
+  const result = { type: '', tip: '' }
+  if (
+    !formValidate.value.errors.length ||
+    formValidate.value.errors[0].prop !== props.name
+  )
+    return result
 
-onMounted(() => {
-  if (formLabelWidth || labelWidth?.value) return
+  result.type = formValidate.value.errors[0].type
+  result.tip = formValidate.value.errors[0].message
+  return result
+})
+
+function setAutoLabelWidth() {
   const { width } = FormItemRef.value.getBoundingClientRect()
-  setLabelWidth?.(width)
+  labelWidth!.value = Math.max(labelWidth!.value, width)
+}
+onMounted(() => {
+  if (labelWidthForm || labelWidth?.value) return
+  setAutoLabelWidth()
+  const BodyEvents = GlobalEventCenter.get('body')
+  BodyEvents?.on('resize', setAutoLabelWidth)
 })
 </script>
