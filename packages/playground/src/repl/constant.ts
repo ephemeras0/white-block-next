@@ -214,11 +214,11 @@ export const DOWNLOAD_EXCLUDES_FILES = [
 // ------------------------------------------------------ unocss -----------------------------------------------------
 export const PREVIEW_OPTIONS = {
   headHTML: `
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-uno.global.js"><\/script>
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-wind.global.js"><\/script>
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-icons.global.js"><\/script>
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-attributify.global.js"><\/script>
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/transformer-attributify-jsx/dist/index.mjs"><\/script>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-uno.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-wind.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-icons.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-attributify.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/transformer-attributify-jsx/dist/index.mjs"></script>
     <script>
       window.__unocss = {
         rules: [],
@@ -236,7 +236,7 @@ export const PREVIEW_OPTIONS = {
           () => window.__unocss__runtime.transformer.transformerAttributifyJsx()
         ]
       }
-    <\/script>
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/core.global.js"><\/script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/core.global.js"></script>
   `
 }

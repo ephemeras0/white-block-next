@@ -21,7 +21,9 @@ const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: 'Placeholder', link: '/components/placeholder' },
   { text: 'ColorPicker', link: '/components/color-picker' },
   { text: 'Form', link: '/components/form' },
-  { text: 'FormItem', link: '/components/form-item' }
+  { text: 'FormItem', link: '/components/form-item' },
+  { text: 'Loading', link: '/components/loading' },
+  { text: 'Message', link: '/components/message' }
 ]
 
 export const SIDEBAR: DefaultTheme.SidebarItem[] = [

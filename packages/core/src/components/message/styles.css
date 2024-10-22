@@ -1,0 +1,10 @@
+.wb-message {
+  font-size: var(--wb-message-font-size);
+  transition: var(--transition-ease);
+}
+
+/* -------------------------------------------- theme -------------------------------------------- */
+/* .wb-message--primary {
+  --wb-message-vc-main: var(--wb-vc-primary);
+  --wb-message-color-main: var(--wb-color-primary);
+} */

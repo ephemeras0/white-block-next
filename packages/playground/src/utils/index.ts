@@ -37,12 +37,20 @@ export function getImportMap(versions: any) {
       'white-block':
         !isProd && !versions.wb
           ? getLocalWhiteBlock()
-          : getCdnLink('white-block', versions.wb, '/dist/es/index.mjs')
+          : getCdnLink(
+              'white-block',
+              versions.wb,
+              '/dist/es/components/index.js'
+            )
     }
   }
 }
 
 export function getDependenciesFile(version: string) {
+  const cssUrl =
+    !isProd && !version
+      ? './white-block.css'
+      : `https://cdn.jsdelivr.net/npm/white-block${version ? `@${version}` : ''}/dist/styles/index.css'`
   return `
 import WhiteBlock from 'white-block'
 import { getCurrentInstance } from 'vue'
@@ -70,7 +78,8 @@ export function appendStyle() {
 
     const link = document.createElement('link')
     link.rel = 'stylesheet'
-    link.href = '${!isProd && !version ? './white-block.css' : `https://cdn.jsdelivr.net/npm/white-block@${version}/dist/styles/index.css'`}
+    // link.href = '${cssUrl}'
+    link.href = './white-block.css'
     link.onload = resolve
     link.onerror = reject
     document.head.appendChild(link)

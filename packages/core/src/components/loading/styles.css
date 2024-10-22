@@ -1,0 +1,47 @@
+.wb-loading {
+  font-size: var(--wb-loading-font-size);
+  transition: var(--transition-ease);
+}
+
+/* -------------------------------------------- size -------------------------------------------- */
+.wb-loading--xs {
+  --wb-loading-height: var(--wb-comp-height-xs);
+  --wb-loading-padding: var(--wb-comp-padding-xs);
+  --wb-loading-font-size: var(--wb-comp-font-size-xs);
+  --wb-loading-radius: var(--wb-comp-radius-xs);
+  --wb-loading-gap: var(--wb-comp-content-gap-xs);
+}
+.wb-loading--sm {
+  --wb-loading-height: var(--wb-comp-height-sm);
+  --wb-loading-padding: var(--wb-comp-padding-sm);
+  --wb-loading-font-size: var(--wb-comp-font-size-sm);
+  --wb-loading-radius: var(--wb-comp-radius-sm);
+  --wb-loading-gap: var(--wb-comp-content-gap-sm);
+}
+.wb-loading--md {
+  --wb-loading-height: var(--wb-comp-height-md);
+  --wb-loading-padding: var(--wb-comp-padding-md);
+  --wb-loading-font-size: var(--wb-comp-font-size-md);
+  --wb-loading-radius: var(--wb-comp-radius-md);
+  --wb-loading-gap: var(--wb-comp-content-gap-md);
+}
+.wb-loading--lg {
+  --wb-loading-height: var(--wb-comp-height-lg);
+  --wb-loading-padding: var(--wb-comp-padding-lg);
+  --wb-loading-font-size: var(--wb-comp-font-size-lg);
+  --wb-loading-radius: var(--wb-comp-radius-lg);
+  --wb-loading-gap: var(--wb-comp-content-gap-lg);
+}
+.wb-loading--xl {
+  --wb-loading-height: var(--wb-comp-height-xl);
+  --wb-loading-padding: var(--wb-comp-padding-xl);
+  --wb-loading-font-size: var(--wb-comp-font-size-xl);
+  --wb-loading-radius: var(--wb-comp-radius-xl);
+  --wb-loading-gap: var(--wb-comp-content-gap-xl);
+}
+
+/* -------------------------------------------- theme -------------------------------------------- */
+/* .wb-loading--primary {
+  --wb-loading-vc-main: var(--wb-vc-primary);
+  --wb-loading-color-main: var(--wb-color-primary);
+} */

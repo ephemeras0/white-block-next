@@ -3,6 +3,7 @@ import { computed, reactive, toRefs } from 'vue'
 import type { VersionKey } from '../types'
 import { getCdnLink, getDependenciesFile, getImportMap } from '../utils'
 import {
+  APP_FILE,
   APP_MAIN_FILE,
   DEFAULT_FILES,
   DEFAULT_VERSION_TYPESCRIPT,
@@ -12,7 +13,7 @@ import {
   TEMPLATE_CONFIG
 } from './constant'
 
-const query = new URLSearchParams(location.search)
+const query = new URLSearchParams(window.location.search)
 
 const versions = reactive<Record<VersionKey, string>>({
   vue: '',
@@ -33,7 +34,7 @@ const store = useStore(
       showOutput: query.has('showOutput')
     } as any)
   ),
-  location.hash
+  window.location.hash
 )
 
 for (const item of DEFAULT_FILES) {
@@ -55,11 +56,13 @@ async function setVersion(key: any, version: string) {
       )
       versions.vue = version
       store.vueVersion = version
+      store.setActive(APP_FILE)
       break
     case 'white-block':
       versions.wb = version
       store.files[DEPENDENCIES_FILE].code = getDependenciesFile(version)
       compileFile(store, store.files[DEPENDENCIES_FILE]).then(
+        // eslint-disable-next-line no-return-assign
         errs => (store.errors = errs)
       )
       break

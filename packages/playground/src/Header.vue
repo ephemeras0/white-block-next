@@ -149,7 +149,7 @@ async function clickHandler(key: string, e: MouseEvent) {
       break
     }
     case 'share': {
-      await navigator.clipboard.writeText(location.href)
+      await navigator.clipboard.writeText(window.location.href)
       // TODO: Message 组件
       console.log('复制成功')
       break

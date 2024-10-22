@@ -33,7 +33,7 @@ function handleHeaderActions(
       downloadProject(store)
       break
     case 'version':
-      setVersion(payload?.pkg, payload?.version)
+      setVersion(payload!.pkg, payload!.version)
       break
   }
 }
@@ -50,9 +50,9 @@ watch(
   }
 )
 watch(
-  () => [store.typescriptVersion, store.vueVersion],
+  () => [store.typescriptVersion],
   () => store.reloadLanguageTools?.(),
   { deep: true }
 )
-watchEffect(() => history.replaceState({}, '', store.serialize()))
+watchEffect(() => window.history.replaceState({}, '', store.serialize()))
 </script>

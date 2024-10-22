@@ -21,7 +21,9 @@ const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: '占位', link: '/zh/components/placeholder' },
   { text: '颜色选择器', link: '/zh/components/color-picker' },
   { text: '表单', link: '/zh/components/form' },
-  { text: '表单项', link: '/zh/components/form-item' }
+  { text: '表单项', link: '/zh/components/form-item' },
+  { text: '加载', link: '/zh/components/loading' },
+  { text: '消息弹窗', link: '/zh/components/message' }
 ]
 
 export const SIDEBAR: DefaultTheme.SidebarItem[] = [

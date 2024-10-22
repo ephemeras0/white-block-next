@@ -1,5 +1,5 @@
 export const COMPONENTS_CATEGORY: Record<string, string[]> = {
-  Base: ['space', 'placeholder', 'popup'],
+  Base: ['space', 'placeholder', 'popup', 'loading', 'message'],
   Form: [
     'button',
     'button-group',
@@ -33,7 +33,8 @@ export const COMPONENT_PROPERTIES: Record<string, string[]> = {
     'input-number',
     'color-picker',
     'form',
-    'form-item'
+    'form-item',
+    'loading'
   ],
 
   Loading: ['button', 'input', 'popup', 'select', 'input-number', 'form'],
@@ -75,6 +76,7 @@ export const COMPONENT_PROPERTIES: Record<string, string[]> = {
     'slider',
     'input-number',
     'color-picker',
-    'form'
+    'form',
+    'loading'
   ]
 }
