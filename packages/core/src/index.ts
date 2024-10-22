@@ -19,4 +19,4 @@ export function install(app: App): void {
 export default {
   install,
   version: __VERSION__
-}
+} as any

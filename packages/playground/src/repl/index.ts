@@ -1,32 +1,19 @@
+import { compileFile, File, Repl, useStore, type ImportMap } from '@vue/repl'
+import { computed, reactive, toRefs } from 'vue'
+import type { VersionKey } from '../types'
+import { getCdnLink, getDependenciesFile, getImportMap } from '../utils'
 import {
-  File,
-  Repl,
-  useStore,
-  compileFile,
-  mergeImportMap,
-  type StoreState,
-  type ImportMap
-} from '@vue/repl'
-import { reactive, toRefs, watch, watchEffect, computed, ref } from 'vue'
-import {
-  APP_FILE,
-  DEFAULT_FILES,
   APP_MAIN_FILE,
+  DEFAULT_FILES,
+  DEFAULT_VERSION_TYPESCRIPT,
+  DEFAULT_VERSION_VUE,
+  DEPENDENCIES_FILE,
   PRIORITY_FILES,
-  HIDDEN_FILES,
-  TEMPLATE_CONFIG,
-  DEPENDENCIES_FILE
+  TEMPLATE_CONFIG
 } from './constant'
-import { getCdnLink, getImportMap, getDependeciesFile } from '../utils'
 
 const query = new URLSearchParams(location.search)
 
-const files: Record<string, File> = {}
-for (const item of DEFAULT_FILES) {
-  files[item.name] = new File(item.name, item.code, item.hidden)
-}
-
-export type VersionKey = 'vue' | 'wb' | 'typescript'
 const versions = reactive<Record<VersionKey, string>>({
   vue: '',
   wb: '',
@@ -37,13 +24,12 @@ const builtinImportMap = computed<ImportMap>(() => getImportMap(versions))
 const store = useStore(
   toRefs(
     reactive({
-      // files,
       builtinImportMap,
-      vueVersion: 'latest',
       mainFile: APP_MAIN_FILE,
       activeFilename: APP_MAIN_FILE,
+      vueVersion: DEFAULT_VERSION_VUE,
+      typescriptVersion: DEFAULT_VERSION_TYPESCRIPT,
       template: TEMPLATE_CONFIG,
-      typescriptVersion: 'latest',
       showOutput: query.has('showOutput')
     } as any)
   ),
@@ -56,53 +42,32 @@ for (const item of DEFAULT_FILES) {
   }
 }
 
-watch(
-  () => store.loading,
-  loading => {
-    if (!loading) {
-      store.setActive(APP_FILE)
-      for (const file of HIDDEN_FILES) {
-        store.files[file].hidden = true
-      }
-    }
-  }
-)
-
-watchEffect(() => history.replaceState({}, '', store.serialize()))
-
-async function setVueVersion(version: string) {
-  store.compiler = await import(
-    getCdnLink(
-      '@vue/compiler-sfc',
-      version,
-      '/dist/compiler-sfc.esm-browser.js'
-    )
-  )
-  versions.vue = version
-  store.vueVersion = version
-}
-function setVersion(key: any, version: string) {
+async function setVersion(key: any, version: string) {
   switch (key) {
     case 'vue':
-      setVueVersion(version)
+      store.compiler = await import(
+        /* @vite-ignore */
+        getCdnLink(
+          '@vue/compiler-sfc',
+          version,
+          '/dist/compiler-sfc.esm-browser.js'
+        )
+      )
+      versions.vue = version
+      store.vueVersion = version
       break
     case 'white-block':
       versions.wb = version
-      store.files[DEPENDENCIES_FILE].code = getDependeciesFile(version)
+      store.files[DEPENDENCIES_FILE].code = getDependenciesFile(version)
       compileFile(store, store.files[DEPENDENCIES_FILE]).then(
         errs => (store.errors = errs)
       )
       break
     case 'typescript':
+      versions.typescript = version
       store.typescriptVersion = version
       break
   }
 }
-
-watch(
-  () => [store.typescriptVersion, store.vueVersion],
-  () => store.reloadLanguageTools?.(),
-  { deep: true }
-)
 
 export { Repl, store, setVersion }

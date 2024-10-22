@@ -17,11 +17,12 @@
 
 <script setup lang="ts">
 import Monaco from '@vue/repl/monaco-editor'
+import { watch, watchEffect } from 'vue'
 import Header, { ActionType, ActionVersionsPayload } from './Header.vue'
 import { downloadProject } from './download'
+import { Repl, setVersion, store } from './repl'
+import { APP_FILE, HIDDEN_FILES, PREVIEW_OPTIONS } from './repl/constant'
 import { ThemeState } from './states'
-import { Repl, store, setVersion } from './repl'
-import { PREVIEW_OPTIONS } from './repl/constant'
 
 function handleHeaderActions(
   action: ActionType,
@@ -36,4 +37,22 @@ function handleHeaderActions(
       break
   }
 }
+
+watch(
+  () => store.loading,
+  loading => {
+    if (!loading) {
+      store.setActive(APP_FILE)
+      for (const file of HIDDEN_FILES) {
+        store.files[file].hidden = true
+      }
+    }
+  }
+)
+watch(
+  () => [store.typescriptVersion, store.vueVersion],
+  () => store.reloadLanguageTools?.(),
+  { deep: true }
+)
+watchEffect(() => history.replaceState({}, '', store.serialize()))
 </script>

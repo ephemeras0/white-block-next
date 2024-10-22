@@ -1,5 +1,10 @@
 export const isProd = !import.meta.env.DEV
 
+// ------------------------------------------------------ version -----------------------------------------------------
+export const DEFAULT_VERSION_VUE = 'latest'
+export const DEFAULT_VERSION_WHITE_BLOCK = 'latest'
+export const DEFAULT_VERSION_TYPESCRIPT = 'latest'
+
 // ------------------------------------------------------- static -----------------------------------------------------
 export const VUE_RUNTIME_URL =
   'https://cdn.jsdelivr.net/npm/@vue/runtime-dom/dist/runtime-dom.esm-browser.js'
@@ -124,6 +129,7 @@ import { ref } from 'vue'
 const msg = ref('Try it')
 </script>
 `
+
 export const MAIN_FILE = 'src/main.ts'
 export const MAIN_FILE_CONTENT = `
 import { createApp  } from 'vue'
@@ -182,16 +188,6 @@ export const TEMPLATE_CONFIG = {
 }
 
 export const DEFAULT_FILES = [
-  // {
-  //   name: TSCONFIG_FILE,
-  //   code: TSCONFIG_FILE_CONTENT,
-  //   hidden: false
-  // },
-  // {
-  //   name: IMPORT_MAP_FILE,
-  //   code: IMPORT_MAP_FILE_CONTENT,
-  //   hidden: false
-  // },
   {
     name: DEPENDENCIES_FILE,
     code: DEPENDENCIES_FILE_CONTENT,
@@ -208,7 +204,14 @@ export const DEFAULT_FILES = [
     hidden: false
   }
 ]
+export const HIDDEN_FILES = [DEPENDENCIES_FILE, APP_MAIN_FILE]
+export const PRIORITY_FILES = [IMPORT_MAP_FILE, APP_MAIN_FILE]
+export const DOWNLOAD_EXCLUDES_FILES = [
+  IMPORT_MAP_FILE,
+  MAIN_FILE.replace('src/', '')
+]
 
+// ------------------------------------------------------ unocss -----------------------------------------------------
 export const PREVIEW_OPTIONS = {
   headHTML: `
     <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-uno.global.js"><\/script>
@@ -237,15 +240,3 @@ export const PREVIEW_OPTIONS = {
     <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/core.global.js"><\/script>
   `
 }
-
-export const HIDDEN_FILES = [DEPENDENCIES_FILE, APP_MAIN_FILE]
-export const PRIORITY_FILES = [
-  // TSCONFIG_FILE,
-  IMPORT_MAP_FILE,
-  APP_MAIN_FILE
-]
-
-export const DOWNLOAD_EXCLUDES_FILES = [
-  IMPORT_MAP_FILE,
-  MAIN_FILE.replace('src/', '')
-]

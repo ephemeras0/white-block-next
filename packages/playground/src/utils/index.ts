@@ -17,6 +17,10 @@ export function getCdnLink(
   return `https://cdn.jsdelivr.net/npm/${pkg}${VERSION}${path}`
 }
 
+export function getLocalWhiteBlock() {
+  return `./white-block.js`
+}
+
 export interface Dependency {
   pkg?: string
   version?: string
@@ -32,14 +36,13 @@ export function getImportMap(versions: any) {
       ),
       'white-block':
         !isProd && !versions.wb
-          ? './white-block.js'
+          ? getLocalWhiteBlock()
           : getCdnLink('white-block', versions.wb, '/dist/es/index.mjs')
-      // 'white-block/': getCdnLink('white-block', versions.wb, '/')
     }
   }
 }
 
-export function getDependeciesFile(version: string) {
+export function getDependenciesFile(version: string) {
   return `
 import WhiteBlock from 'white-block'
 import { getCurrentInstance } from 'vue'

@@ -170,3 +170,54 @@
   --wb-color-border-soft: rgb(var(--wb-vc-gray-800));
   --wb-color-border-dinky: rgb(var(--wb-vc-gray-800) / 50%);
 }
+
+/* ----------------------------------- utilities ----------------------------------- */
+.scrollable-main {
+  &::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+  &::-webkit-scrollbar-corner {
+    width: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--wb-color-scrollbar);
+    background-clip: content-box;
+    border: 4px solid transparent;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+@media (max-width: 641px) {
+  .scrollable-main {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.scrollable {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-corner {
+    width: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--wb-color-scrollbar);
+    background-clip: content-box;
+    border: 4px solid transparent;
+    border-radius: 6px;
+  }
+}
+@media (max-width: 641px) {
+  .scrollable {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

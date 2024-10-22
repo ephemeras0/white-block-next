@@ -23,7 +23,10 @@
         <div flex items="center" gap="2">
           White Block:
           <wb-select
-            :options="WhiteBlockVersion.map(i => ({ label: i, value: i }))"
+            :options="[
+              { label: 'latest', value: '' },
+              ...WhiteBlockVersion.map(i => ({ label: i, value: i }))
+            ]"
             size="sm"
             placeholder="latest"
             @change="(version: any) => emits('action', 'version', { pkg: 'white-block', version })"
@@ -32,7 +35,10 @@
         <div flex items="center" gap="2">
           Vue:
           <wb-select
-            :options="VueVersion.map(i => ({ label: i, value: i }))"
+            :options="[
+              { label: 'latest', value: '' },
+              ...VueVersion.map(i => ({ label: i, value: i }))
+            ]"
             size="sm"
             placeholder="latest"
             @change="(version: any) => emits('action', 'version', { pkg: 'vue', version })"
@@ -41,7 +47,10 @@
         <div flex items="center" gap="2">
           TypeScript:
           <wb-select
-            :options="TypeScriptVersion.map(i => ({ label: i, value: i }))"
+            :options="[
+              { label: 'latest', value: '' },
+              ...TypeScriptVersion.map(i => ({ label: i, value: i }))
+            ]"
             size="sm"
             placeholder="latest"
             @change="(version: any) => emits('action', 'version', { pkg: 'typescript', version })"
@@ -128,11 +137,11 @@ async function clickHandler(key: string, e: MouseEvent) {
       const target: any = domList.find((dom: any) =>
         dom.className?.includes('wb-button')
       )
-      const classname =
+      const classes =
         theme.value === 'dark'
           ? 'i-heroicons-moon-20-solid'
           : 'i-heroicons-sun-20-solid'
-      target.children[0].setAttribute('class', classname)
+      target.children[0].setAttribute('class', classes)
       window[0].postMessage({
         action: 'theme-change',
         value: theme.value
