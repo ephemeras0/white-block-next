@@ -32,13 +32,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Changelog
-        run: |
-          pnpm install changelogithub -Dw
-          npx changelogithub
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
-
       - name: Publish to NPM
         uses: changesets/action@v1
         with:
