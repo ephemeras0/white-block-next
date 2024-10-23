@@ -33,7 +33,9 @@ jobs:
         run: pnpm install
 
       - name: Changelog
-        run: npx changelogithub
+        run: |
+          pnpm install changelogithub -Dw
+          npx changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
 
