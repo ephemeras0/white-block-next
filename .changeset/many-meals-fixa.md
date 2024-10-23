@@ -2,4 +2,4 @@
 'white-block': patch
 ---
 
-change workflow
+change release workflow 
