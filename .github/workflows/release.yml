@@ -41,6 +41,7 @@ jobs:
       - name: Publish to NPM
         uses: changesets/action@v1
         with:
+          version: pnpm change:version
           publish: pnpm release
           commit: 'chore: release packages'
         env:
