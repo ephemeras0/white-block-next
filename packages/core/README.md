@@ -4,7 +4,7 @@ Intuitive Design for Effortless Development.
 
 ## Documentation
 
-Please refer to the [documentation](https://kythuen.github.io/white-block).
+Please refer to the [documentation](https://kythuen.github.io/white-block-next).
 
 ## License
 
