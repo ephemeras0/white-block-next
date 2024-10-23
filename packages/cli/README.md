@@ -1,4 +1,4 @@
-# @ephemeras/cli
+# @white-block/cli
 
 Command line tool to create component for [`white-block`](https://kythuen.github.io/white-block).
 
