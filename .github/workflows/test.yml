@@ -29,22 +29,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build coverage reports
-        run: |
-          pnpm --filter=@white-block/types test:coverage
-          pnpm --filter=white-block test:coverage
-
-      # Push packages reports
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          flags: core
-          files: ./packages/core/coverage/coverage-final.json
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          flags: types
-          files: ./packages/types/coverage/coverage-final.json
+      - name: Run test
+        run: pnpm test
