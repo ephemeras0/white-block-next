@@ -1,11 +1,23 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.0.3/schema.json",
-  "changelog": "@changesets/cli/changelog",
+  "changelog": "@changesets/changelog-github",
   "commit": false,
   "fixed": [],
-  "linked": [["white-block", "@white-block/docs"]],
+  "linked": [
+    [
+      "white-block",
+      "@white-block/docs",
+      "@white-block/playground",
+      "@white-block/resolver",
+      "@white-block/vscode"
+    ]
+  ],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@white-block/docs"]
+  "ignore": [
+    "@white-block/docs",
+    "@white-block/playground",
+    "@white-block/vscode"
+  ]
 }
