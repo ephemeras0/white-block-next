@@ -17,6 +17,8 @@
     "preinstall": "npx only-allow pnpm",
     "docs:dev": "pnpm -C docs dev",
     "docs:build": "pnpm -C docs build",
+    "play:dev": "pnpm -C packages/playground dev",
+    "play:build": "pnpm -C packages/playground build",
     "docs:preview": "pnpm -C docs preview",
     "test": "pnpm --filter ./packages/** test",
     "test:coverage": "pnpm --filter ./packages/** test:coverage",

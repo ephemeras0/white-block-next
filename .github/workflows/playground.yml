@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 jobs:
-  docs:
+  playground:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,29 +28,19 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build packages
-        run: |
-          pnpm --filter=@white-block/types build
-          pnpm --filter=white-block build
+        run: pnpm --filter=white-block build
 
-      - name: Build document
+      - name: Build playground
         env:
           PLATFORM: GitHub
-        run: pnpm docs:build
+        run: pnpm play:build
 
-      - name: Deploy document
+      - name: Deploy Playground
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           token: ${{ secrets.ACTIONS_TOKEN }}
           branch: gh-pages
-          folder: docs/.vitepress/dist
+          folder: docs/.vitepress/dist/playground
           single-commit: true
           clean: true
-          clean-exclude: |
-            v1/*
-            v1/**/*
-            playground/*
-            playground/**/*
-            - name: Build vitepress site
-            env:
-              PLATFORM: GitHub
-            run: pnpm docs:build
+          target-folder: playground

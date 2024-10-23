@@ -1,16 +1,17 @@
-name: release
+name: changeset
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  release:
-    permissions:
-      contents: write
-      id-token: write
-
+  changeset:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,10 +35,8 @@ jobs:
       - name: Publish to NPM
         uses: changesets/action@v1
         with:
-          publish: pnpm release
+          version: pnpm change:version
+          commit: 'chore: release packages'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - run: npx changelogithub
-        env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
