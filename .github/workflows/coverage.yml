@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 jobs:
-  build:
+  coverage:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
