@@ -1,5 +1,11 @@
 # white-block
 
+## 0.0.19
+
+### Patch Changes
+
+- [`0503793`](https://github.com/Kythuen/white-block-next/commit/0503793306988c478224663f716ede6c5ce324ac) Thanks [@ephemeras246](https://github.com/ephemeras246)! - init code
+
 ## 0.0.18
 
 ### Patch Changes
