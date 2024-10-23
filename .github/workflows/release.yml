@@ -33,9 +33,15 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Publish to NPM
+      - name: Creating .npmrc
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish to NPM
         run: npx changeset publish
 
       - name: Release to GitHub
