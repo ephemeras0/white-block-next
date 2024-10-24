@@ -25,14 +25,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Get version
-        id: get_version
-        run: echo "VERSION=$(node -p \"require\('./packages/core/package.json'\).version\")" >> $GITHUB_ENV
-
       - name: Changeset version
         env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         run: pnpm change:version
+
+      - name: Get version
+        id: get_version
+        run: echo "VERSION=$(node -p \"require\('./packages/core/package.json'\).version\")" >> $GITHUB_ENV
 
       - name: Push and tag
         env:
