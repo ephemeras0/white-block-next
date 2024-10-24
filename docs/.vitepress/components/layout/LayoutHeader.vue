@@ -45,7 +45,7 @@
           <span m="l-2">{{ site.title }}</span>
         </a>
       </div>
-      <div class="hidden lg:flex" flex="lg:1">
+      <div class="hidden !lg:flex" flex="lg:1">
         <VPNavBarSearch class="search" />
         <VPNavBarMenu />
       </div>

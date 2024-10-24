@@ -42,7 +42,7 @@
       @click="handleCopyColor"
     >
       <i
-        class="hidden group-hover:block"
+        class="hidden !group-hover:block"
         :i="copyState ? 'tdesign-check' : 'mdi-content-copy'"
       />
     </div>

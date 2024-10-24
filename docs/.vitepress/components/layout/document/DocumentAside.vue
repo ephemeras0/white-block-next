@@ -10,7 +10,7 @@
         ? '[calc(100vh-var(--wb-doc-height-header)-11.5rem)]'
         : '[calc(100vh-var(--wb-doc-height-header)-19rem)]'
     "
-    class="hidden 2xl:block vp-raw"
+    class="hidden !2xl:block vp-raw"
   >
     <div
       w="full"

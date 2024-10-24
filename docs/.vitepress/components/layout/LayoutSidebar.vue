@@ -6,7 +6,7 @@
     flex="none"
     h="[calc(100vh-var(--wb-doc-height-header))]"
     p="8"
-    class="hidden xl:block scrollable"
+    class="hidden !xl:block scrollable"
   >
     <div m="b-8">
       <wb-select

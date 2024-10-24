@@ -9,7 +9,7 @@
     shadow="lg"
     flex
     gap="2"
-    class="md:hidden"
+    class="!md:hidden"
   >
     <div
       h="full"

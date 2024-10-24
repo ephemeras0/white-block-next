@@ -2,14 +2,13 @@
 <template>
   <div
     sticky
-    relative
-    top="-6 md:-18"
+    top="-6 !md:-18"
     z="80"
     bg="dark:[rgb(var(--wb-vc-gray-950))]"
     backdrop="blur"
     border="0 b-px solid $wb-color-border-base dark:$wb-color-border-soft"
   >
-    <div relative w="full" h="38 md:60" m="x-auto" p="3 md:6 lg:8">
+    <div relative w="full" h="38 !md:60" m="x-auto" p="3 md:6 lg:8">
       <div v-if="focus" h="12 md:18" m="t-21 md:t-29" flex items="center">
         <h1 text="6 md:7 lg:7" leading="relaxed" fw="extrabold">
           {{ frontmatter.title }}
@@ -18,12 +17,12 @@
       <div v-else h="full">
         <div w="full lg:70%" flex="~ col" gap="2 md:4 lg:5">
           <div v-if="frontmatter.component" m="b-4">
-            <div class="md:hidden">
+            <div class="!md:hidden">
               <img
                 :src="`https://img.shields.io/badge/coverages-${coverageData.statements?.value}%25-${coverageData.statements?.color}`"
               />
             </div>
-            <div gap="2" op="dark:85" class="hidden md:flex">
+            <div gap="2" op="dark:85" class="hidden !md:flex">
               <img
                 v-for="item in coverageData"
                 :key="item.type"
@@ -47,7 +46,7 @@
         absolute
         bottom="-6"
         w="42"
-        class="hidden md:block"
+        class="hidden !md:block"
       >
         <slot />
       </div>
@@ -56,7 +55,7 @@
         absolute
         right="8"
         bottom="8"
-        class="vp-raw hidden md:block"
+        class="vp-raw hidden !md:block"
       >
         <wb-button-group w="72" theme="emphasize">
           <wb-button
