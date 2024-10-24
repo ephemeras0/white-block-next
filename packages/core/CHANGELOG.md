@@ -1,5 +1,11 @@
 # white-block
 
+## 0.0.22
+
+### Patch Changes
+
+- [#22](https://github.com/Kythuen/white-block-next/pull/22) [`b328780`](https://github.com/Kythuen/white-block-next/commit/b32878051adbce67fc84572089e11d1035b8627f) Thanks [@ephemeras0](https://github.com/ephemeras0)! - docs: fix classes render priority
+
 ## 0.0.21
 
 ### Patch Changes
