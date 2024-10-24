@@ -32,7 +32,7 @@ jobs:
       - name: Get repository info
         id: get_owner_info
         run: |
-          OWNER_INFO=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/owner)
+          OWNER_INFO=$(curl -H "Authorization: token ${{ secrets.ACTIONS_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/owner)
           OWNER_NAME=$(echo $OWNER_INFO | jq -r '.login')
           OWNER_EMAIL=$(echo $OWNER_INFO | jq -r '.email')
           echo "OWNER_NAME=$OWNER_NAME" >> $GITHUB_ENV
@@ -48,7 +48,7 @@ jobs:
 
       - name: Push and tag
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         run: |
           git add .
           git commit -m 'chore(version): bump version' -n
