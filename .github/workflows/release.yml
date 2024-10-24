@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install PNPM
         uses: pnpm/action-setup@v4
@@ -31,13 +33,18 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Publish to NPM
-        uses: changesets/action@v1
-        with:
-          publish: pnpm release
+      - name: Creating .npmrc
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - run: npx changelogithub
+      - name: Publish to NPM
+        run: npx changeset publish
+
+      - name: Release to GitHub
+        run: npx changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
