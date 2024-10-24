@@ -50,7 +50,3 @@ jobs:
             v1/**/*
             playground/*
             playground/**/*
-            - name: Build vitepress site
-            env:
-              PLATFORM: GitHub
-            run: pnpm docs:build
