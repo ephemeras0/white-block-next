@@ -44,6 +44,8 @@ jobs:
           git config user.email ${{ env.OWNER_EMAIL }}
 
       - name: Changeset version
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         run: pnpm change:version
 
       - name: Push and tag
