@@ -1,5 +1,11 @@
 # white-block
 
+## 0.0.23
+
+### Patch Changes
+
+- [#27](https://github.com/Kythuen/white-block-next/pull/27) [`04e20a9`](https://github.com/Kythuen/white-block-next/commit/04e20a9e24549f376901c67ffd60c00b1d0bffbe) Thanks [@ephemeras0](https://github.com/ephemeras0)! - chore(workflow): change workflows
+
 ## 0.0.22
 
 ### Patch Changes
