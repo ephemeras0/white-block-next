@@ -33,8 +33,9 @@ jobs:
       - name: Get version
         id: get_version
         run: |
-          node -p require\('./packages/core/package.json'\).version
-          echo "VERSION=$(node -p \"require\('./packages/core/package.json'\).version\")" >> $GITHUB_ENV
+          VERSION=$(node -p "require('./packages/core/package.json').version")
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "::set-output name=version::$VERSION"
 
       - name: Push and tag
         env:
