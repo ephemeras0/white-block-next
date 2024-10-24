@@ -1,5 +1,11 @@
 # white-block
 
+## 0.0.21
+
+### Patch Changes
+
+- Stable development process
+
 ## 0.0.20
 
 ### Patch Changes
