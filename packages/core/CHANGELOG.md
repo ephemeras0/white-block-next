@@ -1,5 +1,11 @@
 # white-block
 
+## 0.0.30
+
+### Patch Changes
+
+- [`ef3e332`](https://github.com/Kythuen/white-block-next/commit/ef3e332a625aaec1ad0c149db6cb37a25ace630c) Thanks [@ephemeras246](https://github.com/ephemeras246)! - change workflow
+
 ## 0.0.26
 
 ### Patch Changes
