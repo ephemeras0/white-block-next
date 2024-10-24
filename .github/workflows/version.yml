@@ -45,5 +45,5 @@ jobs:
           git config pull.rebase true
           git pull
           git push
-          git tag v${{ env.VERSION }}
-          git push origin v${{ env.VERSION }}
+          git tag v0.0.24
+          git push origin v0.0.24
