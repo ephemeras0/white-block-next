@@ -78,7 +78,7 @@ exports[`# ColorPicker > ## Base > ### default config 1`] = `
         w="full"
       >
         <i
-          class="hidden group-hover:block"
+          class="hidden !group-hover:block"
           i="mdi-content-copy"
         />
       </div>

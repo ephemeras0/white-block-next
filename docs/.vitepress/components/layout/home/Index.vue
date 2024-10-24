@@ -1,7 +1,7 @@
 <template>
   <div max-w="lg:400" h="full" m="x-auto">
     <div relative p="y-32 md:y-48 lg:y-25vh b-16">
-      <div absolute inset="0" h="full" class="hidden lg:block">
+      <div absolute inset="0" h="full" class="hidden !lg:block">
         <div
           absolute
           inset="0"
@@ -113,7 +113,7 @@
         </div>
       </div>
     </div>
-    <div w="full" p="t-12 b-24" class="hidden lg:block">
+    <div w="full" p="t-12 b-24" class="hidden !lg:block">
       <ComponentDemo />
     </div>
     <div

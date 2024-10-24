@@ -188,7 +188,7 @@
         flex="none"
         w="72"
         h="full"
-        class="hidden md:block"
+        class="hidden !md:block"
       >
         <div
           v-if="showProperties"

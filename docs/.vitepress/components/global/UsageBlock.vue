@@ -165,7 +165,7 @@
           </div>
         </div>
       </div>
-      <div flex="none" w="72" h="full" class="hidden md:block">
+      <div flex="none" w="72" h="full" class="hidden !md:block">
         <div
           v-if="showProperties"
           w="full"
