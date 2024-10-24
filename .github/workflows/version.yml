@@ -27,7 +27,7 @@ jobs:
 
       - name: Get version
         id: get_version
-        run: echo "VERSION=$(node -p \"require('./packages/core/package.json').version\")" >> $GITHUB_ENV
+        run: echo "VERSION=$(node -p \"require\('./packages/core/package.json'\).version\")" >> $GITHUB_ENV
 
       - name: Get repository info
         id: get_owner_info
