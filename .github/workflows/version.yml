@@ -1,13 +1,11 @@
 name: version
 
 on:
-  pull_request:
-    types: [closed]
+  workflow_dispatch:
 
 jobs:
   version:
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.merged == true && contains(github.event.pull_request.title, 'Release Version') }}
 
     steps:
       - name: Checkout Repo
