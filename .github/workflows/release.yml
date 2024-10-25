@@ -1,6 +1,9 @@
 name: release
 
 on:
+  workflow_run:
+    workflows: ['tag']
+    types: [completed]
   push:
     tags:
       - 'v*'
@@ -12,6 +15,7 @@ jobs:
       id-token: write
 
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' }} || ${{ github.event.workflow_run && github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout Repo

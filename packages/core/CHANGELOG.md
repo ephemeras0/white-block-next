@@ -1,5 +1,41 @@
 # white-block
 
+## 0.0.32
+
+### Patch Changes
+
+- [`f07e320`](https://github.com/Kythuen/white-block-next/commit/f07e3206e24a051f879f17ec6b93fa5261c243b6) Thanks [@ephemeras246](https://github.com/ephemeras246)! - workflow
+
+## 0.0.31
+
+### Patch Changes
+
+- [`bc205ad`](https://github.com/Kythuen/white-block-next/commit/bc205ad58f476cadc2d4e3f36c9559718eb83851) Thanks [@ephemeras246](https://github.com/ephemeras246)! - workflow
+
+## 0.0.30
+
+### Patch Changes
+
+- [`ef3e332`](https://github.com/Kythuen/white-block-next/commit/ef3e332a625aaec1ad0c149db6cb37a25ace630c) Thanks [@ephemeras246](https://github.com/ephemeras246)! - change workflow
+
+## 0.0.26
+
+### Patch Changes
+
+- [`0f9e8be`](https://github.com/Kythuen/white-block-next/commit/0f9e8bebf4d46cd66169d03e6a9ac634336ad712) Thanks [@ephemeras246](https://github.com/ephemeras246)! - change workflows
+
+## 0.0.25
+
+### Patch Changes
+
+- [`b751f09`](https://github.com/Kythuen/white-block-next/commit/b751f0969816b9a981fae726fe17d9d56c7f1f07) Thanks [@ephemeras246](https://github.com/ephemeras246)! - change workflow
+
+## 0.0.24
+
+### Patch Changes
+
+- [`d3493a7`](https://github.com/Kythuen/white-block-next/commit/d3493a749688c7b95ed09619d2b08812db7cd353) Thanks [@ephemeras246](https://github.com/ephemeras246)! - change workflow
+
 ## 0.0.23
 
 ### Patch Changes
