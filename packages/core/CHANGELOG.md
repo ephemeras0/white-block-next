@@ -1,5 +1,13 @@
 # white-block
 
+## 0.0.33
+
+### Patch Changes
+
+- [#28](https://github.com/Kythuen/white-block-next/pull/28) [`1b1a54f`](https://github.com/Kythuen/white-block-next/commit/1b1a54fad0d5b4cb7696660ed400d7c00cf8bfdf) Thanks [@ephemeras0](https://github.com/ephemeras0)! - change workflow
+
+- [#28](https://github.com/Kythuen/white-block-next/pull/28) [`400daad`](https://github.com/Kythuen/white-block-next/commit/400daad10422289560c6197b31a0fe3da2088422) Thanks [@ephemeras0](https://github.com/ephemeras0)! - fix(playground): fix playground css url
+
 ## 0.0.32
 
 ### Patch Changes
