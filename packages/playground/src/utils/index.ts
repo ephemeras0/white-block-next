@@ -50,7 +50,7 @@ export function getDependenciesFile(version: string) {
   const cssUrl =
     !isProd && !version
       ? './white-block.css'
-      : `https://cdn.jsdelivr.net/npm/white-block${version ? `@${version}` : ''}/dist/styles/index.css'`
+      : `https://cdn.jsdelivr.net/npm/white-block${version ? `@${version}` : ''}/dist/styles/index.css`
   return `
 import WhiteBlock from 'white-block'
 import { getCurrentInstance } from 'vue'
