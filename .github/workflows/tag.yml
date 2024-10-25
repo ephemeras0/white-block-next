@@ -42,12 +42,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         run: |
-          git config user.name "ephemeras"
-          git config user.email "ephemeras@qq.com"
+          git config user.name "Kythuen"
+          git config user.email "616332192@qq.com"
           git add .
           git commit -m "chore: bump version" -n --allow-empty
           git config pull.rebase true
           git pull
-          git push
+          git push --force
           git tag v${{ env.VERSION }}
-          git push origin v${{ env.VERSION }}
+          git push origin v${{ env.VERSION }} --force
