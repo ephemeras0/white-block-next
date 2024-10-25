@@ -65,7 +65,7 @@ createApp(App).use(WhiteBlock).mount('#app')
 
 ## 演练场
 
-[在线尝试](https://kythuen.github.io/white-block/playground)
+[在线尝试](https://kythuen.github.io/white-block-next/playground)
 
 
 ## 项目模板

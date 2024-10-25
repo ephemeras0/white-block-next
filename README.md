@@ -64,7 +64,7 @@ Read [Documents](https://kythuen.github.io/white-block) for more detail usage.
 
 ## Playground
 
-[Playground](https://kythuen.github.io/white-block/playground)
+[Playground](https://kythuen.github.io/white-block-next/playground)
 
 
 ## White Block Starter

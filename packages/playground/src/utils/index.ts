@@ -78,8 +78,7 @@ export function appendStyle() {
 
     const link = document.createElement('link')
     link.rel = 'stylesheet'
-    // link.href = '${cssUrl}'
-    link.href = './white-block.css'
+    link.href = '${cssUrl}'
     link.onload = resolve
     link.onerror = reject
     document.head.appendChild(link)
