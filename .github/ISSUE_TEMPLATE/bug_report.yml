@@ -1,6 +1,6 @@
 name: 🐞 Bug report
 description: Found a bug of WhiteBlock
-labels: 'bug', 'triage'
+labels: bug, triage
 body:
   - type: markdown
     attributes:
