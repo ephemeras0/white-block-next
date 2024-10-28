@@ -1,7 +1,7 @@
 <p align="center">
   <br>
   <a href="https://github.com/Kythuen/white-block">
-    <img src="https://raw.githubusercontent.com/Kythuen/white-block/main/docs/contents/public/logo.png" alt="WhiteBlock - Intuitive Design for Effortless Development" height="120">
+    <img src="https://raw.githubusercontent.com/Kythuen/white-block-next/main/docs/contents/public/logo.png" alt="WhiteBlock - Intuitive Design for Effortless Development" height="120">
   </a>
 </p>
 <h3 align="center">更符合直觉的设计，更轻松地开发</h3>
@@ -11,14 +11,14 @@
   <a href="https://www.npmjs.com/package/white-block" target="__blank">
     <img src="https://img.shields.io/npm/v/white-block?color=a1b858" alt="NPM version">
   </a>
-  <a href="https://github.com/Kythuen/white-block/blob/main/LICENSE" target="__blank">
+  <a href="https://github.com/Kythuen/white-block-next/blob/main/LICENSE" target="__blank">
     <img src="https://img.shields.io/npm/l/white-block" alt="license">
   </a>
   <a href="https://www.npmjs.com/package/white-block" target="__blank">
     <img src="https://img.shields.io/npm/dm/white-block" alt="NPM downloads">
   </a>
-  <a href="https://github.com/Kythuen/white-block/actions/workflows/release.yml" target="__blank">
-    <img src="https://img.shields.io/github/actions/workflow/status/Kythuen/white-block/release.yml" alt="GitHub actions">
+  <a href="https://github.com/Kythuen/white-block-next/actions/workflows/release.yml" target="__blank">
+    <img src="https://img.shields.io/github/actions/workflow/status/Kythuen/white-block-next/release.yml" alt="GitHub actions">
   </a>
   <a href="https://codecov.io/gh/Kythuen/white-block" target="__blank">
     <img src="https://img.shields.io/codecov/c/github/Kythuen/white-block?flag=core" alt="coverage">
@@ -54,7 +54,7 @@ pnpm add white-block
 ```js
 import { createApp } from 'vue'
 import WhiteBlock from 'white-block'
-import 'white-block/style/index.css'
+import 'white-block/dist/style/index.css'
 import App from './app.vue'
 
 createApp(App).use(WhiteBlock).mount('#app')
