@@ -1,6 +1,6 @@
 name: 🐞 Bug report
 description: Found a bug of WhiteBlock
-labels: ['bug', 'triage']
+labels: 'bug', 'triage'
 body:
   - type: markdown
     attributes:
@@ -42,7 +42,6 @@ body:
     attributes:
       label: System Info
       description: Output of `npx envinfo --system --npmPackages '{vite,@vitejs/*,rollup}' --binaries --browsers`.
-      placeholder: System, Browsers, Framework
     validations:
       required: false
 
