@@ -1,6 +1,6 @@
 {
   "name": "@white-block/cli",
-  "version": "0.0.1",
+  "version": "0.0.2-beta.1",
   "description": "command line tool for white-block",
   "keywords": [
     "white-block",

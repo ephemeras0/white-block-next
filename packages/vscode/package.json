@@ -2,7 +2,7 @@
   "name": "@white-block/vscode",
   "description": "vscode extension for white-block",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2-beta.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kythuen/white-block.git"
