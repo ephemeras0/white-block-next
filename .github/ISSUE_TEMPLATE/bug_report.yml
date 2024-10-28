@@ -1,5 +1,5 @@
 name: 🐞 Bug report
-description: Found a bug of WhiteBlock
+description: Found a bug of WhiteBlock.
 labels: bug, triage
 body:
   - type: markdown
