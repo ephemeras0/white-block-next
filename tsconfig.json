@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "module": "ESNext",
-    "target": "ESNext",
-    "moduleResolution": "Node",
+    "target": "ES2018",
+    "moduleResolution": "Bundler",
     "lib": ["ESNext", "DOM"],
     "strict": true,
     "resolveJsonModule": true,
@@ -16,5 +16,12 @@
       "@/*": ["packages/core/src/*"]
     }
   },
-  "exclude": ["**/dist/**", "**/node_modules/**"]
+  "exclude": [
+    "node_modules",
+    "**/dist/**",
+    "**/__tests__/**",
+    "**/examples/**",
+    "packages/cli/files/**",
+    "packages/playground/**/template/**"
+  ]
 }

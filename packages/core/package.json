@@ -15,9 +15,11 @@
   "license": "MIT",
   "type": "module",
   "files": [
-    "dist",
-    "CHANGELOG.md"
+    "dist"
   ],
+  "main": "./dist/es/components/index.js",
+  "module": "./dist/lib/components/index.cjs",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",

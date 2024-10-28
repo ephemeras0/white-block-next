@@ -11,5 +11,5 @@
     "resolveJsonModule": true
   },
   "include": ["src"],
-  "exclude": ["files"]
+  "exclude": ["files", "**/node_modules/**"]
 }

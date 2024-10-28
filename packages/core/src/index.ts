@@ -9,7 +9,7 @@ export * from './utils'
 
 export function install(app: App): void {
   for (const key in components) {
-    const component = components[key]
+    const component: any = (components as any)[key]
     if (component.install) {
       app.use(component)
     }
