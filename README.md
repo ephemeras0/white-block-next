@@ -1,7 +1,7 @@
 <p align="center">
   <br>
-  <a href="https://github.com/Kythuen/white-block">
-    <img src="https://raw.githubusercontent.com/Kythuen/white-block-next/main/docs/contents/public/logo.png" alt="WhiteBlock - Intuitive Design for Effortless Development" height="120">
+  <a href="https://github.com/Kythuen/white-block-next">
+    <img src="https://raw.githubusercontent.com/Kythuen/white-block-next/main/docs/src/public/logo.png" alt="WhiteBlock - Intuitive Design for Effortless Development" height="120">
   </a>
 </p>
 <h3 align="center">Intuitive Design for Effortless Development</h3>

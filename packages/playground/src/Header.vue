@@ -9,7 +9,11 @@
     justify="between"
   >
     <a
-      href="http://localhost:28801/"
+      :href="
+        isProd
+          ? 'https://kythuen.github.io/white-block-next'
+          : 'http://localhost:28801/'
+      "
       un-text="lg"
       font="semibold"
       flex="~ row"
@@ -76,7 +80,7 @@
 import { gte } from 'semver'
 import { shallowRef } from 'vue'
 import { ThemeState } from './states'
-import { getPkgVersion } from './utils'
+import { getPkgVersion, isProd } from './utils'
 
 export type ActionType = 'download' | 'version'
 export type ActionVersionsPayload = {
