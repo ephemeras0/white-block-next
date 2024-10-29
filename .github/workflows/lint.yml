@@ -1,0 +1,41 @@
+name: autofix.ci
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Environment
+        uses: ./.github/actions/setup-environment
+
+      - name: Get PR author information
+        run: |
+          PR_AUTHOR=${{ github.event.pull_request.user.login }}
+          PR_EMAIL=$(curl -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/users/$PR_AUTHOR | jq -r '.email')
+          if [ "$PR_EMAIL" == "null" ]; then
+            PR_EMAIL="default-email@example.com"
+          fi
+          echo "PR_AUTHOR=$PR_AUTHOR" >> $GITHUB_ENV
+          echo "PR_EMAIL=$PR_EMAIL" >> $GITHUB_ENV
+
+      - name: Rollback commit
+        run: |
+          git checkout HEAD^
+
+      - name: Add change files
+        run: |
+          git config user.name "${{ env.PR_AUTHOR }}"
+          git config user.email "${{ env.PR_EMAIL }}"
+          git add .
+
+      - name: Check code lint
+        run: npx lint-staged
