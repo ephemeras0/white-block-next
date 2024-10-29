@@ -5,11 +5,11 @@ Hi! We're really excited that you're interested in contributing to WhiteBlock!
 Before starting your contribution, please read through the following guide.
 
 ## Issue Workflow
-![Contribution Workflow](./docs/src/public/repo/ISSUE_WORKFLOW.png)
+![Contribution Workflow](https://github.com/Kythuen/white-block-next/tree/main/docs/src/public/repo/ISSUE_WORKFLOW.png)
 
 
 ## Contribution Workflow
-![Contribution Workflow](./docs/src/public/repo/CONTRIBUTING_WORKFLOW.png)
+![Contribution Workflow](https://github.com/Kythuen/white-block-next/tree/main/docs/src/public/repo/CONTRIBUTING_WORKFLOW.png)
 
 ### Fork the Repo
 To develop locally, fork the Vite repository and clone it in your local machine.
