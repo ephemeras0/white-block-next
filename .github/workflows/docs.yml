@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Environment
-        uses: .github/actions/setup-environment
+        uses: ./.github/actions/setup-environment
 
       - name: Build packages
         run: |
@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Environment
-        uses: .github/actions/setup-environment
+        uses: ./.github/actions/setup-environment
 
       - name: Build packages
         run: pnpm --filter=white-block build
