@@ -10,5 +10,8 @@ jobs:
       - name: Setup Environment
         uses: ./.github/actions/setup-environment
 
-      - name: Run test
+      - name: Check type
+        run: pnpm type
+
+      - name: Check unit test
         run: pnpm test

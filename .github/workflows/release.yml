@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Setup Environment
-        uses: ./.github/actions/setup-environment.yml
+        uses: ./.github/actions/setup-environment
 
       - name: Creating .npmrc
         run: |
