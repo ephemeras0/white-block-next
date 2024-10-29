@@ -1,0 +1,17 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "@white-block/docs": "0.0.1",
+    "@white-block/cli": "0.0.1",
+    "white-block": "0.0.34",
+    "@white-block/playground": "0.0.0",
+    "@white-block/resolver": "0.0.17",
+    "@white-block/types": "0.0.3",
+    "@white-block/vscode": "0.0.1"
+  },
+  "changesets": [
+    "heavy-mayflies-grab",
+    "witty-crabs-judge"
+  ]
+}
