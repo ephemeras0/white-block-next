@@ -1,4 +1,4 @@
-name: check
+name: autofix
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  check:
+  autofix:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
