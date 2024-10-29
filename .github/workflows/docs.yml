@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Environment
-        uses: ./.github/actions/setup-environment
+        uses: ./.github/actions/setup-environment.yml
 
       - name: Build packages
         run: |
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Environment
-        uses: ./.github/actions/setup-environment
+        uses: ./.github/actions/setup-environment.yml
 
       - name: Build packages
         run: pnpm --filter=white-block build
