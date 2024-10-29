@@ -1,10 +1,10 @@
 import { App, Plugin, Component } from 'vue'
 import { SizeEnum } from '@/components/types'
 
-         export function withInstall(component: Component) {
-   const comp = component as Component & Plugin
+export function withInstall(component: Component) {
+  const comp = component as Component & Plugin
   comp.install = (app: App) => {
-             if (comp.name) {
+    if (comp.name) {
       app.component(comp.name, comp)
     }
   }
