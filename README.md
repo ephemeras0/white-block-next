@@ -64,12 +64,6 @@ Read [Documents](https://kythuen.github.io/white-block) for more detail usage.
 
 [Playground](https://kythuen.github.io/white-block-next/playground)
 
-
-## White Block Starter
-
-[white-block-starter](https://github.com/Kythuen/white-block-starter)
-
-
 ## Welcome Star
 
 If there were anything help you, please give me star.
