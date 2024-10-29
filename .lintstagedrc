@@ -1,6 +1,6 @@
 {
   "*.md": ["prettier --write"],
-  "*.{js,jsx,ts,tsx}": ["eslint --fix"],
-  "*.vue": ["eslint --fix"],
+  "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
+  "*.vue": ["eslint --fix", "prettier --write"],
   "*.{less,css,html}": ["prettier --write"]
 }

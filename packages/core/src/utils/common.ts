@@ -1,11 +1,11 @@
 export function throttle<Fn extends (...args: any[]) => void>(
-           func: Fn,
-  limit: number
+      func: Fn,
+        limit: number
 ): (...args: Parameters<Fn>) => void {
   let inThrottle: boolean
-  let lastFuncCall: number
+     let lastFuncCall: number
 
-  const throttledFunc = (...args: Parameters<Fn>): void => {
+     const throttledFunc = (...args: Parameters<Fn>): void => {
     if (!inThrottle) {
       func(...args)
       inThrottle = true
