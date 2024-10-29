@@ -1,1 +1,8 @@
-{"recommendations":["EditorConfig.EditorConfig","dbaeumer.vscode-eslint","esbenp.prettier-vscode","Vue.volar"]}
+{
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "Vue.volar"
+  ]
+}

@@ -38,8 +38,6 @@
 
 <br>
 
-English | [简体中文](./README-zh_CN.md)
-
 ## Getting Started
 
 ### Installation
