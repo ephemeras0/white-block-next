@@ -15,8 +15,8 @@ jobs:
       - name: Setup Environment
         uses: ./.github/actions/setup-environment
 
-      - name: Check type
-        run: pnpm type
+      - name: Lint code
+        run: npx lint-staged
 
-      - name: Check unit test
-        run: pnpm test
+      - name: autofix.ci
+        uses: autofix-ci/action@v1
