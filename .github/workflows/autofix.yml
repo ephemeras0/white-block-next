@@ -16,7 +16,7 @@ jobs:
         uses: ./.github/actions/setup-environment
 
       - name: Lint code
-        run: pnpm format
+        run: npx prettier --write .
 
       - name: Autofix ci
         uses: autofix-ci/action@v1
