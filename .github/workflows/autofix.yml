@@ -1,0 +1,22 @@
+name: autofix.ci
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Environment
+        uses: ./.github/actions/setup-environment
+
+      - name: Lint code
+        run: pnpm format
+
+      - name: Autofix ci
+        uses: autofix-ci/action@v1
