@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Environment
-        uses: ./.github/actions/setup-environment
+        uses: ../actions/setup-environment
 
       - name: Check type
         run: pnpm type
