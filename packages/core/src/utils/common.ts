@@ -1,5 +1,5 @@
 export function throttle<Fn extends (...args: any[]) => void>(
-  func: Fn,
+      func: Fn,
   limit: number
 ): (...args: Parameters<Fn>) => void {
   let inThrottle: boolean
