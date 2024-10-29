@@ -1,6 +1,6 @@
 {
   "name": "@white-block/resolver",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "unplugin-vue-components resolver for white-block",
   "keywords": [
     "white-block",
