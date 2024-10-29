@@ -1,13 +1,13 @@
-export function throttle<Fn extends (...args: any[]) => void>(
-  func: Fn,
+       export function throttle<Fn extends (...args: any[]) => void>(
+   func: Fn,
   limit: number
 ): (...args: Parameters<Fn>) => void {
-  let inThrottle: boolean
+         let inThrottle: boolean
   let lastFuncCall: number
 
-  const throttledFunc = (...args: Parameters<Fn>): void => {
+      const throttledFunc = (...args: Parameters<Fn>): void => {
     if (!inThrottle) {
-      func(...args)
+         func(...args)
       inThrottle = true
       lastFuncCall = Date.now()
     } else {
