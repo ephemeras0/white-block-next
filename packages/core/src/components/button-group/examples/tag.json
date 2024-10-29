@@ -3,9 +3,21 @@
     {
       "type": "plain",
       "options": [
-        { "key": "1", "content": "button1", "href": "https://kythuen.github.io/white-block" },
-        { "key": "2", "content": "button2", "href": "https://kythuen.github.io/white-block" },
-        { "key": "3", "content": "button3", "href": "https://kythuen.github.io/white-block" }
+        {
+          "key": "1",
+          "content": "button1",
+          "href": "https://kythuen.github.io/white-block"
+        },
+        {
+          "key": "2",
+          "content": "button2",
+          "href": "https://kythuen.github.io/white-block"
+        },
+        {
+          "key": "3",
+          "content": "button3",
+          "href": "https://kythuen.github.io/white-block"
+        }
       ]
     }
   ],

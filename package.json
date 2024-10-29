@@ -22,6 +22,7 @@
     "test": "pnpm --filter ./packages/** test",
     "test:coverage": "pnpm --filter ./packages/** test:coverage",
     "type": "tsc --noEmit",
+    "format": "prettier --write --cache .",
     "build": "pnpm --filter ./packages/** build",
     "clear": "rimraf 'packages/*/{dist,node_modules}' && rimraf node_modules",
     "change": "changeset",

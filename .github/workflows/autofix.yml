@@ -16,7 +16,8 @@ jobs:
         uses: ./.github/actions/setup-environment
 
       - name: Lint code
-        run: npx lint-staged
+        run: |
+          pnpm format
 
       - name: Autofix ci
         uses: autofix-ci/action@v1

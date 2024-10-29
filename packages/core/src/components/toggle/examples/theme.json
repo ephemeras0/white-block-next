@@ -1,7 +1,5 @@
 {
-  "components": [
-    { "defaultValue": true }
-  ],
+  "components": [{ "defaultValue": true }],
   "configs": [
     {
       "name": "theme",
