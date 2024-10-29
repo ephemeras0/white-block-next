@@ -1,6 +1,6 @@
 name: 🚀 New feature proposal
 description: Propose a new feature to be added to WhiteBlock.
-labels: enhancement, triage
+labels: enhancement, state:triage
 body:
   - type: markdown
     attributes:

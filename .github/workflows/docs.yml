@@ -38,6 +38,7 @@ jobs:
             v1/**/*
             playground/*
             playground/**/*
+
   playground:
     runs-on: ubuntu-latest
     steps:

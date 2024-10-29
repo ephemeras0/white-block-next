@@ -1,6 +1,6 @@
 name: 🐞 Bug report
 description: Found a bug of WhiteBlock.
-labels: bug, triage
+labels: bug, state:triage
 body:
   - type: markdown
     attributes:
@@ -9,7 +9,7 @@ body:
         If you have an usage question or not sure if it is really a bug, you can do following steps first:
 
         - Read the `README.md` or [Document](https://kythuen.github.io/white-block-next).
-        - Already used on [Playground](https://kythuen.github.io/white-block-next/playground).
+        - Already tried on [Playground](https://kythuen.github.io/white-block-next/playground).
         - Ask on [GitHub Discussion](https://github.com/Kythuen/white-block-next/discussions).
 
   - type: input
@@ -53,7 +53,7 @@ body:
       options:
         - label: Read the `README.md` or [Document](https://kythuen.github.io/white-block-next).
           required: true
-        - label: Check that there isn't [already an issue](https://github.com/Kythuen/white-block-next/issues) that reports the same bug to avoid creating a duplicate.
+        - label: Check that there isn't [an already issue](https://github.com/Kythuen/white-block-next/issues) that reports the same bug to avoid creating a duplicate.
           required: true
         - label: Already used on [Playground](https://kythuen.github.io/white-block-next/playground).
           required: false
