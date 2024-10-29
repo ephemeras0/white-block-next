@@ -1,9 +1,6 @@
 name: release
 
 on:
-  workflow_run:
-    workflows: ['tag']
-    types: [completed]
   push:
     tags:
       - 'v*'
@@ -15,27 +12,10 @@ jobs:
       id-token: write
 
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'push' }} || ${{ github.event.workflow_run && github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Install PNPM
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9.x
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.x
-          cache: 'pnpm'
-
-      - name: Install Dependencies
-        run: pnpm install
+      - name: Setup Environment
+        uses: ./.github/actions/setup-environment
 
       - name: Creating .npmrc
         run: |

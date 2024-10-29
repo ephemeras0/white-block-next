@@ -1,9 +1,6 @@
 name: docs
 
 on:
-  workflow_run:
-    workflows: ['tag']
-    types: [completed]
   push:
     tags:
       - 'v*'
@@ -11,25 +8,9 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'push' }} || ${{ github.event.workflow_run && github.event.workflow_run.conclusion == 'success' }}
-
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Install PNPM
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9.x
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.x
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+      - name: Setup Environment
+        uses: ./.github/actions/setup-environment
 
       - name: Build packages
         run: |
@@ -54,3 +35,26 @@ jobs:
             v1/**/*
             playground/*
             playground/**/*
+  playground:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Environment
+        uses: ./.github/actions/setup-environment
+
+      - name: Build packages
+        run: pnpm --filter=white-block build
+
+      - name: Build playground
+        env:
+          PLATFORM: GitHub
+        run: pnpm play:build
+
+      - name: Deploy Playground
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        with:
+          token: ${{ secrets.ACTIONS_TOKEN }}
+          branch: gh-pages
+          folder: docs/.vitepress/dist/playground
+          single-commit: true
+          clean: true
+          target-folder: playground
